@@ -1,174 +1,480 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Dashboard Admin</title>
-    <!-- Tambahkan link CSS Anda di sini, termasuk Bootstrap jika tidak menggunakan CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    {{-- <link rel="stylesheet" href="/css/bootstrap.min.css"> --}}
-</head>
-<body>
-    <div class="container-fluid">
-        @if(Auth::check())
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <ul class="nav nav-pills">
-              <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">{{ Auth::user()->email }}</a></li>
-              @if(Auth::user()->isAdmin=='1')
-              <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Status:Admin</a></li>
-              @else
-                <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Status:User</a></li>
-              @endif
-              <li class="nav-item"><a href="/session/logout" class="nav-link">Logout</a></li>
-            </ul>
-          </header>
-        @else
-        @endif
-        <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <!-- Tambahkan menu dan navigasi sidebar di sini -->
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_dashboard')" href="/admin/wedding/dashboard">
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_wedding')" data-bs-toggle="collapse" href="#submenu_wedding_1" aria-expanded="false" aria-controls="submenu_wedding_1">
-                            Wedding Invitation
-                        </a>
-                        <div class="collapse" id="submenu_wedding_1">
-                            <ul class="nav flex-column pl-2 border border-primary">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/admin/wedding/list">
-                                        Daftar Undangan
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/wedding/konfirmasi">
-                                        Daftar Konfirmasi
-                                    </a>
-                                </li>
-                                <!-- Tambahkan lebih banyak submenu sesuai kebutuhan Anda -->
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_khitan')" data-bs-toggle="collapse" href="#submenu_wedding" aria-expanded="false" aria-controls="submenu_wedding">
-                            Khitan Invitation
-                        </a>
-                        <div class="collapse" id="submenu_wedding">
-                            <ul class="nav flex-column pl-2 border border-primary">
-                                <li class="nav-item">
-                                    <a class="nav-link @yield('navbar_produk')" href="/admin/khitan/list">
-                                        Daftar Undangan
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link @yield('navbar_konfirmasi')" href="/khitan/konfirmasi">
-                                        Daftar Konfirmasi
-                                    </a>
-                                </li>
-                                <!-- Tambahkan lebih banyak submenu sesuai kebutuhan Anda -->
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_aqiqah')" data-bs-toggle="collapse" href="#submenu_aqiqah" aria-expanded="false" aria-controls="submenu_aqiqah">
-                            Aqiqah Invitation
-                        </a>
-                        <div class="collapse" id="submenu_aqiqah">
-                            <ul class="nav flex-column pl-2 border border-primary">
-                                <li class="nav-item">
-                                    <a class="nav-link @yield('navbar_produk')" href="/admin/aqiqah/list">
-                                        Daftar Undangan
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link @yield('navbar_konfirmasi')" href="/aqiqah/konfirmasi">
-                                        Daftar Konfirmasi
-                                    </a>
-                                </li>
-                                <!-- Tambahkan lebih banyak submenu sesuai kebutuhan Anda -->
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_polaroid')" data-bs-toggle="collapse" href="#submenu_polaroid" aria-expanded="false" aria-controls="submenu_polaroid">
-                            Polaroid
-                        </a>
-                        <div class="collapse" id="submenu_polaroid">
-                            <ul class="nav flex-column pl-2 border border-primary">
-                                <li class="nav-item">
-                                    <a class="nav-link @yield('navbar_produk')" href="/polaroid/home">
-                                        Menu Utama
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link @yield('navbar_konfirmasi')" href="/polaroid/background">
-                                        Background Foto
-                                    </a>
-                                </li>
-                                <!-- Tambahkan lebih banyak submenu sesuai kebutuhan Anda -->
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_code')" href="/code">
-                            Kode
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_song')" href="/song">
-                            Lagu
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_video')" href="/video">
-                            Video
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_attendance')" href="/myattendance">
-                            Attendance
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_pendingpayment')" href="/pendingpayment">
-                            Pending Payment
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_catalog')" href="/catalog">
-                            Catalog
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_order')" href="/order/pending/all">
-                            Order
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link @yield('navbar_menu_rating')" href="/rating">
-                            Rating
-                        </a>
-                    </li>
-                    
-                    <!-- Tambahkan lebih banyak menu utama sesuai kebutuhan Anda -->
-                </ul>
-            </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <!-- Tambahkan konten utama Anda di sini -->
-                @if(Auth::check())
-                    @yield('main')
-                @else
-                @endif
-            </main>
-        </div>
-        
-    </div>
 
-    <!-- Tambahkan script JavaScript Anda di sini jika diperlukan -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    {{-- <script src="/js/bootstrap.bundle.min.js"></script> --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+        @yield('title')
+    </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/bootstrap/css/bootstrap.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/animate/animate.css') }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/css-hamburgers/hamburgers.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/animsition/css/animsition.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/revolution/css/layers.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/revolution/css/navigation.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/revolution/css/settings.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/select2/select2.min.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/slick/slick.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/MagnificPopup/magnific-popup.css') }}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/css/util.min.css') }}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/css/main.css') }}">
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+		<nav class="container-header-desktop">
+			<div class="top-bar">
+				<div class="content-topbar container flex-sb-c h-full">
+					<div class="size-w-0 flex-wr-s-c">
+						<div class="t1-s-1 cl-13 m-r-50">
+							<span class="fs-16 m-r-6">
+								<i class="fa fa-home" aria-hidden="true"></i>
+							</span>
+							<span>JATIM</span>
+						</div>
+
+						<div class="t1-s-1 cl-13 m-r-50">
+							<span class="fs-16 m-r-6">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</span>
+							<span>
+								<a href="https://api.whatsapp.com/send?phone=+6282195796488&text=Halo%20Admin%20Saya%20Mau%20Konsultasi%20Jasanya" target="_blank">(+62)82195796488</a>
+							</span>
+						</div>
+
+						<div class="t1-s-1 cl-13 m-r-50">
+							<span class="fs-16 m-r-6">
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+							</span>
+							<span>Senin-Sabtu 09:00 - 17:00 WIB /Minggu TUTUP</span>
+						</div>					
+					</div>
+
+					<div class="text-nowrap">
+						<a href="#" class="fs-16 cl-13 hov-link2 trans-02 m-l-15">
+							<i class="fa fa-facebook-official"></i>	
+						</a>
+
+						<a href="#" class="fs-16 cl-13 hov-link2 trans-02 m-l-15">
+							<i class="fa fa-twitter"></i>	
+						</a>
+
+						<a href="#" class="fs-16 cl-13 hov-link2 trans-02 m-l-15">
+							<i class="fa fa-google-plus"></i>	
+						</a>
+
+						<a href="#" class="fs-16 cl-13 hov-link2 trans-02 m-l-15">
+							<i class="fa fa-instagram"></i>	
+						</a>
+
+						<a href="#" class="fs-16 cl-13 hov-link2 trans-02 m-l-15">
+							<i class="fa fa-linkedin"></i>	
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap-menu-desktop">
+				<div class="limiter-menu-desktop container">					
+					<!-- Logo desktop -->		
+					<div class="logo">
+						<a href="index.html"><img src="{{ asset('theme/cprofile1/images/icons/logo-01.png') }}" alt="LOGO"></a>
+					</div>
+
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu respon-sub-menu">
+							<li>
+								<a href="index.html">Home</a>
+								{{-- <ul class="sub-menu">
+									<li><a href="index.html">Homepage v1</a></li>
+									<li><a href="home-02.html">Homepage v2</a></li>
+									<li><a href="home-03.html">Homepage v3</a></li>
+								</ul> --}}
+							</li>
+
+							<li>
+								<a href="#about.html">About Us</a>
+							</li>
+
+							<li>
+								<a href="services-list.html">Services</a>
+								<ul class="sub-menu">
+									{{-- <li><a href="services-list.html">Services List</a></li> --}}
+									<li>
+										<a href="#">Services Detail</a>
+
+										<ul class="sub-menu">
+											<li><a href="services-detail-01.html">Jasa Entry Data</a></li>
+											<li><a href="services-detail-02.html">Jasa Pembuatan Website</a></li>
+											<li><a href="services-detail-03.html">Jasa Konsul UI/UX</a></li>
+											<li><a href="services-detail-04.html">Jasa Pembuatan Aplikasi Android</a></li>
+											<li><a href="services-detail-05.html">Penyedia Prompt Chatgpt</a></li>
+											
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							{{-- <li>
+								<a href="news-grid.html">News</a>
+								<ul class="sub-menu">
+									<li><a href="news-grid.html">News Grid</a></li>
+									<li><a href="news-list.html">News List</a></li>
+									<li><a href="news-detail.html">News Detail</a></li>
+								</ul>
+							</li>
+
+							<li>
+								<a href="projects-grid.html">Projects</a>
+								<ul class="sub-menu">
+									<li><a href="projects-grid.html">Projects Grid</a></li>
+									<li>
+										<a href="#">Projects Detail</a>
+
+										<ul class="sub-menu">
+											<li><a href="projects-detail-01.html">Projects Detail v1</a></li>
+											<li><a href="projects-detail-02.html">Projects Detail v2</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<a href="shop-grid.html">Shop</a>
+								<ul class="sub-menu">
+									<li><a href="shop-grid.html">Shop Grid</a></li>
+									<li><a href="shop-detail.html">Shop Detail</a></li>
+									<li><a href="shop-cart.html">Shop Cart</a></li>
+								</ul>
+							</li> --}}
+
+							<li>
+								<a href="#contact.html">Contact us</a>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>	
+		</nav>
+
+		<!-- Header Mobile -->
+		<nav class="container-header-mobile">
+			<div class="wrap-header-mobile">
+				<!-- Logo moblie -->		
+				<div class="logo-mobile">
+					<a href="index.html"><img src="{{ asset('theme/cprofile1/images/icons/logo-01.png') }}" alt="LOGO"></a>
+				</div>
+				
+
+				<!-- Button show menu -->
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>			
+			</div>
+
+			<div class="menu-mobile">
+				<ul class="top-bar-m p-l-20 p-tb-8">
+					<li>
+						<div class="t1-s-1 cl-5 p-tb-3">
+							<span class="fs-16 m-r-6">
+								<i class="fa fa-home" aria-hidden="true"></i>
+							</span>
+							<span>379 5Th Ave New York, Nyc 10018</span>
+						</div>
+					</li>
+
+					<li>
+						<div class="t1-s-1 cl-5 p-tb-3">
+							<span class="fs-16 m-r-6">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</span>
+							<span>
+								<a href="https://api.whatsapp.com/send?phone=+6282195796488&text=Halo%20Admin%20Saya%20Mau%20Konsultasi%20Jasanya" target="_blank">(+62)82195796488</a>
+							</span>
+						</div>
+					</li>
+
+					<li>
+						<div class="t1-s-1 cl-5 p-tb-3">
+							<span class="fs-16 m-r-6">
+								<i class="fa fa-clock-o" aria-hidden="true"></i>
+							</span>
+							<span>Mon-Sat 09:00 am - 17:00 pm/Sunday CLOSE</span>
+						</div>
+					</li>
+
+					<li>
+						<div>
+							<a href="#" class="fs-16 cl-5 hov-link2 trans-02 m-r-15">
+								<i class="fa fa-facebook-official"></i>	
+							</a>
+
+							<a href="#" class="fs-16 cl-5 hov-link2 trans-02 m-r-15">
+								<i class="fa fa-twitter"></i>	
+							</a>
+
+							<a href="#" class="fs-16 cl-5 hov-link2 trans-02 m-r-15">
+								<i class="fa fa-google-plus"></i>	
+							</a>
+
+							<a href="#" class="fs-16 cl-5 hov-link2 trans-02 m-r-15">
+								<i class="fa fa-instagram"></i>	
+							</a>
+
+							<a href="#" class="fs-16 cl-5 hov-link2 trans-02 m-r-15">
+								<i class="fa fa-linkedin"></i>	
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+    @yield('main')
+	
+	<!-- Footer -->
+	<footer>
+		<div class="parallax100 kit-overlay1 p-t-35 p-b-10" style="background-image: url(images/bg-03.jpg);">
+			<div class="container">
+				<div class="row justify-content-center justify-content-md-start">
+					<div class="col-sm-8 col-md-4 col-lg-3 p-b-20">
+						<div class="size-h-1 flex-s-e p-b-6 m-b-18">
+							<a href="#">
+								<img class="max-s-full" src="{{ asset('theme/cprofile1/images/icons/logo-02.png') }}" alt="IMG">
+							</a>
+						</div>
+
+						<div>
+							<p class="t1-s-2 cl-13 p-b-17">
+								On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized   the charms of pleasure of.
+							</p>
+
+							<div class="flex-wr-s-c p-t-10">
+								<a href="#" class="flex-c-c size-a-7 borad-50per bg-11 fs-16 cl-0 hov-btn2 trans-02 m-r-10">
+									<i class="fa fa-facebook"></i>	
+								</a>
+
+								<a href="#" class="flex-c-c size-a-7 borad-50per bg-11 fs-16 cl-0 hov-btn2 trans-02 m-r-10">
+									<i class="fa fa-twitter"></i>	
+								</a>
+
+								<a href="#" class="flex-c-c size-a-7 borad-50per bg-11 fs-16 cl-0 hov-btn2 trans-02 m-r-10">
+									<i class="fa fa-google-plus"></i>	
+								</a>
+
+								<a href="#" class="flex-c-c size-a-7 borad-50per bg-11 fs-16 cl-0 hov-btn2 trans-02 m-r-10">
+									<i class="fa fa-instagram"></i>	
+								</a>
+
+								<a href="#" class="flex-c-c size-a-7 borad-50per bg-11 fs-16 cl-0 hov-btn2 trans-02 m-r-10">
+									<i class="fa fa-linkedin"></i>	
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-8 col-md-4 col-lg-3 p-b-20">
+						<div class="size-h-1 flex-s-e m-b-18">
+							<h4 class="t1-m-3 text-uppercase cl-0">
+								Contact us
+							</h4>
+						</div>
+
+						<ul>
+							<li class="flex-wr-s-s t1-s-2 cl-13 p-b-9">
+								<span class="size-w-3">
+									<i class="fa fa-home" aria-hidden="true"></i>
+								</span>
+
+								<span class="size-w-4">
+									JATIM
+								</span>
+							</li>
+
+							<li class="flex-wr-s-s t1-s-2 cl-13 p-b-9">
+								<span class="size-w-3">
+									<i class="fa fa-envelope-o" aria-hidden="true"></i>
+								</span>
+
+								<span class="size-w-4">
+									arijayadigitalprinting@gmail.com
+								</span>
+							</li>
+
+							<li class="flex-wr-s-s t1-s-2 cl-13 p-b-9">
+								<span class="size-w-3">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</span>
+
+								<span class="size-w-4">
+									<a href="api.whatsapp.com/send?phone=6282195796488&text=Halo%20Admin%20Saya%20Mau%20Order%20">(+62) 821 9579 6488</a>
+									<br>
+									<a href="api.whatsapp.com/send?phone=6282195796488&text=Halo%20Admin%20Saya%20Mau%20Order%20">(+62) 821 9579 6488</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-sm-8 col-md-4 col-lg-3 p-b-20">
+						<div class="size-h-1 flex-s-e m-b-18">
+							<h4 class="t1-m-3 text-uppercase cl-0">
+								Company
+							</h4>
+						</div>
+
+						<div class="flex-wr-s-s">
+							<ul class="w-50">
+								<li class="kit-list1 p-b-9">
+									<a href="/" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Home
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="projects-grid.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Projects
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="services-list.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Services
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="about.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+										About us
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="contact.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Contact
+									</a>
+								</li>
+							</ul>
+
+							<ul class="w-50">
+								<li class="kit-list1 p-b-9">
+									<a href="#" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Blogs
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="#" class="t1-s-2 cl-13 hov-link2 trans-02">
+										404 Page
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="shop-grid.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Shop
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="#" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Elements
+									</a>
+								</li>
+
+								<li class="kit-list1 p-b-9">
+									<a href="typography.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+										Typography
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-sm-8 col-md-6 col-lg-3 p-b-20">
+						<div class="size-h-1 flex-s-e m-b-18">
+							<h4 class="t1-m-3 text-uppercase cl-0">
+								Gallery
+							</h4>
+						</div>
+
+						<div class="flex-wr-s-s p-t-6 gallery-mp">
+							<a href="images/gallery-01.jpg') }}" class="d-block size-a-8 bg-img1 hov-overlay1 m-r-10 m-b-20 js-show-gallery" style="background-image: url(images/gallery-01.jpg);"></a>
+							<a href="images/gallery-02.jpg') }}" class="d-block size-a-8 bg-img1 hov-overlay1 m-r-10 m-b-20 js-show-gallery" style="background-image: url(images/gallery-02.jpg);"></a>
+							<a href="images/gallery-03.jpg') }}" class="d-block size-a-8 bg-img1 hov-overlay1 m-r-10 m-b-20 js-show-gallery" style="background-image: url(images/gallery-03.jpg);"></a>
+							<a href="images/gallery-04.jpg') }}" class="d-block size-a-8 bg-img1 hov-overlay1 m-r-10 m-b-20 js-show-gallery" style="background-image: url(images/gallery-04.jpg);"></a>
+							<a href="images/gallery-05.jpg') }}" class="d-block size-a-8 bg-img1 hov-overlay1 m-r-10 m-b-20 js-show-gallery" style="background-image: url(images/gallery-05.jpg);"></a>
+							<a href="images/gallery-06.jpg') }}" class="d-block size-a-8 bg-img1 hov-overlay1 m-r-10 m-b-20 js-show-gallery" style="background-image: url(images/gallery-06.jpg);"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-10">
+			<div class="container txt-center p-tb-15">
+				<span class="t1-s-2 cl-14">
+					Copyright @ 2018 Designed by pencilblue. All rights reserved. 
+				</span>
+			</div>
+		</div>
+	</footer>
+
+<!--===============================================================================================-->	
+	<script src="{{ asset('theme/cprofile1/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/animsition/js/animsition.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/bootstrap/js/popper.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/vendor/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/js/revo-custom.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/select2/select2.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/parallax100/parallax100.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/waypoint/jquery.waypoints.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/countterup/jquery.counterup.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/slick/slick.min.js') }}"></script>
+	<script src="{{ asset('theme/cprofile1/js/slick-custom.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/vendor/MagnificPopup/jquery.magnific-popup.min.js') }}"></script>
+<!--===============================================================================================-->
+	<script src="{{ asset('theme/cprofile1/js/main.js') }}"></script>
+
 </body>
 </html>

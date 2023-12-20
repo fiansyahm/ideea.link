@@ -25,7 +25,7 @@ use App\Http\Controllers\CodeController;
 use App\Http\Controllers\MidtransController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\VideoController;
-use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\PendingpaymentController;
 
 
@@ -37,6 +37,8 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::get('/service/{service}', [ServiceController::class, 'index']);
 
 Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
 
