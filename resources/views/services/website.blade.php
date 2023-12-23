@@ -38,7 +38,7 @@
         <p class="">
             Kami disini dapat membantu kakak untuk membuat website untuk membantu bisnis kakak semakin berkembang. <b>Pembayaran setelah web jadi</b>. Hanya dengan Rp99.000, anda dapat memiliki website anda sendiri.<br>
             <br>
-            Berminat?Hubungi Kontak dibawah ini. https://Izintermurah.com, Membantu keperluan websitemu dengan cepat dan mudah.
+            Berminat?Hubungi Kontak dibawah ini. https://ideea.link, Membantu keperluan websitemu dengan cepat dan mudah.
         </p>
     </div>
     <!-- end Biaya Mengurus? -->

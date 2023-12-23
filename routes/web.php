@@ -31,7 +31,7 @@ use App\Http\Controllers\PendingpaymentController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/home', function () {

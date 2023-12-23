@@ -35,7 +35,7 @@
 
 					    data-basealign="slide" 
     					data-responsive_offset="off"
-					    >Welcome to the Arges</h2>
+					    >Welcome to the Ideea.link</h2>
 
 					    <p class="tp-caption tp-resizeme caption-2" 
 						data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"x:right;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -63,7 +63,7 @@
 					    data-basealign="slide" 
     					data-responsive_offset="off"
 					    >
-					    	We stand behind your success
+					    	Make Your Idea To Be True
 					    </p>
 
 					    <div class="tp-caption tp-resizeme caption-3 flex-wr-c-c d-flex"
@@ -123,7 +123,7 @@
 
 					    data-basealign="slide" 
     					data-responsive_offset="off"
-					    >Welcome to the Arges</h2>
+					    >Welcome to the Ideea.link</h2>
 
 					    <p class="tp-caption tp-resizeme caption-2" 
 						data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -151,7 +151,7 @@
 					    data-basealign="slide" 
     					data-responsive_offset="off"
 					    >
-					    	We stand behind your success
+					    	Make Your Idea To Be True
 					    </p>
 
 					    <div class="tp-caption tp-resizeme caption-3 flex-wr-c-c d-flex"
@@ -211,7 +211,7 @@
 
 					    data-basealign="slide" 
     					data-responsive_offset="off"
-					    >Welcome to the Arges</h2>
+					    >Welcome to the Ideea.link</h2>
 
 					    <p class="tp-caption tp-resizeme caption-2" 
 						data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"x:500px;skX:-85px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -239,7 +239,7 @@
 					    data-basealign="slide" 
     					data-responsive_offset="off"
 					    >
-					    	We stand behind your success
+					    	Make Your Idea To Be True
 					    </p>
 
 					    <div class="tp-caption tp-resizeme caption-3 flex-wr-c-c d-flex"

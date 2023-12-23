@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+	<link rel="icon" type="image/png" href="https://i.ibb.co/7nkM7v0/logo-ideea-link.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/bootstrap/css/bootstrap.min.css') }}">
 <!--===============================================================================================-->
@@ -96,14 +96,14 @@
 				<div class="limiter-menu-desktop container">					
 					<!-- Logo desktop -->		
 					<div class="logo">
-						<a href="index.html"><img src="{{ asset('theme/cprofile1/images/icons/logo-01.png') }}" alt="LOGO"></a>
+						<a href="index.html"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
 					</div>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu respon-sub-menu">
 							<li>
-								<a href="index.html">Home</a>
+								<a href="/">Home</a>
 								{{-- <ul class="sub-menu">
 									<li><a href="index.html">Homepage v1</a></li>
 									<li><a href="home-02.html">Homepage v2</a></li>
@@ -124,7 +124,7 @@
 
 										<ul class="sub-menu">
 											<li><a href="services-detail-01.html">Jasa Entry Data</a></li>
-											<li><a href="services-detail-02.html">Jasa Pembuatan Website</a></li>
+											<li><a href="/service/website">Jasa Pembuatan Website</a></li>
 											<li><a href="services-detail-03.html">Jasa Konsul UI/UX</a></li>
 											<li><a href="services-detail-04.html">Jasa Pembuatan Aplikasi Android</a></li>
 											<li><a href="services-detail-05.html">Penyedia Prompt Chatgpt</a></li>
@@ -181,7 +181,7 @@
 			<div class="wrap-header-mobile">
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="{{ asset('theme/cprofile1/images/icons/logo-01.png') }}" alt="LOGO"></a>
+					<a href="index.html"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
 				</div>
 				
 
@@ -262,13 +262,13 @@
 					<div class="col-sm-8 col-md-4 col-lg-3 p-b-20">
 						<div class="size-h-1 flex-s-e p-b-6 m-b-18">
 							<a href="#">
-								<img class="max-s-full" src="{{ asset('theme/cprofile1/images/icons/logo-02.png') }}" alt="IMG">
+								<img class="max-s-full" src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" alt="LOGO">
 							</a>
 						</div>
 
 						<div>
 							<p class="t1-s-2 cl-13 p-b-17">
-								On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized   the charms of pleasure of.
+								Kami Menyediakan Berbagai Jasa Dengan Kualitas & Hasil Terbaik.
 							</p>
 
 							<div class="flex-wr-s-c p-t-10">
@@ -434,7 +434,7 @@
 		<div class="bg-10">
 			<div class="container txt-center p-tb-15">
 				<span class="t1-s-2 cl-14">
-					Copyright @ 2018 Designed by pencilblue. All rights reserved. 
+					Copyright @ 2023 ideea.link . All rights reserved. 
 				</span>
 			</div>
 		</div>
