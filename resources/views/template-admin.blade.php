@@ -123,7 +123,7 @@
 										<a href="#">Services Detail</a>
 
 										<ul class="sub-menu">
-											<li><a href="services-detail-01.html">Jasa Entry Data</a></li>
+											<li><a href="/service/entry">Jasa Entry Data</a></li>
 											<li><a href="/service/website">Jasa Pembuatan Website</a></li>
 											<li><a href="services-detail-03.html">Jasa Konsul UI/UX</a></li>
 											<li><a href="services-detail-04.html">Jasa Pembuatan Aplikasi Android</a></li>
