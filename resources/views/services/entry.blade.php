@@ -150,7 +150,7 @@
         </div>
 
         <hr class="dotted">
-
+        {{-- Berpengalaman dan Profesional --}}
         <div class="container">
             <h1 class="text-center">Berpengalaman dan Profesional</h1>
             <p class="text-center light-gray-color">Jagoketik.com telah dipercaya oleh ratusan klien baik invidu,
