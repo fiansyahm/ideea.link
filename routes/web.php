@@ -17,7 +17,7 @@ use App\Http\Controllers\WeddingController;
 use App\Http\Controllers\KhitanController;
 use App\Http\Controllers\AqiqahController;
 use App\Http\Controllers\RequestController;
-use App\Http\Controllers\PolaroidController;
+use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\CekresiController;
 use App\Http\Controllers\ConfirmationController;
 use App\Http\Controllers\SessionController;
@@ -41,6 +41,15 @@ Route::get('/home', function () {
 Route::get('/service/{service}', [ServiceController::class, 'index']);
 
 Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
+
+Route::get('/register-resume', [ResumeController::class, 'registerResume']);
+Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
+// Route::get('/pending-invitation-wedding/{wedding}/{guest}', [WeddingController::class, 'pendinginvitationWedding']);
+// Route::get('/list-guest-wedding/{wedding}', [WeddingController::class, 'listGuestWedding']);
+// Route::post('/confirmation-wedding', [WeddingController::class, 'confirmationWedding']);
+
+
+// Route::get('/register-wedding', [PortofolController::class, 'registerPortofol']);
 
 // Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
 // Route::post('/session/login', [SessionController::class, 'login']);
