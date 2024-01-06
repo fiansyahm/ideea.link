@@ -125,8 +125,8 @@
 										<ul class="sub-menu">
 											<li><a href="/service/entry">Jasa Entry Data</a></li>
 											<li><a href="/service/website">Jasa Pembuatan Website</a></li>
-											<li><a href="services-detail-03.html">Jasa Konsul UI/UX</a></li>
-											<li><a href="services-detail-04.html">Jasa Pembuatan Aplikasi Android</a></li>
+											<li><a href="/service/ui">Jasa Konsul UI/UX</a></li>
+											<li><a href="/service/android">Jasa Pembuatan Aplikasi Android</a></li>
 											<li><a href="services-detail-05.html">Penyedia Prompt Chatgpt</a></li>
 											
 										</ul>
