@@ -8,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Page Title</title>
+        <title>Entry Data</title>
         <style>
             /* Add margin to the table of contents div */
             #table-of-contents {
