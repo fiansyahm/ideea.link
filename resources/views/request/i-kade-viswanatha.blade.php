@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{$resume->name}} Resume</title>
+    <title>{{$data->name}} Resume</title>
 
 
     <!-- Fonts -->
@@ -56,7 +56,7 @@
           <span class="icon-bar third_icon"></span>
         </button>
         <div class="header_image">
-          <a href="index.html"><img src="{{$resume->photo}}" alt="Logo" class="img-responsive"></a>
+          <a href="index.html"><img src="{{$data->photo}}" alt="Logo" class="img-responsive"></a>
         </div>
 
         <ul class="left_menu nav">
@@ -93,7 +93,7 @@
               </div>
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a class="page-scroll" href="#portfolio">
               <div class="menu_item">
                 <div class="menu_icon flaticon-suitcase"></div>
@@ -158,7 +158,7 @@
                 </div>
               </div>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </div>
     </div><!-- left side content -->
@@ -169,23 +169,31 @@
         <div class="body_container">
           <div class="banner_content">
             <h4>Hi There! I am</h4>
-            <h2>{{$resume->fullname}}</h2>
-            <p style="color: white">{{$resume->job}}</p>
+            <h2>{{$data->name}}</h2>
+            <p style="color: white">{{$data->job}}</p>
             <ul class="banner_social">
-              @if($resume->linkedin != null)
-              <li><a href="{{$resume->linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              @if($data->linkedin != null)
+              <li><a href="{{$data->linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
               @endif
-              @if($resume->instagram != null)
-              <li><a href="{{$resume->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              @if($data->instagram != null)
+              <li><a href="{{$data->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
               @endif
-              @if($resume->facebook != null)
-              <li><a href="{{$resume->facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              @if($data->facebook != null)
+              <li><a href="{{$data->facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
               @endif
-              @if($resume->twitter != null)
-              <li><a href="{{$resume->twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              @if($data->twitter != null)
+              <li><a href="{{$data->twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
               @endif
-              @if($resume->github != null)
-              <li><a href="{{$resume->github}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              @if($data->github != null)
+              <li><a href="{{$data->github}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              @endif
+              {{-- email --}}
+              @if($data->email != null)
+              <li><a href="mailto:{{$data->email}}"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+              @endif
+              {{-- phone --}}
+              @if($data->phone != null)
+              <li><a href="tel:{{$data->phone}}"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
               @endif
               {{-- <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
               <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> --}}
@@ -204,31 +212,31 @@
             <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="section_header">
                 <h2>About Me</h2>
-                <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+                {{-- <p><em>You can know who i am and what is my Hobbies. I hope it will
+  help you for our Friendshiop. </em></p> --}}
               </div><!-- section header -->
               <div class="about_details">
-                <p>{{$resume->aboutme}}</p>
+                <p>{{$data->aboutme}}</p>
                 {{-- <p>Progressively myocardinate state of the art ROI. Monotonectally disseminate unique methods of empowerment.</p> --}}
                 <ul>
-                  <li><p>Name<span>:</span></p> <span>{{$resume->name}}</span></li>
-                  @if($resume->phone != null)
-                  <li><p>Phone<span>:</span></p> <span>{{$resume->phone}}</span></li>
+                  <li><p>Name<span>:</span></p> <span>{{$data->fullname}}</span></li>
+                  @if($data->phone != null)
+                  {{-- <li><p>Phone<span>:</span></p> <span>{{$data->phone}}</span></li> --}}
                   @endif
-                  @if($resume->email != null)
-                  <li><p>E-mail<span>:</span></p> <span> {{$resume->email}}</span></li>
+                  @if($data->email != null)
+                  {{-- <li><p>E-mail<span>:</span></p> <span> {{$data->email}}</span></li> --}}
                   @endif
-                  @if($resume->address != null)
-                  <li><p>Address<span>:</span></p> <span>{{$resume->address}}</span></li>
+                  @if($data->address != null)
+                  {{-- <li><p>Address<span>:</span></p> <span>{{$data->address}}</span></li> --}}
                   @endif
-                  @if($resume->birth != null)
-                  <li><p>Date of Birth<span>:</span></p> <span>{{$resume->birth}}</span></li>
+                  @if($data->birth != null)
+                  {{-- <li><p>Date of Birth<span>:</span></p> <span>{{$data->birth}}</span></li> --}}
                   @endif
-                  @if($resume->website != null)
-                  <li><p>Website<span>:</span></p> <span>{{$resume->website}}</span></li>
+                  @if($data->website != null)
+                  {{-- <li><p>Website<span>:</span></p> <span>{{$data->website}}</span></li> --}}
                   @endif
-                  @if($resume->freelance != null)
-                  <li><p>Freelance<span>:</span></p> <span>{{$resume->freelance}}</span></li>
+                  @if($data->freelance != null)
+                  {{-- <li><p>Freelance<span>:</span></p> <span>{{$data->freelance}}</span></li> --}}
                   @endif
                 </ul>
               </div><!-- about details -->
@@ -238,7 +246,7 @@
                 <h3>What can i Do</h3>
                 <?php
                   // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                  $canido = json_decode($resume->canido, true);
+                  $canido = json_decode($data->canido, true);
                 ?>
                 <ul>
                   @foreach ($canido['data'] as $item)
@@ -255,7 +263,7 @@
                 <div class="skills_progress">
                   <?php
                     // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                    $skill = json_decode($resume->skill, true);
+                    $skill = json_decode($data->skill, true);
                   ?>
                   @foreach ($skill['data'] as $item)
                   <div class="progress_item">
@@ -283,8 +291,8 @@
         <div class="body_container">
           <div class="section_header">
             <h2>Resume</h2>
-            <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+            {{-- <p><em>You can know who i am and what is my Hobbies. I hope it will
+  help you for our Friendshiop. </em></p> --}}
           </div><!-- section header -->
 
           <div class="resume_items">
@@ -292,10 +300,13 @@
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <h3>Educational Experience</h3>
                 <div class="experiences left">
-                  <?php
-                      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                      $educational = json_decode($resume->educational, true);
-                  ?>
+
+                  
+
+                <?php
+                    // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                    $educational = json_decode($data->educational, true);
+                ?>
                   @foreach ($educational['data'] as $item)
                   <div class="experience">
                     <h4>{{ $item['degree'] }}</h4>
@@ -306,23 +317,50 @@
 
                 </div><!-- experience -->
               </div>
-              <div class="col-md-6 col-sm-12 col-xs-12">
+			  <div class="col-md-6 col-sm-12 col-xs-12">
                 <h3>Working Experience</h3>
-                <div class="experiences right">
-
-                  <?php
-                      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                      $working = json_decode($resume->working, true);
-                  ?>
-
-                  @foreach ($working['data'] as $item)
-                  <div class="experience">
-                    <h4>{{ $item['position'] }}</h4>
-                    <p>{{ $item['company'] }} / <span>{{ $item['year'] }}</span></p>
-                    <p class="ex_details">{{ $item['description'] }}.</p>
+                <div class="experiences right">                 
+                 <div class="experience">
+                    <h4>PETER AND THE WOLF</h4>
+					<img src="https://www.peterandthewolf.net/wp-content/uploads/2023/10/peter-and-the-wolf-book-poster.jpg" alt="working experience" class="img-responsive my-5">
+                    <p>RUSSIA / <span>2018 - 2022</span></p>
+                    <p class="ex_details">.</p>
                   </div><!-- experience -->
-                  @endforeach
-
+                  <div class="experience">
+                    <h4>KID E CATS THE MOVIE</h4>
+					<img src="https://shahid.mbc.net/mediaObject/2023/Hanin/Jun/Thump_Clean_Kid-E-Cats/original/Thump_Clean_Kid-E-Cats.jpg?height=360&width=480&croppingPoint=tc&version=1&type=webp" alt="working experience" class="img-responsive my-5">
+                    <p>RUSSIA / <span>2021 - 2022</span></p>
+                    <p class="ex_details">.</p>
+                  </div><!-- experience -->
+                  <div class="experience">
+                    <h4>IMAGO</h4>
+					<img src="https://m.media-amazon.com/images/M/MV5BMDdlMzRkZjItZWQ0ZC00MDY4LWJmOGMtOTU3Yzk2MjI1YTVmXkEyXkFqcGdeQXVyMTU5NTI5OTMy._V1_.jpg" alt="working experience" class="img-responsive my-5">
+                    <p>FRENCH / <span>2021</span></p>
+                    <p class="ex_details">.</p>
+                  </div><!-- experience -->
+                  <div class="experience">
+                    <h4>PUFFY WORLD</h4>
+                    <p> / <span>2023</span></p>
+                    <p class="ex_details">.</p>
+                  </div><!-- experience -->
+                  <div class="experience">
+                    <h4>NUZO AND NAMIA</h4>
+					<img src="https://www.sisiafrika.com/wp-content/uploads/2023/07/Nuzo-and-Namia-Banner-670-x-390-01-1-2.png" alt="working experience" class="img-responsive my-5">
+                    <p>AFRICA / <span>2023</span></p>
+                    <p class="ex_details">.</p>
+                  </div><!-- experience -->
+                  <div class="experience">
+                    <h4>TWEENDE</h4>
+                    <p> / <span>2023</span></p>
+                    <p class="ex_details">.</p>
+                  </div><!-- experience -->
+                  <div class="experience">
+                    <h4>HIT-MONKEY</h4>
+					<img src="https://asset.kompas.com/crops/bzrGv-ImNmnnOq6jatf09ayHsXA=/119x0:1127x672/750x500/data/photo/2022/01/20/61e8d9796136f.jpg" alt="working experience" class="img-responsive my-5">
+                    <p> / <span>2023</span></p>
+                    <p class="ex_details">.</p>
+                  </div><!-- experience -->
+                  
                 </div><!-- experience -->
               </div>
             </div><!--   -->
@@ -334,7 +372,7 @@
 
 
       <!-- Portfolio section start here -->
-      <section id="portfolio" class="portfolio portfolio_two padding_140">
+      {{-- <section id="portfolio" class="portfolio portfolio_two padding_140">
         <div class="body_container">
           <div class="section_header">
             <h2>Portfolio</h2>
@@ -424,13 +462,13 @@
           </div><!-- portfolio items -->
           
         </div><!-- container -->
-      </section>
+      </section> --}}
       <!-- Portfolio section end here -->
 
 
 
       <!-- Services section start here -->
-      <section id="services" class="services padding_140 bg_border">
+      {{-- <section id="services" class="services padding_140 bg_border">
         <div class="body_container">
           <div class="section_header">
             <h2>Services</h2>
@@ -547,13 +585,13 @@
           </div><!--   -->
 
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Blog section end here -->
 
 
 
       <!-- Pricing section start here -->
-      <section id="pricing" class="pricing pricing_two padding_140 bg_border">
+      {{-- <section id="pricing" class="pricing pricing_two padding_140 bg_border">
         <div class="body_container">
           <div class="section_header">
             <h2>Pricing Table</h2>
@@ -625,13 +663,13 @@
           </div><!-- pricing item -->
 
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Pricing section end here -->
 
 
 
       <!-- Client section start here -->
-      <section id="client" class="client padding_140">
+      {{-- <section id="client" class="client padding_140">
         <div class="body_container">
           <div class="section_header">
             <h2>My Clents</h2>
@@ -650,12 +688,12 @@
             <div><img src="{{ asset('theme/gentleman/assets/images/client_04.jpg')}}" alt="client image" class="img-responsive"></div>
           </div>
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Client section end here -->
 
 
       <!-- Contact section start here -->
-      <section id="contact" class="contact padding_140 bg_border">
+      {{-- <section id="contact" class="contact padding_140 bg_border">
         <div class="body_container">
           <div class="section_header">
             <h2>Get in Touch</h2>
@@ -700,14 +738,14 @@
 
           </div><!-- contact me -->
         </div>
-      </section>
+      </section> --}}
       <!-- Contact section end here -->
 
 
 
       <!-- Footer section start here -->
       <footer>
-        <p>&#169; copyright <a href="#">Gantleman</a> 2016. All Right Reserved by <a href="#">Labartisan.</a></p>
+        <p>&#169; copyright <a href="#">Gantleman</a> 2023. All Right Reserved by <a href="#">ideea.link.</a></p>
       </footer>
       <!-- Footer section end here -->
 
