@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{$resume->name}} Resume</title>
+    <title>{{$resume->fullname}} Resume</title>
 
 
     <!-- Fonts -->
@@ -67,12 +67,12 @@
               <li><a class="page-scroll" href="#header">Home</a></li>
               <li><a class="page-scroll" href="#about">About Me</a></li>
               <li><a class="page-scroll" href="#resume">Resume</a></li>
-              <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>              
+              {{-- <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>              
               <li><a class="page-scroll" href="#services">Services</a></li>
               <li><a class="page-scroll" href="#blog">Blog</a></li>
               <li><a class="page-scroll" href="#pricing">Pricing</a></li>
               <li><a class="page-scroll" href="#client">Clients</a></li>
-              <li><a class="page-scroll" href="#contact">Contact</a></li>
+              <li><a class="page-scroll" href="#contact">Contact</a></li> --}}
             </ul>
 
           </div><!-- /.navbar-collapse -->
@@ -132,7 +132,7 @@ help you for our Friendshiop. </em></p>
               <p>{{$resume->aboutme}}.</p>
               {{-- <p>Progressively myocardinate state of the art ROI. Monotonectally disseminate unique methods of empowerment.</p> --}}
               <ul>
-                <li><p>Name<span>:</span></p> <span>{{$resume->name}}</span></li>
+                <li><p>Name<span>:</span></p> <span>{{$resume->fullname}}</span></li>
                 @if($resume->phone != null)
                 <li><p>Phone<span>:</span></p> <span>{{$resume->phone}}</span></li>
                 @endif
@@ -255,7 +255,7 @@ help you for our Friendshiop. </em></p>
 
 
     <!-- Portfolio section start here -->
-    <section id="portfolio" class="portfolio padding_140">
+    {{-- <section id="portfolio" class="portfolio padding_140">
       <div class="container">
         <div class="section_header">
           <h2>Portfolio</h2>
@@ -345,18 +345,18 @@ help you for our Friendshiop. </em></p>
         </div><!-- portfolio items -->
         
       </div><!-- container -->
-    </section>
+    </section> --}}
     <!-- Portfolio section end here -->
 
 
 
     <!-- Services section start here -->
-    <section id="services" class="services padding_140 bg_border">
+    {{-- <section id="services" class="services padding_140 bg_border">
       <div class="container">
         <div class="section_header">
           <h2>Services</h2>
           <p><em>You can know who i am and what is my Hobbies. I hope it will
-help you for our Friendshiop. </em></p>
+            help you for our Friendshiop. </em></p>
         </div><!-- section header -->
 
         <div class="row">
@@ -417,18 +417,18 @@ help you for our Friendshiop. </em></p>
 
         </div><!-- row -->
       </div><!-- container -->
-    </section>
+    </section> --}}
     <!-- Services section end here -->
 
 
 
     <!-- Blog section start here -->
-    <section id="blog" class="blog padding_140">
+    {{-- <section id="blog" class="blog padding_140">
       <div class="container">
         <div class="section_header">
           <h2>Recent Blog</h2>
           <p><em>You can know who i am and what is my Hobbies. I hope it will
-help you for our Friendshiop. </em></p>
+            help you for our Friendshiop. </em></p>
         </div><!-- section header -->
 
         <div class="row">
@@ -466,18 +466,18 @@ help you for our Friendshiop. </em></p>
           </div>
         </div><!-- row -->
       </div><!-- container -->
-    </section>
+    </section> --}}
     <!-- Blog section end here -->
 
 
 
     <!-- Pricing section start here -->
-    <section id="pricing" class="pricing padding_140 bg_border">
+    {{-- <section id="pricing" class="pricing padding_140 bg_border">
       <div class="container">
         <div class="section_header">
           <h2>Pricing Table</h2>
           <p><em>You can know who i am and what is my Hobbies. I hope it will
-help you for our Friendshiop. </em></p>
+            help you for our Friendshiop. </em></p>
         </div><!-- section header -->
 
         <div class="pricing_item">
@@ -544,18 +544,18 @@ help you for our Friendshiop. </em></p>
         </div><!-- pricing item -->
 
       </div><!-- container -->
-    </section>
+    </section> --}}
     <!-- Pricing section end here -->
 
 
 
     <!-- Client section start here -->
-    <section id="client" class="client padding_140">
+    {{-- <section id="client" class="client padding_140">
       <div class="container">
         <div class="section_header">
           <h2>My Clents</h2>
           <p><em>You can know who i am and what is my Hobbies. I hope it will
-help you for our Friendshiop. </em></p>
+              help you for our Friendshiop. </em></p>
         </div><!-- section header -->
 
         <div class="client_items">
@@ -569,17 +569,17 @@ help you for our Friendshiop. </em></p>
           <div><img src="assets/images/client_04.jpg" alt="client image" class="img-responsive"></div>
         </div>
       </div><!-- container -->
-    </section>
+    </section> --}}
     <!-- Client section end here -->
 
 
     <!-- Contact section start here -->
-    <section id="contact" class="contact padding_140 bg_border">
+    {{-- <section id="contact" class="contact padding_140 bg_border">
       <div class="container">
         <div class="section_header">
           <h2>Get in Touch</h2>
           <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+              help you for our Friendshiop. </em></p>
         </div><!-- section header -->
           
         <div class="contact_me">
@@ -619,7 +619,7 @@ help you for our Friendshiop. </em></p>
 
         </div><!-- contact me -->
       </div>
-    </section>
+    </section> --}}
     <!-- Contact section end here -->
 
 

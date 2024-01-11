@@ -24,10 +24,41 @@ class ResumeController extends Controller
         $canido = '{
             "data": [
               {
-                "name": "2D ANIMATION",
+                "name": "Jiwa Kepemimpinan",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Komunikasi Baik",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Bertanggung Jawab",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Kerjasama Tim",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Disiplin",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Bernegosiasi",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Microsoft Word",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Microsoft Excel",
+                "icon": "icon flaticon-layers-icon"
+              },
+              {
+                "name": "Microsoft Power Point",
                 "icon": "icon flaticon-layers-icon"
               }
-              
             ]
           }';
               // ,
@@ -42,52 +73,22 @@ class ResumeController extends Controller
 
               $skill = '{
                 "data": [
-                    {
-                        "name": "3 years of experience as an animator 2D",
-                        "percentage": "100"
-                    },
-                    {
-                        "name": "Experience in rigged animation using Toon Boom Harmony",
-                        "percentage": "100"
-                    },
-                    {
-                        "name": "Ability to work in a fast-paced and highly creative series environment",
-                        "percentage": "100"
-                    },
-                    {
-                        "name": "Strong understanding of 2D animation principles and perspective",
-                        "percentage": "80"
-                    },
-                    {
-                        "name": "Experience in animation strong, expressive poses and facial expressions",
-                        "percentage": "90"
-                    },
-                    {
-                        "name": "High attention and care for detail",
-                        "percentage": "95"
-                    },
-                    {
-                        "name": "Ability to adapt to different styles",
-                        "percentage": "85"
-                    },
-                    {
-                        "name": "Excellent time management skills and ability to prioritize work",
-                        "percentage": "90"
-                    },
-                    {
-                        "name": "Ability to work within given quotas and timeframes using the provided briefings and feedback",
-                        "percentage": "90"
-                    }
+                    
                 ]
             }';
+
+            // {
+            //   "name": "Ability to work within given quotas and timeframes using the provided briefings and feedback",
+            //   "percentage": "90"
+            // }
             
 
           $educational = '{
             "data": [
               {
-                "degree": "BACHELOR OF THEATRE PERFORMING ARTS",
-                "university": "Indonesian Institute of The Arts",
-                "year": "Year of Graduation: 2020",
+                "degree": "BACHELOR OF MANAGEMENT",
+                "university": "Universitas Malikussaleh, Lhokseumawe, Ace",
+                "year": "Year of Graduation: 2023",
                 "description": ""
               }
             ]
@@ -104,56 +105,38 @@ class ResumeController extends Controller
             "data": [
       
                 {
-                    "position": "PETER AND THE WOLF",
-                    "company": "RUSSIA",
-                    "year": "2018 - 2022",
-                    "description": ""
-                },
-
-                {
-                  "position": "KID E CATS THE MOVIE",
-                  "company": "RUSSIA",
-                  "year": "2021 - 2022",
-                  "description": ""
-                },           
+                    "position": "Sekretaris",
+                    "company": "Pokdakan Kampung Digita",
+                    "year": "Desember 2016 - Desember 2020",
+                    "description": "Pokdakan kampung digital adalah oraganisasi swasembada dengan bergerak di bidang Perternakan Ikan,Wirausaha, Workshop dan Pelatihan. Berkedudukan hukum SK kementarian hukum dan HAM."
+                },          
                 
                 {
-                  "position": "IMAGO",
-                  "company": "FRENCH",
-                  "year": "2021",
-                  "description": ""
-                },
-
-                {
-                  "position": "PUFFY WORLD",
-                  "company": "-",
-                  "year": "2023",
-                  "description": ""
-                },
-
-                {
-                  "position": "NUZO AND NAMIA",
-                  "company": "AFRICA",
-                  "year": "2023",
-                  "description": ""
-                },
-
-                {
-                  "position": "TWEENDE",
-                  "company": "-",
-                  "year": "2023",
-                  "description": ""
-                },
-
-                {
-                  "position": "HIT-MONKEY",
-                  "company": "-",
-                  "year": "2023",
-                  "description": ""
+                  "position": "Founder",
+                  "company": "Ikatan Mahasiswa Binjai (Lhokseumawe",
+                  "year": "November 2016 - November 2019",
+                  "description": "Saya kuliah di Universitas Malikussaleh Lhokseumawe, Aceh, dan saya asal dari kota Binjai Sumatera Utara, banyak mahasiswa asal daerah Kota Binjai berkuliah di Lhokseumawe, jadi saya mendirikan organisasi ikatan mahasiswa Binjai Lhokseumawe - Aceh Utara dengan azas kekeluargaan untuk mempersatukan mahasiswa yang ada di lhokseumawe agar menjadi akrab dan solid"
                 }
 
             ]
           }';
+
+          // {
+          //   "position": "Anggota",
+          //   "company": "Pemuda Pelopor Kota Binjai 2018",
+          //   "year": "Juni 2018 - Juni 2019",
+          //   "description": "Menjadi pelopor anak muda untuk menjadi kreatif dan berjiwa Leadership yang di buat pemerintah dari dinas 
+          //   pemuda dan olaraga untuk mengetahui potensi pemuda di kota Binjai, saya terpilih dari 10 orang kandidat dari 
+          //   bidang Ketahanan pangan nasional karena saya menaungin organisasi di bidang ketahanan pangan."
+          // }, 
+
+          // {
+          //   "position": "Anggota",
+          //   "company": "Himpunan Mahasiswa Manajemen",
+          //   "year": "September 2017 - September 2018",
+          //   "description": "Himpunan Mahasiswa manajemen adalah organisasi yang terbentuk khususnya mahasiswa. Saya membidangi 
+          //   divisi olaraga dan pemuda. karena latar belakang saya sebagai pelopor untuk anak muda"
+          // },
 
           // {
           //   "position": "UI/UX",
@@ -166,11 +149,11 @@ class ResumeController extends Controller
                          ->orWhere('nickname', $id)
                          ->first();
 
-        // $resume->canido = $canido;
-        // $resume->skill = $skill;
-        // $resume->educational = $educational;
-        // $resume->working = $working;
-        // $resume->save();
+        $resume->canido = $canido;
+        $resume->skill = $skill;
+        $resume->educational = $educational;
+        $resume->working = $working;
+        $resume->save();
  
          if ($resume) {
              $view = 'resume.theme.theme-' . $resume->theme;

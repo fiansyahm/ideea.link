@@ -322,7 +322,7 @@
                 <div class="experiences right">                 
                  <div class="experience">
                     <h4>PETER AND THE WOLF</h4>
-					<img src="https://www.peterandthewolf.net/wp-content/uploads/2023/10/peter-and-the-wolf-book-poster.jpg" alt="working experience" class="img-responsive my-5">
+					<img src="https://i.ibb.co/jv7LJfn/Whats-App-Image-2024-01-09-at-17-07-26.jpg" alt="working experience" class="img-responsive my-5">
                     <p>RUSSIA / <span>2018 - 2022</span></p>
                     <p class="ex_details">.</p>
                   </div><!-- experience -->

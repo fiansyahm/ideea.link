@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{$resume->name}} Resume</title>
+    <title>{{$resume->fullname}} Resume</title>
 
 
     <!-- Fonts -->
@@ -93,7 +93,8 @@
               </div>
             </a>
           </li>
-          <li>
+
+          {{-- <li>
             <a class="page-scroll" href="#portfolio">
               <div class="menu_item">
                 <div class="menu_icon flaticon-suitcase"></div>
@@ -158,7 +159,8 @@
                 </div>
               </div>
             </a>
-          </li>
+          </li> --}}
+
         </ul>
       </div>
     </div><!-- left side content -->
@@ -187,6 +189,10 @@
               @if($resume->github != null)
               <li><a href="{{$resume->github}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
               @endif
+              @if($resume->resume != null)
+              <li><a href="{{$resume->resume}}"><i class="fa fa-file" aria-hidden="true"></i></a></li>
+              <span style="color: white">Resume</span>
+              @endif
               {{-- <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
               <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> --}}
             </ul>
@@ -211,7 +217,7 @@
                 <p>{{$resume->aboutme}}</p>
                 {{-- <p>Progressively myocardinate state of the art ROI. Monotonectally disseminate unique methods of empowerment.</p> --}}
                 <ul>
-                  <li><p>Name<span>:</span></p> <span>{{$resume->name}}</span></li>
+                  <li><p>Name<span>:</span></p> <span>{{$resume->fullname}}</span></li>
                   @if($resume->phone != null)
                   <li><p>Phone<span>:</span></p> <span>{{$resume->phone}}</span></li>
                   @endif
@@ -334,7 +340,7 @@
 
 
       <!-- Portfolio section start here -->
-      <section id="portfolio" class="portfolio portfolio_two padding_140">
+      {{-- <section id="portfolio" class="portfolio portfolio_two padding_140">
         <div class="body_container">
           <div class="section_header">
             <h2>Portfolio</h2>
@@ -424,18 +430,18 @@
           </div><!-- portfolio items -->
           
         </div><!-- container -->
-      </section>
+      </section> --}}
       <!-- Portfolio section end here -->
 
 
 
       <!-- Services section start here -->
-      <section id="services" class="services padding_140 bg_border">
+      {{-- <section id="services" class="services padding_140 bg_border">
         <div class="body_container">
           <div class="section_header">
             <h2>Services</h2>
             <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+              help you for our Friendshiop. </em></p>
           </div><!-- section header -->
 
           <div class="row">
@@ -496,18 +502,18 @@
 
           </div><!-- row -->
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Services section end here -->
 
 
 
       <!-- Blog section start here -->
-      <section id="blog" class="blog padding_140">
+      {{-- <section id="blog" class="blog padding_140">
         <div class="body_container">
           <div class="section_header">
             <h2>Recent Blog</h2>
             <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+                help you for our Friendshiop. </em></p>
           </div><!-- section header -->
 
           <div class="row">
@@ -547,18 +553,18 @@
           </div><!--   -->
 
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Blog section end here -->
 
 
 
       <!-- Pricing section start here -->
-      <section id="pricing" class="pricing pricing_two padding_140 bg_border">
+      {{-- <section id="pricing" class="pricing pricing_two padding_140 bg_border">
         <div class="body_container">
           <div class="section_header">
             <h2>Pricing Table</h2>
             <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+                    help you for our Friendshiop. </em></p>
           </div><!-- section header -->
 
           <div class="pricing_item">
@@ -625,18 +631,18 @@
           </div><!-- pricing item -->
 
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Pricing section end here -->
 
 
 
       <!-- Client section start here -->
-      <section id="client" class="client padding_140">
+      {{-- <section id="client" class="client padding_140">
         <div class="body_container">
           <div class="section_header">
             <h2>My Clents</h2>
             <p><em>You can know who i am and what is my Hobbies. I hope it will
-  help you for our Friendshiop. </em></p>
+            help you for our Friendshiop. </em></p>
           </div><!-- section header -->
 
           <div class="client_items wow fadeInUp" data-wow-duration="2s">
@@ -650,17 +656,17 @@
             <div><img src="{{ asset('theme/gentleman/assets/images/client_04.jpg')}}" alt="client image" class="img-responsive"></div>
           </div>
         </div><!-- body_container -->
-      </section>
+      </section> --}}
       <!-- Client section end here -->
 
 
       <!-- Contact section start here -->
-      <section id="contact" class="contact padding_140 bg_border">
+      {{-- <section id="contact" class="contact padding_140 bg_border">
         <div class="body_container">
           <div class="section_header">
             <h2>Get in Touch</h2>
             <p><em>You can know who i am and what is my Hobbies. I hope it will
-    help you for our Friendshiop. </em></p>
+            help you for our Friendshiop. </em></p>
           </div><!-- section header -->
             
           <div class="contact_me">
@@ -700,7 +706,7 @@
 
           </div><!-- contact me -->
         </div>
-      </section>
+      </section> --}}
       <!-- Contact section end here -->
 
 
