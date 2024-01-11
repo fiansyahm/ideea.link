@@ -354,8 +354,64 @@
         </div>
 
         {{-- Banner 6 --}}
+        <div id="banner6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="mt-5 container">
+                            <div>
+                                <h1 class="mt-5"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 42px; color: #000000; font-weight: bold;">
+                                    UI-UX Tools</h1>
+                                <p class="space-between"
+                                    style="padding-inline-end: 100px; font-family: 'Poppins', sans-serif; font-size: 20px;">
+                                    Dengan menggunakan tools yang sudah terbukti ini, kami memastikan Anda menerima hasil
+                                    desain
+                                    yang diharapkan dalam deadline yang sudah ditentukan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="elementor-widget-container">
+                            <div style="display: flex; align-items: center;">
+                                <img src="https://onero.id/wp-content/uploads/2022/06/logos_figma.png">
+                                <span
+                                    style="margin-left: 20px; font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: bold; color: #000000;">Figma</span>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img src="https://onero.id/wp-content/uploads/2022/06/vscode-icons_file-type-ai.png">
+                                <span
+                                    style="margin-left: 20px; font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: bold; color: #000000;">Adobe
+                                    Illustrator</span>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <img
+                                    src="https://onero.id/wp-content/uploads/2022/06/vscode-icons_file-type-photoshop.png">
+                                <span
+                                    style="margin-left: 20px; font-family: 'Poppins', sans-serif; font-size: 24px; font-weight: bold; color: #000000;">Adobe
+                                    Photoshop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        
+        {{-- Banner 7 --}}
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+
+
+
     </body>
     {{-- https://onero.id/services/ui-ux-design-service/ --}}
 
