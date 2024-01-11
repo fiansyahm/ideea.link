@@ -166,12 +166,14 @@ help you for our Friendshiop. </em></p>
                   $canido = json_decode($resume->canido, true);
                 ?>
                 <ul>
+                  @if(isset($canido['data']))
                   @foreach ($canido['data'] as $item)
                     <li>
                       <span class="{{ $item['icon'] }}"></span>
                       <p>{{ $item['name'] }}</p>
                     </li>
                   @endforeach
+                  @endif
                 </ul>
             </div><!-- about job -->
 
@@ -182,6 +184,7 @@ help you for our Friendshiop. </em></p>
                     // Konversi string JSON ke dalam bentuk array menggunakan json_decode
                     $skill = json_decode($resume->skill, true);
                   ?>
+                  @if(isset($skill['data']))
                   @foreach ($skill['data'] as $item)
                   <div class="progress_item">
                     <p class="progress_title">{{ $item['name'] }}</p>
@@ -192,6 +195,7 @@ help you for our Friendshiop. </em></p>
                     <p class="progress_percent">{{ $item['percentage'] }}</p>
                   </div>
                   @endforeach
+                  @endif
 
               </div><!-- skills progress -->
             </div><!-- about skills -->
@@ -222,6 +226,7 @@ help you for our Friendshiop. </em></p>
                       // Konversi string JSON ke dalam bentuk array menggunakan json_decode
                       $educational = json_decode($resume->educational, true);
                   ?>
+                  @if(isset($educational['data']))
                   @foreach ($educational['data'] as $item)
                   <div class="experience">
                     <h4>{{ $item['degree'] }}</h4>
@@ -229,6 +234,7 @@ help you for our Friendshiop. </em></p>
                     <p class="ex_details">{{ $item['description'] }}.</p>
                   </div><!-- experience -->
                   @endforeach
+                  @endif
               </div><!-- experience -->
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
@@ -239,7 +245,7 @@ help you for our Friendshiop. </em></p>
                       // Konversi string JSON ke dalam bentuk array menggunakan json_decode
                       $working = json_decode($resume->working, true);
                   ?>
-
+                  @if(isset($working['data']))
                   @foreach ($working['data'] as $item)
                   <div class="experience">
                     <h4>{{ $item['position'] }}</h4>
@@ -247,6 +253,7 @@ help you for our Friendshiop. </em></p>
                     <p class="ex_details">{{ $item['description'] }}.</p>
                   </div><!-- experience -->
                   @endforeach
+                  @endif
 
               </div><!-- experience -->
             </div>

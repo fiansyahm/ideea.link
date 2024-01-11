@@ -184,7 +184,7 @@
 						<div class="about-item">
 							<div class="title">
 								<span class="category wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">Hello World</span>
-								<h2 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I am <span>{{$resume->nickname}}</span> UX Designer From New York City 1200. </h2>
+								<h2 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I am <span>{{$resume->nickname}}</span> {{$resume->job}}. </h2>
 								<p class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">{{$resume->aboutme}}</p>
 							</div>
 							<div class="about-content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
@@ -322,7 +322,8 @@
 						$working = json_decode($resume->working, true);
 						$counter=0;
 					?>
-
+					{{-- make if isset --}}
+					@if(isset($educational['data']))
 					@foreach ($educational['data'] as $item)
 					<?php $counter++; ?>
 					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
@@ -341,7 +342,9 @@
 						</div>
 					</div>
 					@endforeach
+					@endif
 
+					@if(isset($working['data']))
 					@foreach ($working['data'] as $item)
 					<?php $counter++; ?>
 					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
@@ -360,7 +363,7 @@
 						</div>
 					</div>
 					@endforeach
-	
+					@endif
 					
 					
 				</div>
@@ -384,6 +387,7 @@
 					$counter=0;
                 ?>
 				<div class="section-wrapper">
+					@if(isset($skill['data']))
 					@foreach ($skill['data'] as $item)
 					<?php $counter++; ?>
 					<div class="service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
@@ -404,6 +408,7 @@
 						</div>
 					</div>
 					@endforeach
+					@endif
 				</div>
 			</div>
 		</section>
