@@ -5,35 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentleman</title>
+    <title>{{$resume->name}} Resume</title>
 
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7CPoppins:300,400,500,600,700" rel="stylesheet">
 
     <!-- Flaticon -->
-    <link href="assets/flat_icon/flaticon.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/flat_icon/flaticon.css') }}" rel="stylesheet">
 
     <!-- Font-awesome -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/font-awesome.min.css') }}" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Lightcase -->
-    <link href="assets/css/lightcase.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/lightcase.css') }}" rel="stylesheet">
 
     <!-- Slick -->
-    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/slick.css') }}" rel="stylesheet">
 
     <!-- Slick theme -->
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/slick-theme.css') }}" rel="stylesheet">
 
     <!-- Style -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/style.css') }}" rel="stylesheet">
 
     <!-- Responsive -->
-    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="{{ asset('theme/gentleman/assets/css/responsive.css') }}" rel="stylesheet">
 
 
   </head>
@@ -89,14 +89,26 @@
         <div class="container">
         <div class="banner_content">
           <h4>Hi There! I am</h4>
-          <h2>Alex Mohon</h2>
-          <p>Professional Graphic Designer</p>
+          <h2>{{$resume->fullname}}</h2>
+          <p>{{$resume->job}}</p>
           <ul class="banner_social">
-            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+            @if($resume->linkedin != null)
+            <li><a href="{{$resume->linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            @endif
+            @if($resume->instagram != null)
+            <li><a href="{{$resume->instagram}}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            @endif
+            @if($resume->facebook != null)
+            <li><a href="{{$resume->facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            @endif
+            @if($resume->twitter != null)
+            <li><a href="{{$resume->twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            @endif
+            @if($resume->github != null)
+            <li><a href="{{$resume->github}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            @endif
+            {{-- <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> --}}
           </ul>
         </div><!--banner content-->
       </div><!--container-->
@@ -117,67 +129,66 @@
 help you for our Friendshiop. </em></p>
             </div><!-- section header -->
             <div class="about_details">
-              <p>Unique utilize plug-and-play best practices vis-a-vis out ofbox strategic theme area. Efficient enga backward-compatible collaboration and idea-share before our client based functionalities. Rapidiously visualize world-class architectures with mission critical intellectual capital.</p>
-              <p>Progressively myocardinate state of the art ROI. Monotonectally disseminate unique methods of empowerment.</p>
+              <p>{{$resume->aboutme}}.</p>
+              {{-- <p>Progressively myocardinate state of the art ROI. Monotonectally disseminate unique methods of empowerment.</p> --}}
               <ul>
-                <li><p>Name<span>:</span></p> <span>Alex Mohon</span></li>
-                <li><p>Phone<span>:</span></p> <span>+880 1234 567890, +880 9876 543210</span></li>
-                <li><p>E-mail<span>:</span></p> <span>contact@yourmail.com</span></li>
-                <li><p>Address<span>:</span></p> <span>Streop Rd, Peosur, Inphodux, USA.</span></li>
-                <li><p>Date of Birth<span>:</span></p> <span>09 July 1984</span></li>
-                <li><p>Website<span>:</span></p> <span>www.yourmail.com</span></li>
-                <li><p>Freelance<span>:</span></p> <span>Available</span></li>
+                <li><p>Name<span>:</span></p> <span>{{$resume->name}}</span></li>
+                @if($resume->phone != null)
+                <li><p>Phone<span>:</span></p> <span>{{$resume->phone}}</span></li>
+                @endif
+                @if($resume->email != null)
+                <li><p>E-mail<span>:</span></p> <span> {{$resume->email}}</span></li>
+                @endif
+                @if($resume->address != null)
+                <li><p>Address<span>:</span></p> <span>{{$resume->address}}</span></li>
+                @endif
+                @if($resume->birth != null)
+                <li><p>Date of Birth<span>:</span></p> <span>{{$resume->birth}}</span></li>
+                @endif
+                @if($resume->website != null)
+                <li><p>Website<span>:</span></p> <span>{{$resume->website}}</span></li>
+                @endif
+                @if($resume->freelance != null)
+                <li><p>Freelance<span>:</span></p> <span>{{$resume->freelance}}</span></li>
+                @endif
               </ul>
             </div><!-- about details -->
           </div><!-- column -->
           <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="about_job">
               <h3>What can i Do</h3>
-              <ul>
-                <li><span class="icon flaticon-layers-icon"></span><p>Graphic Design</p></li>
-                <li><span class="icon flaticon-responsive-design-symbol"></span><p>Web Design</p></li>
-                <li><span class="icon flaticon-technology"></span><p>Photography</p></li>
-              </ul>
+              <?php
+                  // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                  $canido = json_decode($resume->canido, true);
+                ?>
+                <ul>
+                  @foreach ($canido['data'] as $item)
+                    <li>
+                      <span class="{{ $item['icon'] }}"></span>
+                      <p>{{ $item['name'] }}</p>
+                    </li>
+                  @endforeach
+                </ul>
             </div><!-- about job -->
 
             <div class="about_skills">
               <h3>My Skills</h3>
               <div class="skills_progress">
-                <div class="progress_item">
-                  <p class="progress_title">Photoshop</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-transitiongoal="92"><span class="pg_indicator"></span>
+                <?php
+                    // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                    $skill = json_decode($resume->skill, true);
+                  ?>
+                  @foreach ($skill['data'] as $item)
+                  <div class="progress_item">
+                    <p class="progress_title">{{ $item['name'] }}</p>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" data-transitiongoal="{{ $item['percentage'] }}"><span class="pg_indicator"></span>
+                      </div>
                     </div>
+                    <p class="progress_percent">{{ $item['percentage'] }}</p>
                   </div>
-                  <p class="progress_percent">92%</p>
-                </div>
+                  @endforeach
 
-                <div class="progress_item">
-                  <p class="progress_title">Illustrator</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-transitiongoal="86"><span class="pg_indicator"></span>
-                    </div>
-                  </div>
-                  <p class="progress_percent">86%</p>
-                </div>
-
-                <div class="progress_item">
-                  <p class="progress_title">Wn Design</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-transitiongoal="42"><span class="pg_indicator"></span>
-                    </div>
-                  </div>
-                  <p class="progress_percent">42%</p>
-                </div>
-
-                <div class="progress_item">
-                  <p class="progress_title">Corel Drow</p>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" data-transitiongoal="60"><span class="pg_indicator"></span>
-                    </div>
-                  </div>
-                  <p class="progress_percent">60%</p>
-                </div>
               </div><!-- skills progress -->
             </div><!-- about skills -->
           </div><!-- column -->
@@ -203,59 +214,35 @@ help you for our Friendshiop. </em></p>
               <h3>Educational Experience</h3>
               <div class="experiences left">
 
-                <div class="experience">
-                  <h4>Master Degree</h4>
-                  <p>University of Oxford / <span>Jan 2015 - Dec 2017</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
-
-                <div class="experience">
-                  <h4>Bachelors Degree</h4>
-                  <p>University of California / <span>Jan 2011 - Dec 2015</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
-
-                <div class="experience">
-                  <h4>Deploma Engineering</h4>
-                  <p>Stanford University / <span>Jan 2008 - Dec 2011</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
-
-                <div class="experience">
-                  <h4>Higher Secondary</h4>
-                  <p>Stanford University / <span>Jan 2006 - Dec 2008</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
-
+                <?php
+                      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                      $educational = json_decode($resume->educational, true);
+                  ?>
+                  @foreach ($educational['data'] as $item)
+                  <div class="experience">
+                    <h4>{{ $item['degree'] }}</h4>
+                    <p>{{ $item['university'] }} / <span>{{ $item['year'] }}</span></p>
+                    <p class="ex_details">{{ $item['description'] }}.</p>
+                  </div><!-- experience -->
+                  @endforeach
               </div><!-- experience -->
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12">
               <h3>Working Experience</h3>
               <div class="experiences right">
 
-                <div class="experience">
-                  <h4>Lead UI/UX Designer</h4>
-                  <p>CodexCoder / <span>Jan 2014 - Dec 2017</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
+                <?php
+                      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                      $working = json_decode($resume->working, true);
+                  ?>
 
-                <div class="experience">
-                  <h4>UI/UX Designer</h4>
-                  <p>Webcode Ltd. / <span>Jan 2012 - Dec 2014</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
-
-                <div class="experience">
-                  <h4>Senior Graphic Designer</h4>
-                  <p>Webcode Ltd. / <span>Jan 2012 - May 2012</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
-
-                <div class="experience">
-                  <h4>Graphic Designer</h4>
-                  <p>Webcode Ltd. / <span>Jan 2011 - Dec 2012</span></p>
-                  <p class="ex_details">Uniquely incentivize process-centric systems for reliable market. Authoritatively scale next generation collaboration. Globally morph 24/365 e-commerce.</p>
-                </div><!-- experience -->
+                  @foreach ($working['data'] as $item)
+                  <div class="experience">
+                    <h4>{{ $item['position'] }}</h4>
+                    <p>{{ $item['company'] }} / <span>{{ $item['year'] }}</span></p>
+                    <p class="ex_details">{{ $item['description'] }}.</p>
+                  </div><!-- experience -->
+                  @endforeach
 
               </div><!-- experience -->
             </div>
@@ -647,30 +634,30 @@ help you for our Friendshiop. </em></p>
 
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
     
     <!-- Bootstrap Progressbar -->
-    <script src="assets/js/bootstrap-progressbar.js"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/bootstrap-progressbar.js') }}"></script>
 
     <!-- Isotop -->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/isotope.pkgd.min.js') }}"></script>
 
     <!-- Lightcase -->
-    <script src="assets/js/lightcase.js"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/lightcase.js') }}"></script>
 
     <!-- Easing -->
-    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/jquery.easing.min.js') }}"></script>
 
     <!-- Slick -->
-    <script src="assets/js/slick.js"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/slick.js') }}"></script>
 
     <!-- Google Map -->
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAQlXnmyNPAeN3c3HNyWoUMqDk6bDF31Cg"></script>
 
     <!-- Custom -->
-    <script src="assets/js/custom.js"></script>
+    <script src="{{ asset('theme/gentleman/assets/js/custom.js') }}"></script>
 
 
   </body>

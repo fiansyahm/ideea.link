@@ -44,6 +44,9 @@ Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login')
 
 Route::get('/register-resume', [ResumeController::class, 'registerResume']);
 Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
+
+Route::get('/myprofile/{file}/{id}', [RequestController::class, 'myprofile']);
+
 // Route::get('/pending-invitation-wedding/{wedding}/{guest}', [WeddingController::class, 'pendinginvitationWedding']);
 // Route::get('/list-guest-wedding/{wedding}', [WeddingController::class, 'listGuestWedding']);
 // Route::post('/confirmation-wedding', [WeddingController::class, 'confirmationWedding']);
