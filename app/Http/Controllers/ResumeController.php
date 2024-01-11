@@ -149,11 +149,11 @@ class ResumeController extends Controller
                          ->orWhere('nickname', $id)
                          ->first();
 
-        $resume->canido = $canido;
-        $resume->skill = $skill;
-        $resume->educational = $educational;
-        $resume->working = $working;
-        $resume->save();
+        // $resume->canido = $canido;
+        // $resume->skill = $skill;
+        // $resume->educational = $educational;
+        // $resume->working = $working;
+        // $resume->save();
  
          if ($resume) {
              $view = 'resume.theme.theme-' . $resume->theme;
