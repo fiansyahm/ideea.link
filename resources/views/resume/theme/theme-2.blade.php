@@ -107,6 +107,10 @@
             @if($resume->github != null)
             <li><a href="{{$resume->github}}"><i class="fa fa-github" aria-hidden="true"></i></a></li>
             @endif
+            @if($resume->resume != null)
+            <li><a href="{{$resume->resume}}"><i class="fa fa-file" aria-hidden="true"></i></a></li>
+            <span style="color: white">Resume</span>
+            @endif
             {{-- <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> --}}
           </ul>
