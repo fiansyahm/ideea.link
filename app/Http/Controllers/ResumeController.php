@@ -164,4 +164,10 @@ class ResumeController extends Controller
          }
      }
 
+     public function AdminEdit($id)
+     {
+      $resume = Resume::find($id);
+      return view('admin-resume.edit-resume-admin',['resume'=>$resume]);
+     }
+
 }

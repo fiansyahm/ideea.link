@@ -43,7 +43,17 @@ Route::get('/service/{service}', [ServiceController::class, 'index']);
 Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
 
 Route::get('/register-resume', [ResumeController::class, 'registerResume']);
+
 Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
+Route::get('/admin/resume/edit/{id}', [ResumeController::class, 'AdminEdit']);
+// Route::group(['middleware' => ['auth']], function () {
+//     Route::get('/wpadmin', [WeddingController::class, 'wpadmin']);
+//     Route::get('/admin/wedding/dashboard', [WeddingController::class, 'AdminDashboard']);
+//     Route::get('/admin/wedding/list', [WeddingController::class, 'AdminList']);
+//     Route::get('/admin/wedding/edit/{id}', [WeddingController::class, 'AdminEdit']);
+//     Route::get('/admin/wedding/delete/{id}', [WeddingController::class, 'AdminDelete']);
+// });
+
 
 Route::get('/myprofile/{file}/{id}', [RequestController::class, 'myprofile']);
 
