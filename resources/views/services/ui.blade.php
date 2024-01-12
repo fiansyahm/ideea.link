@@ -27,6 +27,19 @@
                 margin-top: 5px;
                 /* Adjust as needed */
             }
+
+            .card-body a {
+                font-family: 'Poppins', sans-serif;
+                font-size: 28px;
+                font-weight: bold;
+                color: #000000;
+                text-align: center;
+                text-decoration: underline;
+                display: block;
+                /* Membuat link menjadi blok untuk memberikan jarak dari teks di atasnya */
+                margin-top: 10px;
+                /* Sesuaikan margin-top sesuai kebutuhan */
+            }
         </style>
     </head>
 
@@ -54,7 +67,7 @@
                     </div>
                     {{-- Gambar animasi UI/UX --}}
                     <div class="col-md">
-                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/3pmmMFw/uiux.png">
+                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/9HfZrwY/uiux.png">
                     </div>
 
                 </div>
@@ -361,7 +374,7 @@
                         <div class="mt-5 container">
                             <div>
                                 <h1 class="mt-5"
-                                    style="font-family: 'Poppins', sans-serif; font-size: 42px; color: #000000; font-weight: bold;">
+                                    style="font-family: 'Poppins', sans-serif; font-size: 42px; color: #000000;">
                                     UI-UX Tools</h1>
                                 <p class="space-between"
                                     style="padding-inline-end: 100px; font-family: 'Poppins', sans-serif; font-size: 20px;">
@@ -397,21 +410,52 @@
                         </div>
                     </div>
                 </div>
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h1 class="mt-5"
+                            style="font-family: 'Poppins', sans-serif; font-size: 28px; text-align:center; color: #000000; font-weight: bold;">
+                            Pelajari lebih lanjut mengenai case study dan portfolio kami
+                        </h1>
+                        <a href="#" class="mt-3 mb-5">
+                            Lihat Selengkapnya</a>
+                    </div>
+                </div>
             </div>
         </div>
 
         {{-- Banner 7 --}}
-        <div class="card text-center">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div id="banner7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="mt-5 container">
+                            <div>
+                                <h1 class="mt-5"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 42px; color: #000000; font-weight: bold;">
+                                    About Us</h1>
+                                <p class="space-between"
+                                    style="padding-inline-end: 100px; font-family: 'Poppins', sans-serif; font-size: 20px;">
+                                    Kelebihan kami terletak pada aspek kerjasama Team. Oleh karena itu, kami mengembangkan
+                                    proyek dan produk dengan desain dan strategi bersama dengan Team kami yang ahli di
+                                    bidangnya.
+                                </p>
+                                <p class="space-between"
+                                    style="padding-inline-end: 100px; font-family: 'Poppins', sans-serif; font-size: 20px;">
+                                    Kami melakukan ini untuk membantu meningkatkan goal bisnis dan mengubah paradigma Anda
+                                    mengenai potensi dari Internet dan Teknologi.
+                                </p>
+                                <a href="#" class="mt-3 mb-5">
+                                    More About Company</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Gambar animasi UI/UX --}}
+                    <div class="col-md">
+                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/fGyhnf3/aboutus.png">
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
     </body>
     {{-- https://onero.id/services/ui-ux-design-service/ --}}
 
