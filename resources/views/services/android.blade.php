@@ -35,6 +35,22 @@
                 </div>
             </div>
         </div>
+        {{-- Banner 2 --}}
+        <div id="banner2">
+            <div class="mt-5 container">
+                <div>
+                    <h1 class="mt-5"
+                        style="font-family: 'Poppins', sans-serif; font-size: 36px; color: #000000; font-weight: bold; text-align:center;">
+                        Dipercaya oleh 600+ klien</h1>
+                    <p class="space-between"
+                        style="padding-inline-end: 100px; font-family: 'Poppins', sans-serif; font-size: 16px; text-align:center; ">
+                        Ideealink ikut serta memajukan berbagai daerah disegenap penjuru tanah air Indonesia.
+                    </p>
+                    <img class="img-fluid mt-4 pt-4 mb-4 pb-4"
+                        src="https://www.seekpng.com/png/full/292-2923588_peta-indonesia-png-indonesia-map-hd.png">
+                </div>
+            </div>
+        </div>
 
     </body>
 
