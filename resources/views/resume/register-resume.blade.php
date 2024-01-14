@@ -179,15 +179,240 @@
 
             <div class="row">
                 <h1 class="text-center">Skill & Experience</h1>
-                
+                <div class="col-md-12">
+                  <div class="row">
 
-            </div>
+                    <div class="col-md-6">
+                        <label for="canido" class="form-label">CAN I DO</label>
+                        {{-- add button add canido --}}
+                        <div class="btn btn-success my-2" onclick="addCanido()">Add Can I Do</div>
+                        <div class="row" id="canido-container">
+                              <div class="mb-3 col-md-5">
+                                  <input type="text" class="form-control" id="canido-0"
+                                   oninput="updateCanidoArray('0', 'name', this.value)">
+                              </div>
+                              <div class="mb-3 col-md-5">
+                                <input type="text" class="form-control" id="canido-icon-0"
+                                    oninput="updateCanidoArray('0', 'icon', this.value)">
+                              </div>
+                              <div class="mb-3 col-md-2">
+                                <button type="button" class="btn btn-danger" id="canido-delete-0" onclick="removeCanido('0')">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                              </div>
+                        </div>
+                        <div class="mb-3 col-md-12">
+                          <input type="text" class="form-control" id="canido" name="canido" value='{"data":[{"name":"","icon":""}]}' placeholder="Can I Do" readonly>
+                        </div>
 
+                       <script>
+                        function updateCanidoArray(index, key, value) {
+                            // alert('index: ' + index + ', key: ' + key + ', value: ' + value)
+                            // Update the canido array dynamically
+                            var canidoContainer = document.getElementById('canido-container');
+                            var canidoInput = document.getElementById('canido');
+                            var canido = JSON.parse(canidoInput.value);
+            
+                            // alert(value);
+                            
+                            // alert(canido['data'][index][key])
 
-            <div class="text-center">
-                <button class="btn btn-warning mx-auto d-flex text-white">
-                    Update Resume
-                </button>
+                            // Update the canido array
+                            canido['data'][index][key] = value;
+            
+                            // Update the value in the readonly input field
+                            canidoInput.value = JSON.stringify(canido);
+            
+                            // You can also send the updated array to the server using AJAX if needed
+                        }
+
+                        function removeCanido(index) {
+                            // alert('index: ' + index)
+                            // Update the canido array dynamically
+                            var canidoContainer = document.getElementById('canido-container');
+                            var canidoInput = document.getElementById('canido');
+                            var canido = JSON.parse(canidoInput.value);
+            
+                            // Remove the canido array
+                            // canido['data'].splice(index, 1);
+                            canido['data'][index] = [];
+            
+                            // Update the value in the readonly input field
+                            canidoInput.value = JSON.stringify(canido);
+
+                            // Remove the HTML element
+                            var canidoElement = document.getElementById('canido-' + index);
+                            canidoElement.parentNode.removeChild(canidoElement);
+
+                            var canidoIconElement = document.getElementById('canido-icon-' + index);
+                            canidoIconElement.parentNode.removeChild(canidoIconElement);
+            
+                            var canidoDeleteElement = document.getElementById('canido-delete-' + index);
+                            canidoDeleteElement.parentNode.removeChild(canidoDeleteElement);
+                            // You can also send the updated array to the server using AJAX if needed
+                        }
+
+                        function addCanido(){
+                            // alert('index: ' + index)
+                            // Update the canido array dynamically
+                            var canidoContainer = document.getElementById('canido-container');
+                            var canidoInput = document.getElementById('canido');
+                            var canido = JSON.parse(canidoInput.value);
+            
+                            // Remove the canido array
+                            // canido['data'].splice(index, 1);
+
+                            // {"name":"Graphic Design","icon":"icon flaticon-layers-icon"}
+                            canido['data'][canido['data'].length] = {"name":"","icon":""};
+            
+                            // Update the value in the readonly input field
+                            canidoInput.value = JSON.stringify(canido);
+
+                            var position = canido['data'].length - 1;
+
+                            // Add the HTML element
+                            var canidoElement = document.createElement('div');
+                            canidoElement.setAttribute('class', 'mb-3 col-md-5');
+                            canidoElement.innerHTML = '<input type="text" class="form-control" id="canido-' + position + '" name="canido-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'name\', this.value)">';
+
+                            var canidoIconElement = document.createElement('div');
+                            canidoIconElement.setAttribute('class', 'mb-3 col-md-5');
+                            canidoIconElement.innerHTML = '<input type="text" class="form-control" id="canido-icon-' + position + '" name="canido-icon-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'icon\', this.value)">';
+
+                            var canidoDeleteElement = document.createElement('div');
+                            canidoDeleteElement.setAttribute('class', 'mb-3 col-md-2');
+                            canidoDeleteElement.innerHTML = '<button type="button" class="btn btn-danger" id="canido-delete-' + position + '" onclick="removeCanido(\'' + position + '\')"><i class="fa fa-trash"></i></button>';
+                            
+                            canidoContainer.appendChild(canidoElement);
+                            canidoContainer.appendChild(canidoIconElement);
+                            canidoContainer.appendChild(canidoDeleteElement);
+                            // You can also send the updated array to the server using AJAX if needed
+                        }
+                       </script>
+
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="canido" class="form-label">Skill</label>
+                      {{-- add button add canido --}}
+                      <div class="btn btn-success my-2" onclick="addSkill()">Add Skill</div>
+                      <div class="row" id="skill-container">
+                            <div class="mb-3 col-md-5">
+                                <input type="text" class="form-control" id="skill-0"
+                                 oninput="updateSkillArray('0', 'name', this.value)">
+                            </div>
+                            <div class="mb-3 col-md-5">
+                              <input type="text" class="form-control" id="skill-percentage-0"
+                                  oninput="updateSkillArray('0', 'percentage', this.value)">
+                            </div>
+                            <div class="mb-3 col-md-2">
+                              <button type="button" class="btn btn-danger" id="skill-delete-0" onclick="removeSkill('0')">
+                                  <i class="fa fa-trash"></i>
+                              </button>
+                            </div>
+                      </div>
+                      <div class="mb-3 col-md-12">
+                        <input type="text" class="form-control" id="skill" name="skill" value='{"data":[{"name":"","percentage":""}]}' placeholder="Skill" readonly>
+                      </div>
+                    </div>
+
+                    <script>
+                        function updateSkillArray(index, key, value) {
+                            // alert('index: ' + index + ', key: ' + key + ', value: ' + value)
+                            // Update the skill array dynamically
+                            var skillContainer = document.getElementById('skill-container');
+                            var skillInput = document.getElementById('skill');
+                            var skill = JSON.parse(skillInput.value);
+            
+                            // alert(value);
+                            
+                            // alert(skill['data'][index][key])
+
+                            // Update the skill array
+                            skill['data'][index][key] = value;
+            
+                            // Update the value in the readonly input field
+                            skillInput.value = JSON.stringify(skill);
+            
+                            // You can also send the updated array to the server using AJAX if needed
+                        }
+
+                        function removeSkill(index) {
+                            // alert('index: ' + index)
+                            // Update the skill array dynamically
+                            var skillContainer = document.getElementById('skill-container');
+                            var skillInput = document.getElementById('skill');
+                            var skill = JSON.parse(skillInput.value);
+            
+                            // Remove the skill array
+                            // skill['data'].splice(index, 1);
+                            skill['data'][index] = [];
+            
+                            // Update the value in the readonly input field
+                            skillInput.value = JSON.stringify(skill);
+
+                            // Remove the HTML element
+                            var skillElement = document.getElementById('skill-' + index);
+                            skillElement.parentNode.removeChild(skillElement);
+
+                            var skillIconElement = document.getElementById('skill-percentage-' + index);
+                            skillIconElement.parentNode.removeChild(skillIconElement);
+            
+                            var skillDeleteElement = document.getElementById('skill-delete-' + index);
+                            skillDeleteElement.parentNode.removeChild(skillDeleteElement);
+                            // You can also send the updated array to the server using AJAX if needed
+                        }
+
+                        function addSkill(){
+                            // alert('index: ' + index)
+                            // Update the skill array dynamically
+                            var skillContainer = document.getElementById('skill-container');
+                            var skillInput = document.getElementById('skill');
+                            var skill = JSON.parse(skillInput.value);
+            
+                            // Remove the skill array
+                            // skill['data'].splice(index, 1);
+
+                            // {"name":"Graphic Design","icon":"icon flaticon-layers-icon"}
+                            skill['data'][skill['data'].length] = {"name":"","percentage":""};
+            
+                            // Update the value in the readonly input field
+                            skillInput.value = JSON.stringify(skill);
+
+                            var position = skill['data'].length - 1
+                            
+                            // Add the HTML element
+                            var skillElement = document.createElement('div');
+                            skillElement.setAttribute('class', 'mb-3 col-md-5');
+                            skillElement.innerHTML = '<input type="text" class="form-control" id="skill-' + position + '" name="skill-' + position + '" value="" placeholder="Skill" oninput="updateSkillArray(\'' + position + '\', \'name\', this.value)">';
+
+                            var skillPercentageElement = document.createElement('div');
+                            skillPercentageElement.setAttribute('class', 'mb-3 col-md-5');
+                            skillPercentageElement.innerHTML = '<input type="text" class="form-control" id="skill-percentage-' + position + '" name="skill-percentage-' + position + '" value="" placeholder="Skill" oninput="updateSkillArray(\'' + position + '\', \'percentage\', this.value)">';
+
+                            var skillDeleteElement = document.createElement('div');
+                            skillDeleteElement.setAttribute('class', 'mb-3 col-md-2');
+                            skillDeleteElement.innerHTML = '<button type="button" class="btn btn-danger" id="skill-delete-' + position + '" onclick="removeSkill(\'' + position + '\')"><i class="fa fa-trash"></i></button>';
+
+                            skillContainer.appendChild(skillElement);
+                            skillContainer.appendChild(skillPercentageElement);
+                            skillContainer.appendChild(skillDeleteElement);
+                            // You can also send the updated array to the server using AJAX if needed
+                        }
+                    </script>
+
+                  </div>
+                    
+
+                  </div>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-warning mx-auto d-flex text-white">
+                      Kirim Form
+                  </button>
+                </div>
+
             </div>
 
         </form>
