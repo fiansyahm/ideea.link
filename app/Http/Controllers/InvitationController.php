@@ -117,7 +117,7 @@ class InvitationController extends Controller
         // get json data from another link
         $link='https://akad.in/json/katalog/'.$type;
         $response = Http::get($link);
-        return view('invitation.katalog', $response->json());
+        return view('invitation.katalog', ['data' => $response->json()]);
     }
 
     public function json_katalog($type)

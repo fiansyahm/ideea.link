@@ -1,6 +1,23 @@
-@extends('invitation.template')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Katalog</title>
+    {{-- boostrap 5 --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+</head>
 
-@section('main')
+<body>
+    <?php
+        $catalogs_web_data = json_encode($data['catalogs_web_data']);
+        $catalogs_video_data = json_encode($data['catalogs_video_data']);
+        $catalogs_filter_data = json_encode($data['catalogs_filter_data']);
+
+        $catalogs_web_data = json_decode($catalogs_web_data);
+        $catalogs_video_data = json_decode($catalogs_video_data);
+        $catalogs_filter_data = json_decode($catalogs_filter_data);
+    ?>
     <div class="container">
         <h1 class="text-center">Daftar Katalog Kami</h1>
         {{-- make 3 type button: Pernikahan,Khitan,Aqiqah --}}
@@ -75,6 +92,4 @@
                     </div>
                 @endif
             @endforeach            
-        </div>
-    </div>
-@endsection
+</body>
