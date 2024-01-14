@@ -26,7 +26,7 @@ use App\Http\Controllers\MidtransController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\PendingpaymentController;
+use App\Http\Controllers\InvitationController;
 
 
 
@@ -60,6 +60,7 @@ Route::post('/update-resume', [ResumeController::class, 'updateResume']);
 
 Route::get('/myprofile/{file}/{id}', [RequestController::class, 'myprofile']);
 
+Route::get('/katalog/{type}', [InvitationController::class, 'katalog']);
 // Route::get('/pending-invitation-wedding/{wedding}/{guest}', [WeddingController::class, 'pendinginvitationWedding']);
 // Route::get('/list-guest-wedding/{wedding}', [WeddingController::class, 'listGuestWedding']);
 // Route::post('/confirmation-wedding', [WeddingController::class, 'confirmationWedding']);

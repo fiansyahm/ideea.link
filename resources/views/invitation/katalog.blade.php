@@ -2,24 +2,76 @@
 
 @section('main')
     <div class="container">
-        <h2 class="text-center">Daftar Katalog Kami</h2>
+        <h1 class="text-center">Daftar Katalog Kami</h1>
+        {{-- make 3 type button: Pernikahan,Khitan,Aqiqah --}}
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="btn-group d-flex" role="group" aria-label="Basic outlined example">
+                    <a href="/katalog/wedding" class="btn btn-outline-primary">Pernikahan</a>
+                    <a href="/katalog/khitan" class="btn btn-outline-primary">Khitan</a>
+                    <a href="/katalog/aqiqah" class="btn btn-outline-primary">Aqiqah</a>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-center">Undangan Web</h3>
         <div class="row">
-            @foreach ($catalogs as $index => $catalog)
-                @if ($index % 2 == 0)
-                <div class="col-md-4 mb-2 d-flex flex-row justify-content-center">
+            @foreach ($catalogs_web_data as $index => $catalog)
+                @if ($loop->iteration % 2 == 1)
+                    <div class="col-md-4 mb-2 d-flex flex-row justify-content-center">
                 @endif
 
                 <div class="card mx-2" style="width:40%">
-                    <img src="{{$catalog->image}}" style="height: 40vh" class="card-img-top" alt="Card Image">
+                    <img src="{{ $catalog->image }}" style="height: 40vh" class="card-img-top" alt="Card Image">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-size: 10px;">{{$catalog->name}}</h5>
-                        <p class="card-text" style="font-size: 9px;text-align: justify;">{{$catalog->description}}</p>
-                        <a href="{{$catalog->url}}" class="btn btn-dark" style="font-size: 9px;">Lihat Detail</a>
+                        <h5 class="card-title" style="font-size: 10px;">{{ $catalog->name }}</h5>
+                        <p class="card-text" style="font-size: 9px; text-align: justify;">{{ $catalog->description }}</p>
+                        <a href="{{ $catalog->url }}" class="btn btn-dark" style="font-size: 9px;">Lihat Detail</a>
                     </div>
                 </div>
                 
+                @if ($loop->iteration % 2 == 0 || $loop->last)
+                    </div>
+                @endif
+            @endforeach            
+        </div>
+        <h3 class="text-center mt-5">Undangan Video</h3>
+        <div class="row">
+            @foreach ($catalogs_video_data as $index => $catalog)
+                @if ($loop->iteration % 2 == 1)
+                    <div class="col-md-4 mb-2 d-flex flex-row justify-content-center">
+                @endif
 
-                @if (($index + 1) % 2 == 0 || $loop->last)
+                <div class="card mx-2" style="width:40%">
+                    <img src="{{ $catalog->image }}" style="height: 40vh" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 10px;">{{ $catalog->name }}</h5>
+                        <p class="card-text" style="font-size: 9px; text-align: justify;">{{ $catalog->description }}</p>
+                        <a href="{{ $catalog->url }}" class="btn btn-dark" style="font-size: 9px;">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                @if ($loop->iteration % 2 == 0 || $loop->last)
+                    </div>
+                @endif
+            @endforeach            
+        </div>
+        <h3 class="text-center mt-5">Filter</h3>
+        <div class="row">
+            @foreach ($catalogs_filter_data as $index => $catalog)
+                @if ($loop->iteration % 2 == 1)
+                    <div class="col-md-4 mb-2 d-flex flex-row justify-content-center">
+                @endif
+
+                <div class="card mx-2" style="width:40%">
+                    <img src="{{ $catalog->image }}" style="height: 40vh" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 10px;">{{ $catalog->name }}</h5>
+                        <p class="card-text" style="font-size: 9px; text-align: justify;">{{ $catalog->description }}</p>
+                        <a href="{{ $catalog->url }}" class="btn btn-dark" style="font-size: 9px;">Lihat Detail</a>
+                    </div>
+                </div>
+                
+                @if ($loop->iteration % 2 == 0 || $loop->last)
                     </div>
                 @endif
             @endforeach            
