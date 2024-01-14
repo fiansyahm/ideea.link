@@ -54,6 +54,9 @@ Route::get('/admin/resume/edit/{id}', [ResumeController::class, 'AdminEdit']);
 //     Route::get('/admin/wedding/delete/{id}', [WeddingController::class, 'AdminDelete']);
 // });
 
+// Route::get('/user/wedding/edit/{id}/{couple1}/{couple2}', [WeddingController::class, 'UserEdit']);
+Route::post('/update-resume', [ResumeController::class, 'updateResume']);
+
 
 Route::get('/myprofile/{file}/{id}', [RequestController::class, 'myprofile']);
 

@@ -170,4 +170,12 @@ class ResumeController extends Controller
       return view('admin-resume.edit-resume-admin',['resume'=>$resume]);
      }
 
+     public function updateResume(Request $request){
+      $resumeData = $request->except(['id', '_token']); // Exclude the 'id' and '_token' fields
+      Resume::where('id', $request->id)->update($resumeData);
+  
+      // You can return a response indicating the update was successful
+      return redirect()->back()->with('status', 'Data Sukses Diupdate');
+  }
+
 }

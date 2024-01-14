@@ -15,6 +15,15 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="mb-3">
+                        <label for="theme" class="form-label">Tema Undangan</label>
+                        <input type="text" class="form-control @error('theme') is-invalid @enderror" id="theme"
+                            name="theme" value="{{ $resume->theme }}" placeholder="Tema Undangan">
+  
+                        @error('theme')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
             </div>
 
@@ -180,12 +189,14 @@
                                     @foreach ($canido['data'] as $item)
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="canido-{{ $counter }}"
-                                                   name="canido-{{ $counter }}" value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
+                                                   {{-- name="canido-{{ $counter }}"  --}}
+                                                   value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
                                                    oninput="updateCanidoArray('{{ $counter }}', 'name', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="canido-icon-{{ $counter }}"
-                                                   name="canido-icon-{{ $counter }}" value="{{ $item['icon'] }}" placeholder="{{ $item['icon'] }}"
+                                                   {{-- name="canido-icon-{{ $counter }}"  --}}
+                                                   value="{{ $item['icon'] }}" placeholder="{{ $item['icon'] }}"
                                                    oninput="updateCanidoArray('{{ $counter }}', 'icon', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-2">
@@ -304,12 +315,14 @@
                                     @foreach ($skill['data'] as $item)
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="skill-{{ $counter }}"
-                                                   name="skill-{{ $counter }}" value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
+                                                   {{-- name="skill-{{ $counter }}"  --}}
+                                                   value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
                                                    oninput="updateSkillArray('{{ $counter }}', 'name', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="skill-percentage-{{ $counter }}"
-                                                   name="skill-percentage-{{ $counter }}" value="{{ $item['percentage'] }}" placeholder="{{ $item['percentage'] }}"
+                                                   {{-- name="skill-percentage-{{ $counter }}"  --}}
+                                                   value="{{ $item['percentage'] }}" placeholder="{{ $item['percentage'] }}"
                                                    oninput="updateSkillArray('{{ $counter }}', 'percentage', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-2">
@@ -432,22 +445,26 @@
                                     
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="educational-{{ $counter }}"
-                                                   name="educational-{{ $counter }}" value="{{ $item['degree'] }}" placeholder="{{ $item['degree'] }}"
+                                                   {{-- name="educational-{{ $counter }}"  --}}
+                                                   value="{{ $item['degree'] }}" placeholder="{{ $item['degree'] }}"
                                                    oninput="updateEducationalArray('{{ $counter }}', 'degree', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="educational-university-{{ $counter }}"
-                                                   name="educational-university-{{ $counter }}" value="{{ $item['university'] }}" placeholder="{{ $item['university'] }}"
+                                                   {{-- name="educational-university-{{ $counter }}"  --}}
+                                                   value="{{ $item['university'] }}" placeholder="{{ $item['university'] }}"
                                                    oninput="updateEducationalArray('{{ $counter }}', 'university', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="educational-year-{{ $counter }}"
-                                                   name="educational-year-{{ $counter }}" value="{{ $item['year'] }}" placeholder="{{ $item['year'] }}"
+                                                   {{-- name="educational-year-{{ $counter }}"  --}}
+                                                   value="{{ $item['year'] }}" placeholder="{{ $item['year'] }}"
                                                    oninput="updateEducationalArray('{{ $counter }}', 'year', this.value)">
                                         </div>
                                         <div class="mb-5 col-md-5">
                                             <input type="text" class="form-control" id="educational-description-{{ $counter }}"
-                                                   name="educational-description-{{ $counter }}" value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
+                                                   {{-- name="educational-description-{{ $counter }}"  --}}
+                                                   value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
                                                    oninput="updateEducationalArray('{{ $counter }}', 'description', this.value)">
                                         </div>
                                         <div class="mb-5 col-md-2">
@@ -586,22 +603,26 @@
                                     @foreach ($working['data'] as $item)
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="working-{{ $counter }}"
-                                                   name="working-{{ $counter }}" value="{{ $item['position'] }}" placeholder="{{ $item['position'] }}"
+                                                   {{-- name="working-{{ $counter }}"  --}}
+                                                   value="{{ $item['position'] }}" placeholder="{{ $item['position'] }}"
                                                    oninput="updateWorkingArray('{{ $counter }}', 'position', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="working-company-{{ $counter }}"
-                                                   name="working-company-{{ $counter }}" value="{{ $item['company'] }}" placeholder="{{ $item['company'] }}"
+                                                   {{-- name="working-company-{{ $counter }}"  --}}
+                                                   value="{{ $item['company'] }}" placeholder="{{ $item['company'] }}"
                                                    oninput="updateWorkingArray('{{ $counter }}', 'company', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="working-year-{{ $counter }}"
-                                                   name="working-year-{{ $counter }}" value="{{ $item['year'] }}" placeholder="{{ $item['year'] }}"
+                                                   {{-- name="working-year-{{ $counter }}"  --}}
+                                                   value="{{ $item['year'] }}" placeholder="{{ $item['year'] }}"
                                                    oninput="updateWorkingArray('{{ $counter }}', 'year', this.value)">
                                         </div>
                                         <div class="mb-5 col-md-5">
                                             <input type="text" class="form-control" id="working-description-{{ $counter }}"
-                                                   name="working-description-{{ $counter }}" value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
+                                                   {{-- name="working-description-{{ $counter }}"  --}}
+                                                   value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
                                                    oninput="updateWorkingArray('{{ $counter }}', 'description', this.value)">
                                         </div>
                                         <div class="mb-3 col-md-2">
