@@ -135,7 +135,9 @@
                         @enderror
                     </div>
                 </div>
+                
                 <div class="col-md-2"></div>
+
                 <div class="col-md-5">
                     <h1 class="text-center">Sosial Media</h1>
                     <div class="mb-3">
@@ -208,7 +210,7 @@
                                     @endforeach
                                 </div>
                                 <div class="mb-3 col-md-12">
-                                    <input type="text" class="form-control" id="canido" name="canido" value="{{ json_encode($canido) }}"
+                                    <input style="display: none" type="text" class="form-control" id="canido" name="canido" value="{{ json_encode($canido) }}"
                                            placeholder="Can I Do" readonly>
                                 </div>
                             @endif
@@ -334,7 +336,7 @@
                                     @endforeach
                                 </div>
                                 <div class="mb-3 col-md-12">
-                                    <input type="text" class="form-control" id="skill" name="skill" value="{{ json_encode($skill) }}"
+                                    <input style="display: none" type="text" class="form-control" id="skill" name="skill" value="{{ json_encode($skill) }}"
                                            placeholder="Skill" readonly>
                                 </div>
                             @endif
@@ -477,7 +479,7 @@
                                     @endforeach
                                 </div>
                                 <div class="mb-3 col-md-12">
-                                    <input type="text" class="form-control" id="educational" name="educational" value="{{ json_encode($educational) }}"
+                                    <input style="display: none" type="text" class="form-control" id="educational" name="educational" value="{{ json_encode($educational) }}"
                                            placeholder="Can I Do" readonly>
                                 </div>
                             @endif
@@ -634,7 +636,7 @@
                                     @endforeach
                                 </div>
                                 <div class="mb-3 col-md-12">
-                                    <input type="text" class="form-control" id="working" name="working" value="{{ json_encode($working) }}"
+                                    <input style="display: none" type="text" class="form-control" id="working" name="working" value="{{ json_encode($working) }}"
                                            placeholder="working" readonly>
                                 </div>
                             @endif
