@@ -43,6 +43,7 @@ Route::get('/service/{service}', [ServiceController::class, 'index']);
 Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
 
 Route::get('/register-resume', [ResumeController::class, 'registerResume']);
+Route::post('/register-resume', [ResumeController::class, 'addResume']);
 
 Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
 Route::get('/admin/resume/edit/{id}', [ResumeController::class, 'AdminEdit']);

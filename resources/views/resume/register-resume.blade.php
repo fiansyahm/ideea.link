@@ -2,7 +2,16 @@
 @section('navbar_menu_resume', 'bg-primary text-white')
 @section('main')
     <div class="mx-3 mt-5 rounded bg-dark text-white">
-        <h1 class="text-center">Edit Resume</h1>
+        <h1 class="text-center">Register Resume</h1>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @elseif(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         <form enctype="multipart/form-data" class="mx-5 mb-5 pb-5" class="ps-checkout__form" action="/register-resume"
             method="post">
             @csrf

@@ -178,4 +178,12 @@ class ResumeController extends Controller
       return redirect()->back()->with('status', 'Data Sukses Diupdate');
   }
 
+  public function addResume(Request $request){
+    $resumeData = $request->except(['id', '_token']); // Exclude the 'id' and '_token' fields
+    Resume::create($resumeData);
+
+    // You can return a response indicating the update was successful
+    return redirect()->back()->with('status', 'Data Sukses Ditambahkan');
+  }
+
 }

@@ -38,13 +38,13 @@
         <p class="">
             Kami disini dapat membantu kakak untuk membuat website untuk membantu bisnis kakak semakin berkembang. <b>Pembayaran setelah web jadi</b>. Hanya dengan Rp99.000, anda dapat memiliki website anda sendiri.<br>
             <br>
-            Berminat?Hubungi Kontak dibawah ini. https://ideea.link, Membantu keperluan websitemu dengan cepat dan mudah.
+            Berminat?Hubungi Kontak dibawah ini. ideea.link, Membantu keperluan websitemu dengan cepat dan mudah.
         </p>
     </div>
     <!-- end Biaya Mengurus? -->
     <div class="img img-fluid my-5" id="kontak">
-        <a href="https://api.whatsapp.com/send?phone=6282195796488&text=Saya%20ingin%20order%20website%20dan%20bayar%20hanya%20setelah%20saya%20puas" target="_blank">
-            <img width="" height="" class="text-center justify-content-center" src="https://lapakjaya.com/wp-content/uploads/2020/04/hubungi-kami-wa-2.png" alt="">
+        <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20website%20dan%20bayar%20hanya%20setelah%20saya%20puas" target="_blank">
+            <img width="300px" height="100px" class="text-center justify-content-center" src="https://internetindihomebekasi.files.wordpress.com/2020/02/wa-only.png" alt="">
         </a>
     </div>
 
