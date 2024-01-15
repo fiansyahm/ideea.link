@@ -9,7 +9,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Android</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <style>
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                margin-bottom: 10px;
+            }
+
+            .dot-icon {
+                margin-right: 10px;
+            }
         </style>
     </head>
 
@@ -53,29 +66,101 @@
         </div>
         {{-- Banner 3 --}}
         <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h1 class="pt-5 mt-5 text-center" style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
-                Aplikasi Yang <br>
-                Kami Hadirkan</h1>
-        </div>
-    </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="pt-5 mt-5 text-center"
+                        style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
+                        Aplikasi Yang <br>
+                        Kami Hadirkan</h1>
+                </div>
+            </div>
 
-    <div class="row mt-5 pt-5">
-        <div class="col-md-3 text-center">
-            <img src="https://i.ibb.co/z2d0Xsj/android.png" width="80" height="80">
-            <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">Android</p>
+            <div class="row mt-5 pt-5">
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/z2d0Xsj/android.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">Android</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/CBfqJDV/ios.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">IOS</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/qp9xrLj/hybrid.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">Hybrid</p>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="https://i.ibb.co/CBfqJDV/ios.png" width="80" height="80">
-            <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">IOS</p>
+        {{-- Banner 4 --}}
+        <div id="banner4" style="background-image: url('your-image-url.jpg'); background-size: cover;">
+            <div class="row">
+                <div class="col-md">
+                    <img class="img-fluid mt-4 pt-4 mb-4 pb-4" src="https://i.ibb.co/rvFY4NG/banner-4.png">
+                </div>
+                <div class="col-md" style="display: flex; align-items: center; justify-content: center;">
+                    <div class="container">
+                        <div class="container">
+                            <h1 class="mt-1"
+                                style="font-family: 'Poppins', sans-serif; font-size: 24px; font-color:#00000;">Siapa Saja
+                                Yang Perlu Menggunakan Mobile Apps?
+                            </h1>
+                            <ul>
+                                <li><span class="dot-icon"><i class="fas fa-circle"></i></span>Perusahaan yang ingin lebih
+                                    berkembang melalui digital.</li>
+                                <li><span class="dot-icon"><i class="fas fa-circle"></i></span>Instansi pemerintah untuk
+                                    meningkatkan pelayanan masyarakat.</li>
+                                <li><span class="dot-icon"><i class="fas fa-circle"></i></span>Perusahaan startup yang
+                                    membutuhkan dukungan tim developer.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3 text-center">
-            <img src="https://i.ibb.co/qp9xrLj/hybrid.png" width="80" height="80">
-            <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">Hybrid</p>
+
+        {{-- Banner 5 --}}
+        <div id="banner5" style="background-image: url('your-image-url.jpg'); background-size: cover;">
+            <div class="row">
+                <div class="col-md" style="display: flex; align-items: center; justify-content: center;">
+                     <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="pt-5 mt-5 text-center" style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
+                        Kelebihan Undangan Digital</h1>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-5">
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/Cvrhyvc/creative-12515656.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                       Inovatif</p>
+                    
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/pzcpbh5/special-offer-10700119.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                        Bergaransi</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/Bsd5Tjv/socialmedia-2833443.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                        User Experience Testing</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="https://i.ibb.co/n0g15Tt/clock-3506839.png" width="80" height="80">
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                        Tepat Waktu</p>
+                </div>
+            </div>
+
         </div>
-    </div>
-</div>
+                </div>
+                <div class="col-md">
+                    <img class="img-fluid mt-4 pt-4 mb-4 pb-4" src="https://i.ibb.co/CWzygGk/banner5.png">
+                </div>
+            </div>
+        </div>
+
     </body>
 
     {{-- https://www.jmc.co.id/mobile-apps --}}
