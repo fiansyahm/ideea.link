@@ -37,7 +37,7 @@
                                 <h1 class="mt-5 mb-5"
                                     style="font-family: 'Poppins', sans-serif; font-size: 42px; color: #000000; font-weight: bold;">
                                     Menghadirkan Mobile Apps Yang Mudah Digunakan</h1>
-                                <button type="button" class="btn btn-primary btn-lg">Konsultasi GRATIS</button>
+                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20pembuatan%20android%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="btn btn-primary btn-lg">Konsultasi GRATIS</a>
                             </div>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                                 <p
                                     style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626;">
                                     Tim kami akan memberikan rancangan pembiayaan dan proses kerja yang ideal.</p>
-                                <button type="button" class="mt-5 btn btn-primary btn-lg">Yuk Konsultasi GRATIS</button>
+                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20pembuatan%20android%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="mt-5 btn btn-primary btn-lg">Yuk Konsultasi GRATIS</a>
                             </div>
                         </div>
                     </div>
