@@ -121,39 +121,45 @@
         <div id="banner5" style="background-image: url('your-image-url.jpg'); background-size: cover;">
             <div class="row">
                 <div class="col-md" style="display: flex; align-items: center; justify-content: center;">
-                     <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h1 class="pt-5 mt-5 text-center" style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
-                        Kelebihan Undangan Digital</h1>
-                </div>
-            </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="pt-5 mt-5 text-center"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
+                                    Mengapa Ideea.Link?</h1>
+                            </div>
+                        </div>
 
-            <div class="row mt-5 pt-5">
-                <div class="col-md-3 text-center">
-                    <img src="https://i.ibb.co/Cvrhyvc/creative-12515656.png" width="80" height="80">
-                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
-                       Inovatif</p>
-                    
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="https://i.ibb.co/pzcpbh5/special-offer-10700119.png" width="80" height="80">
-                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
-                        Bergaransi</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="https://i.ibb.co/Bsd5Tjv/socialmedia-2833443.png" width="80" height="80">
-                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
-                        User Experience Testing</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <img src="https://i.ibb.co/n0g15Tt/clock-3506839.png" width="80" height="80">
-                    <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
-                        Tepat Waktu</p>
-                </div>
-            </div>
+                        <div class="row mt-5 pt-5">
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/Cvrhyvc/creative-12515656.png" width="80" height="80">
+                                <p
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                                    Inovatif</p>
 
-        </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/pzcpbh5/special-offer-10700119.png" width="80"
+                                    height="80">
+                                <p
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                                    Bergaransi</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/Bsd5Tjv/socialmedia-2833443.png" width="80" height="80">
+                                <p
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                                    User Experience Testing</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/n0g15Tt/clock-3506839.png" width="80" height="80">
+                                <p
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-weight: bold;">
+                                    Tepat Waktu</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-md">
                     <img class="img-fluid mt-4 pt-4 mb-4 pb-4" src="https://i.ibb.co/CWzygGk/banner5.png">
@@ -161,6 +167,87 @@
             </div>
         </div>
 
+
+        {{-- Banner 6 --}}
+        <div id="banner6" style="background-image: url('your-image-url.jpg'); background-size: cover;">
+            <div class="row">
+                <div class="col-md" style="display: flex; align-items: center; justify-content: center;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <h1 class="pt-5 mt-5 text-center"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
+                                    PORTOFOLIO</h1>
+                                <p>Di bawah ini merupakan contoh dari jasa pembuatan aplikasi android kami.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 pt-5">
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/567S6BZ/Device.png" width="180" height="360">
+                                <p class="mt-3"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
+                                    Aplikasi Akad.in</p>
+                                <p class="mt-3"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-align:center;">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus adipisci hic
+                                    molestias tempora quisquam, amet voluptates recusandae eligendi provident aspernatur
+                                    minima aut. Sint ad voluptas voluptatem saepe ex veritatis quis!</p>
+
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/567S6BZ/Device.png" width="180" height="360">
+                                <p class="mt-3"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
+                                    Aplikasi Akad.in</p>
+                                <p class="mt-3"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-align:center;">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus adipisci hic
+                                    molestias tempora quisquam, amet voluptates recusandae eligendi provident aspernatur
+                                    minima aut. Sint ad voluptas voluptatem saepe ex veritatis quis!</p>
+
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <img src="https://i.ibb.co/567S6BZ/Device.png" width="180" height="360">
+                                <p class="mt-3"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
+                                    Aplikasi Akad.in</p>
+                                <p class="mt-3"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626; font-align:center;">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus adipisci hic
+                                    molestias tempora quisquam, amet voluptates recusandae eligendi provident aspernatur
+                                    minima aut. Sint ad voluptas voluptatem saepe ex veritatis quis!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Banner 7 --}}
+        <div id="banner7">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md mb-5">
+                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/8cZs388/unsplash-MMUp-T2-C5-Pnk.png">
+                    </div>
+                    <div class="col-md">
+                        <div class="mt-5 container">
+                            <div>
+                                <h1 class="mt-5"
+                                    style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
+                                    Siap mengembangakan bisnis Anda bersama Ideea.Link?</h1>
+                                <p
+                                    style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626;">
+                                    Tim kami akan memberikan rancangan pembiayaan dan proses kerja yang ideal.</p>
+                                <button type="button" class="mt-5 btn btn-primary btn-lg">Yuk Konsultasi GRATIS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 
     {{-- https://www.jmc.co.id/mobile-apps --}}
