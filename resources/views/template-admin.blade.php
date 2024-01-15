@@ -56,7 +56,7 @@
 								<i class="fa fa-phone" aria-hidden="true"></i>
 							</span>
 							<span>
-								<a href="https://api.whatsapp.com/send?phone=+6282195796488&text=Halo%20Admin%20Saya%20Mau%20Konsultasi%20Jasanya" target="_blank">(+62)82195796488</a>
+								<a href="https://api.whatsapp.com/send?phone=+6287888971186&text=Halo%20Admin%20Saya%20Mau%20Konsultasi%20Jasanya" target="_blank">(+62)87888971186</a>
 							</span>
 						</div>
 
@@ -210,7 +210,8 @@
 								<i class="fa fa-phone" aria-hidden="true"></i>
 							</span>
 							<span>
-								<a href="https://api.whatsapp.com/send?phone=+6282195796488&text=Halo%20Admin%20Saya%20Mau%20Konsultasi%20Jasanya" target="_blank">(+62)82195796488</a>
+								<a href="https://api.whatsapp.com/send?phone=+6287888971186&text=Halo%20Admin%20Saya%20Mau%20Konsultasi%20Jasanya" target="_blank">(+62)87888971186
+								</a>
 							</span>
 						</div>
 					</li>
@@ -329,9 +330,9 @@
 								</span>
 
 								<span class="size-w-4">
-									<a href="api.whatsapp.com/send?phone=6282195796488&text=Halo%20Admin%20Saya%20Mau%20Order%20">(+62) 821 9579 6488</a>
+									<a href="api.whatsapp.com/send?phone=6287888971186&text=Halo%20Admin%20Saya%20Mau%20Order%20">(+62)878 8897 1186</a>
 									<br>
-									<a href="api.whatsapp.com/send?phone=6282195796488&text=Halo%20Admin%20Saya%20Mau%20Order%20">(+62) 821 9579 6488</a>
+									<a href="api.whatsapp.com/send?phone=6287888971186&text=Halo%20Admin%20Saya%20Mau%20Order%20">(+62)878 8897 1186</a>
 								</span>
 							</li>
 						</ul>

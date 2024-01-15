@@ -76,15 +76,15 @@
             </div>
 
             <div class="row mt-5 pt-5">
-                <div class="col-md-3 text-center">
+                <div class="col-md-4 text-center">
                     <img src="https://i.ibb.co/z2d0Xsj/android.png" width="80" height="80">
                     <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">Android</p>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-4 text-center">
                     <img src="https://i.ibb.co/CBfqJDV/ios.png" width="80" height="80">
                     <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">IOS</p>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-4 text-center">
                     <img src="https://i.ibb.co/qp9xrLj/hybrid.png" width="80" height="80">
                     <p style="font-family: 'Poppins', sans-serif; font-size: 16px; color: #262626;">Hybrid</p>
                 </div>
@@ -184,7 +184,7 @@
                         </div>
 
                         <div class="row mt-5 pt-5">
-                            <div class="col-md-3 text-center">
+                            <div class="col-md-4 text-center">
                                 <img src="https://i.ibb.co/567S6BZ/Device.png" width="180" height="360">
                                 <p class="mt-3"
                                     style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
@@ -196,7 +196,7 @@
                                     minima aut. Sint ad voluptas voluptatem saepe ex veritatis quis!</p>
 
                             </div>
-                            <div class="col-md-3 text-center">
+                            <div class="col-md-4 text-center">
                                 <img src="https://i.ibb.co/567S6BZ/Device.png" width="180" height="360">
                                 <p class="mt-3"
                                     style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
@@ -208,7 +208,7 @@
                                     minima aut. Sint ad voluptas voluptatem saepe ex veritatis quis!</p>
 
                             </div>
-                            <div class="col-md-3 text-center">
+                            <div class="col-md-4 text-center">
                                 <img src="https://i.ibb.co/567S6BZ/Device.png" width="180" height="360">
                                 <p class="mt-3"
                                     style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
