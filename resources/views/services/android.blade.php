@@ -37,7 +37,8 @@
                                 <h1 class="mt-5 mb-5"
                                     style="font-family: 'Poppins', sans-serif; font-size: 42px; color: #000000; font-weight: bold;">
                                     Menghadirkan Mobile Apps Yang Mudah Digunakan</h1>
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20pembuatan%20android%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="btn btn-primary btn-lg">Konsultasi GRATIS</a>
+                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20pembuatan%20android%20dan%20bayar%20hanya%20setelah%20saya%20puas"
+                                    type="button" class="btn btn-primary btn-lg">Konsultasi GRATIS</a>
                             </div>
                         </div>
                     </div>
@@ -238,15 +239,72 @@
                                 <h1 class="mt-5"
                                     style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626; font-weight: bold;">
                                     Siap mengembangakan bisnis Anda bersama Ideea.Link?</h1>
-                                <p
-                                    style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626;">
+                                <p style="font-family: 'Poppins', sans-serif; font-size: 20px; color: #262626;">
                                     Tim kami akan memberikan rancangan pembiayaan dan proses kerja yang ideal.</p>
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20pembuatan%20android%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="mt-5 btn btn-primary btn-lg">Yuk Konsultasi GRATIS</a>
+                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20pembuatan%20android%20dan%20bayar%20hanya%20setelah%20saya%20puas"
+                                    type="button" class="mt-5 btn btn-primary btn-lg">Yuk Konsultasi GRATIS</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        {{-- Banner 8 --}}
+        <div id="banner8">
+            <div class="container">
+                <h1 class="pt-5 mt-5 text-center"
+                    style="font-family: 'Poppins', sans-serif; font-size: 40px; color: #262626;">
+                    Layanan Kami Lainnya</h1>
+                <p class="text-center">Selain pembuatan mobile apps, Ideea.Link juga menghadirkan layanan yang lainnya
+                </p>
+                <div class="row d-flex align-items-center justify-content-center h-100 mt-5">
+                   {{-- Card 1 --}}
+                    <div class="col-md-2 mb-3">
+                        <div class="card text-center">
+                            <img src="https://i.ibb.co/vjN0zjD/programming-6062646.png" class="card-img-top" alt="sistem informasi">
+                            <div class="card-body">
+                                <h5 class="card-title">SISTEM INFORMASI</h5>
+                                <p class="card-text">Gunakan sistem informasi yang dirancang sesuai kebutuhan,</p>
+                                <a href="#" class="btn btn-primary">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Card 2 --}}
+                    <div class="col-md-2 mb-3">
+                        <div class="card text-center">
+                            <img src="https://i.ibb.co/b29115P/website-977597.png" class="card-img-top" alt="Website">
+                            <div class="card-body">
+                                <h5 class="card-title">WEBSITE</h5>
+                                <p class="card-text">Miliki website custom dan eksklusif untuk bisnismu.</p>
+                                <a href="#" class="btn btn-primary">Selangkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Card 3 --}}
+                    <div class="col-md-2 mb-3">
+                        <div class="card text-center">
+                            <img src="https://i.ibb.co/18JMX3L/map-5185234.png" class="card-img-top" alt="gis">
+                            <div class="card-body">
+                                <h5 class="card-title">GIS</h5>
+                                <p class="card-text">Pembuatan sistem berbasis peta online untuk kinerja yang lebih optimal</p>
+                                <a href="#" class="btn btn-primary">Selangkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- Card 4 --}}
+                    <div class="col-md-2 mb-3">
+                        <div class="card text-center">
+                            <img src="https://i.ibb.co/YLWXrrj/solutions-2550652.png" class="card-img-top" alt="integrasi">
+                            <div class="card-body">
+                                <h5 class="card-title">INTEGRASI SISTEM</h5>
+                                <p class="card-text">Hubungkan sistem yang dimiliki untuk meningkatkan produktifitas.</p>
+                                <a href="#" class="btn btn-primary">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </body>
 
