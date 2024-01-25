@@ -27,6 +27,7 @@ use App\Http\Controllers\SongController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\InvitationController;
+use App\Http\Controllers\FlipbookController;
 
 
 
@@ -47,6 +48,8 @@ Route::post('/register-resume', [ResumeController::class, 'addResume']);
 
 Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
 Route::get('/admin/resume/edit/{id}', [ResumeController::class, 'AdminEdit']);
+Route::get('/flipbook/home', [FlipbookController::class, 'index']);
+Route::get('/flipbook/default-book', [FlipbookController::class, 'defaultBook']);
 // Route::group(['middleware' => ['auth']], function () {
 //     Route::get('/wpadmin', [WeddingController::class, 'wpadmin']);
 //     Route::get('/admin/wedding/dashboard', [WeddingController::class, 'AdminDashboard']);
