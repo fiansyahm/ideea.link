@@ -96,7 +96,7 @@
 				<div class="limiter-menu-desktop container">					
 					<!-- Logo desktop -->		
 					<div class="logo">
-						<a href="index.html"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
+						<a href="/"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
 					</div>
 
 					<!-- Menu desktop -->
@@ -127,8 +127,7 @@
 											<li><a href="/service/website">Jasa Pembuatan Website</a></li>
 											<li><a href="/service/ui">Jasa Konsul UI/UX</a></li>
 											<li><a href="/service/android">Jasa Pembuatan Aplikasi Android</a></li>
-											<li><a href="services-detail-05.html">Penyedia Prompt Chatgpt</a></li>
-											
+											{{-- <li><a href="services-detail-05.html">Penyedia Prompt Chatgpt</a></li> --}}
 										</ul>
 									</li>
 								</ul>
@@ -181,7 +180,7 @@
 			<div class="wrap-header-mobile">
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
+					<a href="/"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
 				</div>
 				
 
@@ -262,7 +261,7 @@
 				<div class="row justify-content-center justify-content-md-start">
 					<div class="col-sm-8 col-md-4 col-lg-3 p-b-20">
 						<div class="size-h-1 flex-s-e p-b-6 m-b-18">
-							<a href="#">
+							<a href="/">
 								<img class="max-s-full" src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" alt="LOGO">
 							</a>
 						</div>
@@ -366,13 +365,13 @@
 								</li>
 
 								<li class="kit-list1 p-b-9">
-									<a href="about.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+									<a href="#" class="t1-s-2 cl-13 hov-link2 trans-02">
 										About us
 									</a>
 								</li>
 
 								<li class="kit-list1 p-b-9">
-									<a href="contact.html" class="t1-s-2 cl-13 hov-link2 trans-02">
+									<a href="#" class="t1-s-2 cl-13 hov-link2 trans-02">
 										Contact
 									</a>
 								</li>

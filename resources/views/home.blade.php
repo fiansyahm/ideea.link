@@ -8,7 +8,7 @@
 				<ul>
 					<!-- Slide 1 -->
 					<li data-transition="slidingoverlayhorizontal">
-						<img src="{{ asset('theme/cprofile1/images/slide-01.jpg') }}" alt="IMG-SLIDE" class="rev-slidebg">
+						<img src="https://i.pinimg.com/564x/f1/a4/fa/f1a4fa6f4a666d8d425dbec0927451cd.jpg" alt="IMG-SLIDE" class="rev-slidebg">
 
 						<h2 class="tp-caption tp-resizeme caption-1 text-uppercase" 
 						data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"x:left;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -84,11 +84,11 @@
 					    data-basealign="slide" 
     					data-responsive_offset="off"
 					    >
-						    <a href="projects-grid.html" class="btn1 flex-c-c">
+						    <a href="/" class="btn1 flex-c-c">
 						    	Our project
 						    </a>
 
-						    <a href="about.html" class="btn2 flex-c-c">
+						    <a href="/" class="btn2 flex-c-c">
 						    	Learn more
 						    </a>
 					    </div>
@@ -96,7 +96,7 @@
 
 					<!-- Slide 2 -->
 					<li data-transition="slidingoverlayvertical">
-						<img src="{{ asset('theme/cprofile1/images/slide-01.jpg') }}" alt="IMG-SLIDE" class="rev-slidebg">
+						<img src="https://i.pinimg.com/564x/f9/1f/6d/f91f6df5d0a2a2db60e456774cc6a03f.jpg" alt="IMG-SLIDE" class="rev-slidebg">
 
 						<h2 class="tp-caption tp-resizeme caption-1 text-uppercase" 
 						data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"y:top;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -184,7 +184,7 @@
 
 					<!-- Slide 3 -->
 					<li data-transition="boxslide">
-						<img src="{{ asset('theme/cprofile1/images/slide-01.jpg') }}" alt="IMG-SLIDE" class="rev-slidebg">
+						<img src="https://i.pinimg.com/564x/34/33/f0/3433f083b186a7edbf02e8cf1968c356.jpg" alt="IMG-SLIDE" class="rev-slidebg">
 
 						<h2 class="tp-caption tp-resizeme caption-1 text-uppercase" 
 						data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"x:-500px;skX:85px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -280,7 +280,7 @@
 			<!-- Title section -->
 			<div class="flex-col-c-c p-b-50">
 				<h3 class="t1-b-1 cl-3 txt-center m-b-11">
-					Our Services
+					Layanan Kami
 				</h3>
 
 				<div class="size-a-2 bg-3"></div>
@@ -291,19 +291,19 @@
                 
 				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
-						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('theme/cprofile1/images/services-01.jpg') }}" alt="IMG">
+						<a href="/service/entry" class="hov-img0 of-hidden bg-0">
+							<img src="https://i.pinimg.com/564x/3c/79/84/3c79849f534ca7fb81ae329db99a3f66.jpg" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">
 							<h4 class="p-b-9">
-								<a href="services-detail-01.html" class="t1-m-1 cl-0 hov-link2 trans-02">
+								<a href="/service/entry" class="t1-m-1 cl-0 hov-link2 trans-02">
 									Jasa Entry Data
 								</a>
 							</h4>
 
 							<p class="t1-s-2 cl-13">
-								We support and help people increase manage-ment experience.
+								Kami membantu anda untuk memasukan data ke dalam sistem anda.
 							</p>
 						</div>
 					</div>
@@ -311,19 +311,19 @@
 
 				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
-						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('theme/cprofile1/images/services-02.jpg') }}" alt="IMG">
+						<a href="/service/website" class="hov-img0 of-hidden bg-0">
+							<img src="https://i.pinimg.com/564x/5a/13/64/5a136487705d8bf2f0ab5220318a77b9.jpg" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">
 							<h4 class="p-b-9">
-								<a href="services-detail-01.html" class="t1-m-1 cl-0 hov-link2 trans-02">
+								<a href="/service/website" class="t1-m-1 cl-0 hov-link2 trans-02">
 									Jasa Pembuatan Website
 								</a>
 							</h4>
 
 							<p class="t1-s-2 cl-13">
-								If you are going to use a passage of Lorem Ipsum, you need to be sure
+								Kami membantu anda dalam pembuatan website untuk keperluan bisnis anda.
 							</p>
 						</div>
 					</div>
@@ -331,19 +331,19 @@
 
 				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
-						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('theme/cprofile1/images/services-03.jpg') }}" alt="IMG">
+						<a href="/service/ui" class="hov-img0 of-hidden bg-0">
+							<img src="https://i.pinimg.com/564x/2b/65/8b/2b658bee14c491cc02e7371d05b1544a.jpg" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">
 							<h4 class="p-b-9">
-								<a href="services-detail-01.html" class="t1-m-1 cl-0 hov-link2 trans-02">
+								<a href="/service/ui" class="t1-m-1 cl-0 hov-link2 trans-02">
 									Jasa Konsul UI/UX
 								</a>
 							</h4>
 
 							<p class="t1-s-2 cl-13">
-								Analysis the business plan for deployment in the market. 
+								Kami membantu anda dalam konsultasi UI/UX untuk keperluan bisnis anda.
 							</p>
 						</div>
 					</div>
@@ -351,25 +351,25 @@
 
                 <div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
-						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
-							<img src="{{ asset('theme/cprofile1/images/services-03.jpg') }}" alt="IMG">
+						<a href="/service/android" class="hov-img0 of-hidden bg-0">
+							<img src="https://i.pinimg.com/564x/c9/7e/b4/c97eb46b0a23c0113cd7d4ea0455ebf6.jpg" alt="IMG">
 						</a>
 
 						<div class="p-rl-30 p-t-26 p-b-20">
 							<h4 class="p-b-9">
-								<a href="services-detail-01.html" class="t1-m-1 cl-0 hov-link2 trans-02">
+								<a href="/service/android" class="t1-m-1 cl-0 hov-link2 trans-02">
 									Jasa Pembuatan Aplikasi Android
 								</a>
 							</h4>
 
 							<p class="t1-s-2 cl-13">
-								Analysis the business plan for deployment in the market. 
+								Kami membantu anda dalam pembuatan aplikasi android untuk keperluan bisnis anda.
 							</p>
 						</div>
 					</div>
 				</div>
 
-                <div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
+                {{-- <div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
 						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
 							<img src="{{ asset('theme/cprofile1/images/services-03.jpg') }}" alt="IMG">
@@ -387,7 +387,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 
 			</div>
 		</div>
@@ -399,7 +399,7 @@
 			<!-- Title section -->
 			<div class="flex-col-c-c p-b-50">
 				<h3 class="t1-b-1 cl-3 txt-center m-b-11">
-					Why Chosse Us
+					Kenapa Memilih Kami
 				</h3>
 
 				<div class="size-a-2 bg-3"></div>
@@ -417,13 +417,13 @@
 							</div>
 
 							<h4 class="block1-title t1-m-1 text-uppercase cl-3 txt-center trans-04">
-								Experienced adviser
+								Tim Profesional dan Berpengalaman
 							</h4>
 						</div>
 							
 						<div class="block1-hide flex-col-c-c p-t-8 trans-04">
 							<p class="t1-s-2 cl-12 txt-center p-b-26">
-								Sed nec egestas diam, vitae imper-diet nisi. Vivamus cursus
+								Tim kami terdiri dari orang-orang yang berpengalaman dan profesional di bidangnya.
 							</p>
 
 							<a href="#" class="flex-c-c size-a-1 p-rl-15 t1-s-2 text-uppercase cl-6 bg-0 hov-btn1 trans-02">
@@ -443,13 +443,13 @@
 							</div>
 
 							<h4 class="block1-title t1-m-1 text-uppercase cl-3 txt-center trans-04">
-								Great Ideas 
+								Ide Kreatif dan Inovatif
 							</h4>
 						</div>
 							
 						<div class="block1-hide flex-col-c-c p-t-8 trans-04">
 							<p class="t1-s-2 cl-12 txt-center p-b-26">
-								Sed nec egestas diam, vitae imper-diet nisi. Vivamus cursus
+								Kami selalu berusaha untuk memberikan ide-ide kreatif dan inovatif untuk kebutuhan bisnis anda.
 							</p>
 
 							<a href="#" class="flex-c-c size-a-1 p-rl-15 t1-s-2 text-uppercase cl-6 bg-0 hov-btn1 trans-02">
@@ -469,13 +469,13 @@
 							</div>
 
 							<h4 class="block1-title t1-m-1 text-uppercase cl-3 txt-center trans-04">
-								Worldwide System
+								Proses Cepat dan Tepat
 							</h4>
 						</div>
 							
 						<div class="block1-hide flex-col-c-c p-t-8 trans-04">
 							<p class="t1-s-2 cl-12 txt-center p-b-26">
-								Sed nec egestas diam, vitae imper-diet nisi. Vivamus cursus
+								Kami selalu berusaha untuk memberikan pelayanan yang cepat dan tepat untuk kebutuhan bisnis anda.
 							</p>
 
 							<a href="#" class="flex-c-c size-a-1 p-rl-15 t1-s-2 text-uppercase cl-6 bg-0 hov-btn1 trans-02">
@@ -495,13 +495,13 @@
 							</div>
 
 							<h4 class="block1-title t1-m-1 text-uppercase cl-3 txt-center trans-04">
-								Security Information
+								Harga Terjangkau
 							</h4>
 						</div>
 							
 						<div class="block1-hide flex-col-c-c p-t-8 trans-04">
 							<p class="t1-s-2 cl-12 txt-center p-b-26">
-								Sed nec egestas diam, vitae imper-diet nisi. Vivamus cursus
+								Kami selalu berusaha untuk memberikan harga yang terjangkau untuk kebutuhan bisnis anda.
 							</p>
 
 							<a href="#" class="flex-c-c size-a-1 p-rl-15 t1-s-2 text-uppercase cl-6 bg-0 hov-btn1 trans-02">
@@ -522,14 +522,14 @@
 					<!-- Title section -->
 					<div class="flex-col-c-s p-b-20">
 						<h3 class="t1-b-1 cl-0 m-b-11">
-							Request A Call Back
+							Hubungi Kami
 						</h3>
 
 						<div class="size-a-2 bg-0"></div>
 					</div>
 
 					<p class="t1-s-2 cl-0">
-						Leave your information and email address. We will call back and advise you. 
+						Kami siap membantu anda untuk kebutuhan bisnis anda.
 					</p>
 				</div>
 
@@ -537,33 +537,38 @@
 					<div class="row">
 						<div class="col-sm-6 p-b-25">
 							<div class="size-a-3">
-								<input class="s-full bg-0 t1-m-2 cl-6 plh-6 p-rl-20" type="text" name="name" placeholder="Your Name">
+								<input class="s-full bg-0 t1-m-2 cl-6 plh-6 p-rl-20" type="text" name="name" id="name" placeholder="Nama Anda">
 							</div>
 						</div>
 
 						<div class="col-sm-6 p-b-25">
 							<div class="size-a-3">
-								<input class="s-full bg-0 t1-m-2 cl-6 plh-6 p-rl-20" type="text" name="phone" placeholder="Phone Number">
+								<input class="s-full bg-0 t1-m-2 cl-6 plh-6 p-rl-20" type="text" name="phone" id="phone" placeholder="WA Anda">
 							</div>
 						</div>
 
 						<div class="col-sm-6 p-b-25">
 							<div class="rs1-select2 bor9 bg0">
-								<select class="js-select2" name="subject">
-									<option>Subject</option>
-									<option>Subject 1</option>
-									<option>Subject 2</option>
-									<option>Subject 3</option>
-								</select>
-								<div class="dropDownSelect2"></div>
+								<input style="padding-top: 15px; padding-bottom: 15px" class="s-full bg-0 t1-m-2 cl-6 plh-6 p-rl-20" type="text" name="message" id="message" placeholder="Pesan Anda">
 							</div>
 						</div>
 
 						<div class="col-sm-6 p-b-25">
-							<button class="flex-c-c size-a-4 bg-11 t1-s-2 text-uppercase cl-0 hov-btn2 trans-02 p-rl-15">
-								Submit
+							<button onclick="contactWA()" class="flex-c-c size-a-4 bg-11 t1-s-2 text-uppercase cl-0 hov-btn2 trans-02 p-rl-15">
+								Kirim
 							</button>
 						</div>
+
+						<script>
+							function contactWA() {
+								var name = document.getElementById("name").value;
+								var phone = document.getElementById("phone").value;
+								var message = document.getElementById("message").value;
+								var url = "https://api.whatsapp.com/send?phone=6287888971186&text=Halo%20Admin%20Ideea.link%2C%20saya%20"+name+"%20dari%20"+phone+"%20ingin%20bertanya%20tentang%20"+message;
+								window.open(url, '_blank');
+							}
+						</script>
+
 					</div>
 				</form>
 			</div>
@@ -576,7 +581,7 @@
 			<!-- Title section -->
 			<div class="flex-col-c-c p-b-50">
 				<h3 class="t1-b-1 cl-3 txt-center m-b-11">
-					Featured Projects
+					Project Kami
 				</h3>
 
 				<div class="size-a-2 bg-3"></div>
@@ -589,21 +594,21 @@
 					<div class="block2 bg-img2" style="background-image: url(images/project-01.jpg);">
 						<div class="block2-content trans-04">
 							<h4 class="block2-title t1-m-1 cl-0 flex-s-c trans-04">
-								System Expansion
+								akad.in
 							</h4>
 
 							<p class="t1-s-2 cl-13 p-b-26">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, various versions have evolved over the years.
+								Akad.in adalah sebuah website yang menyediakan layanan untuk membuat undangan online yang dapat diakses oleh semua orang.
 							</p>
 
-							<a href="projects-detail-01.html" class="d-inline-flex flex-c-c size-a-1 p-rl-15 t1-s-2 text-uppercase cl-6 bg-0 hov-btn3 trans-02">
+							<a href="https://akad.in" class="d-inline-flex flex-c-c size-a-1 p-rl-15 t1-s-2 text-uppercase cl-6 bg-0 hov-btn3 trans-02" target="_blank">
 								Read More
 							</a>
 						</div>
 					</div>
 				</div>
 
-				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
+				{{-- <div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<!-- Block2 -->
 					<div class="block2 bg-img2" style="background-image: url(images/project-02.jpg);">
 						<div class="block2-content trans-04">
@@ -639,11 +644,12 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</section>
 
+{{-- 
 	<!-- Number -->
 	<div class="parallax100 kit-overlay1 p-tb-38" style="background-image: url(images/bg-01.jpg);">
 		<div class="container">
@@ -1069,5 +1075,9 @@
 				</form>
 			</div>
 		</div>
-	</section>
+	</section> 
+	
+--}}
+
+
 @endsection
