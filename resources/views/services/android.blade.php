@@ -1,32 +1,6 @@
 @extends('template-admin')
 @section('title', 'Android')
 @section('main')
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Android</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <style>
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            li {
-                margin-bottom: 10px;
-            }
-
-            .dot-icon {
-                margin-right: 10px;
-            }
-        </style>
-    </head>
-
-    <body>
         {{-- Banner 1 --}}
         <div id="banner1">
             <div class="container">
@@ -168,7 +142,6 @@
             </div>
         </div>
 
-
         {{-- Banner 6 --}}
         <div id="banner6" style="background-image: url('your-image-url.jpg'); background-size: cover;">
             <div class="row">
@@ -249,6 +222,7 @@
                 </div>
             </div>
         </div>
+
         {{-- Banner 8 --}}
         <div id="banner8">
             <div class="container">
@@ -305,8 +279,5 @@
                 </div>
             </div>
         </div>
-        </div>
-    </body>
-
-    {{-- https://www.jmc.co.id/mobile-apps --}}
+        
 @endsection

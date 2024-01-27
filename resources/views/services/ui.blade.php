@@ -1,49 +1,6 @@
 @extends('template-admin')
 @section('title', 'UI/UX Design')
-@section('main')
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Desain UI/UX</title>
-        <style>
-            .space-between {
-                margin-bottom: 50px;
-                /* Adjust the value according to your preference */
-            }
-
-            #banner3 ul li {
-                font-weight: bold;
-            }
-
-            /* Add a common class for alignment */
-            .ui-ux-text {
-                font-family: 'Poppins', sans-serif;
-                color: #000000;
-                font-weight: bold;
-                margin-top: 5px;
-                /* Adjust as needed */
-            }
-
-            .card-body a {
-                font-family: 'Poppins', sans-serif;
-                font-size: 28px;
-                font-weight: bold;
-                color: #000000;
-                text-align: center;
-                text-decoration: underline;
-                display: block;
-                /* Membuat link menjadi blok untuk memberikan jarak dari teks di atasnya */
-                margin-top: 10px;
-                /* Sesuaikan margin-top sesuai kebutuhan */
-            }
-        </style>
-    </head>
-
-    <body>
+@section('main')    
         {{-- Banner 1 --}}
         <div id="banner1">
             <div class="container">
@@ -456,8 +413,4 @@
                 </div>
             </div>
         </div>
-    </body>
-    {{-- https://onero.id/services/ui-ux-design-service/ --}}
-
-    </html>
 @endsection

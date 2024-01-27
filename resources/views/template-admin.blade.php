@@ -127,6 +127,7 @@
 											<li><a href="/service/website">Jasa Pembuatan Website</a></li>
 											<li><a href="/service/ui">Jasa Konsul UI/UX</a></li>
 											<li><a href="/service/android">Jasa Pembuatan Aplikasi Android</a></li>
+											<li><a href="/service/resume">Jasa Pembuatan Resume</a></li>
 											{{-- <li><a href="services-detail-05.html">Penyedia Prompt Chatgpt</a></li> --}}
 										</ul>
 									</li>
