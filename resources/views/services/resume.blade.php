@@ -109,14 +109,11 @@
                     src="https://i.ibb.co/FzDGyBn/personal-profile.png"
                     alt="izin" width="500" height="500" style="border: 2px solid #000; /* Warna hitam */">
                             <ul class="list-fitur">
-                                <li>Deadline kurang dari 5 hari (120 jam)</li>
-                                <li>Input data di Excel (Spreadsheet)</li>
-                                <li>Garansi uang kembali 100% jika terlambat</li>
-                                <li>Gratis revisi tanpa batasan waktu atau kesempatan</li>
-                                <li>Gratis backup file dokumen seumur hidup</li>
-                                <li>Perlindungan keamanan privasi dokumen</li>
+                                <li> Isi Form Langsung Jadi </li>
+                                <li> Desain Elegan dan Interaktif </li>
+                                <li> Bisa Edit Kapanpun </li>
                             </ul>
-                            <a href="" class="btn btn-primary text-white">Lihat Contoh</a>
+                            <a href="/personal-profile/1" class="btn btn-primary text-white">Lihat Contoh</a>
                         </div>
                     </div>
                 </div>
@@ -125,25 +122,21 @@
                         <div class="card-body">
                             <h5 class="card-title"><strong>Personal Profile</strong> 2</h5>
                             <img class="img img-fluid text-center justify-content-center"
-                    src="https://i.ibb.co/FzDGyBn/personal-profile.png"
+                    src="https://i.ibb.co/NxsCTc0/Screenshot-2024-01-27-121430.png"
                     alt="izin" width="500" height="500" style="border: 2px solid #000; /* Warna hitam */">
                             <ul class="list-fitur">
-                                <li>Deadline kurang dari 3 hari (72 jam)</li>
-                                <li>Input data di Excel (Spreadsheet)</li>
-                                <li>Garansi uang kembali 100% jika terlambat</li>
-                                <li>Gratis revisi tanpa batasan waktu atau kesempatan</li>
-                                <li>Gratis backup file dokumen seumur hidup</li>
-                                <li>Perlindungan keamanan privasi dokumen</li>
+                                <li> Isi Form Langsung Jadi </li>
+                                <li> Desain Elegan dan Interaktif </li>
+                                <li> Bisa Edit Kapanpun </li>
                             </ul>
-                            <a class="btn btn-primary text-white">Rp400/cell</a>
+                            <a href="/personal-profile/6" class="btn btn-primary text-white">Lihat Contoh</a> 
                         </div>
                     </div>
                 </div>
             </div>
             <h3 class="text-center mt-5">Mau konsultasi atau negosiasi?</h3>
-            <p class="text-center light-gray-color">Butuh jasa input data dengan jumlah ratusan atau bahkan jutaan data
-                dalam waktu singkat?
-                Admin selalu siap 24/7 via WhatsApp maupun telepon. Klik WhatsApp atau telepon di bawah
+            <p class="text-center light-gray-color">Kami siap membantu kamu. Klik tombol di bawah untuk menghubungi kami
+                melalui WhatsApp
             </p>
             <div class="container">
                 <div class="row">
