@@ -50,13 +50,14 @@ Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile'
 Route::get('/admin/resume/edit/{id}', [ResumeController::class, 'AdminEdit']);
 Route::get('/flipbook/home', [FlipbookController::class, 'index']);
 Route::get('/flipbook/default-book', [FlipbookController::class, 'defaultBook']);
-// Route::group(['middleware' => ['auth']], function () {
-//     Route::get('/wpadmin', [WeddingController::class, 'wpadmin']);
-//     Route::get('/admin/wedding/dashboard', [WeddingController::class, 'AdminDashboard']);
-//     Route::get('/admin/wedding/list', [WeddingController::class, 'AdminList']);
-//     Route::get('/admin/wedding/edit/{id}', [WeddingController::class, 'AdminEdit']);
-//     Route::get('/admin/wedding/delete/{id}', [WeddingController::class, 'AdminDelete']);
-// });
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/wpadmin', [WeddingController::class, 'wpadmin']);
+    Route::get('/admin/wedding/dashboard', [WeddingController::class, 'AdminDashboard']);
+    Route::get('/admin/wedding/list', [WeddingController::class, 'AdminList']);
+    Route::get('/admin/wedding/edit/{id}', [WeddingController::class, 'AdminEdit']);
+    Route::get('/admin/wedding/delete/{id}', [WeddingController::class, 'AdminDelete']);
+});
 
 // Route::get('/user/wedding/edit/{id}/{couple1}/{couple2}', [WeddingController::class, 'UserEdit']);
 Route::post('/update-resume', [ResumeController::class, 'updateResume']);
@@ -72,11 +73,11 @@ Route::get('/katalog/{type}', [InvitationController::class, 'katalog']);
 
 // Route::get('/register-wedding', [PortofolController::class, 'registerPortofol']);
 
-// Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
-// Route::post('/session/login', [SessionController::class, 'login']);
-// Route::get('/session/logout', [SessionController::class, 'logout']);
-// Route::get('/session/register', [SessionController::class, 'register']);
-// Route::post('/session/register', [SessionController::class, 'createUser']);
+Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login');
+Route::post('/session/login', [SessionController::class, 'login']);
+Route::get('/session/logout', [SessionController::class, 'logout']);
+Route::get('/session/register', [SessionController::class, 'register']);
+Route::post('/session/register', [SessionController::class, 'createUser']);
 
 
 // Route::get('/contact/{product}', [SessionController::class, 'contact']);
