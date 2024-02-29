@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
-class WeddingController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,7 @@ class WeddingController extends Controller
     }
 
      public function AdminDashboard(){
-         return view('admin-wedding.dashboard');
+         return view('admin-resume.dashboard');
      }
 
      public function AdminSearch($data){

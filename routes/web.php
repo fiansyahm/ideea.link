@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\WeddingController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KhitanController;
 use App\Http\Controllers\AqiqahController;
 use App\Http\Controllers\RequestController;
@@ -52,11 +52,11 @@ Route::get('/flipbook/home', [FlipbookController::class, 'index']);
 Route::get('/flipbook/default-book', [FlipbookController::class, 'defaultBook']);
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/wpadmin', [WeddingController::class, 'wpadmin']);
-    Route::get('/admin/wedding/dashboard', [WeddingController::class, 'AdminDashboard']);
-    Route::get('/admin/wedding/list', [WeddingController::class, 'AdminList']);
-    Route::get('/admin/wedding/edit/{id}', [WeddingController::class, 'AdminEdit']);
-    Route::get('/admin/wedding/delete/{id}', [WeddingController::class, 'AdminDelete']);
+    Route::get('/wpadmin', [AdminController::class, 'wpadmin']);
+    Route::get('/admin/wedding/dashboard', [AdminController::class, 'AdminDashboard']);
+    Route::get('/admin/wedding/list', [AdminController::class, 'AdminList']);
+    Route::get('/admin/wedding/edit/{id}', [AdminController::class, 'AdminEdit']);
+    Route::get('/admin/wedding/delete/{id}', [AdminController::class, 'AdminDelete']);
 });
 
 // Route::get('/user/wedding/edit/{id}/{couple1}/{couple2}', [WeddingController::class, 'UserEdit']);
