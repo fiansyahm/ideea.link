@@ -19,9 +19,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mb-3">
-                        <label for="theme" class="form-label">ID Undangan</label>
-                        <input type="text" class="form-control @error('theme') is-invalid @enderror" id="theme"
+                        <label for="theme" class="form-label">Tema Undangan</label>
+                        <select type="text" class="form-select form-control @error('theme') is-invalid @enderror" id="theme"
                             name="theme" value="{{ old('theme') }}" placeholder="Tema Undangan">
+                            <option value="1">Tema 1</option>
+                            <option value="2">Tema 2</option>
+                            <option value="3">Tema 3</option>
+                        </select>
                         @error('theme')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
@@ -198,13 +202,18 @@
                             <div class="row" id="canido-container">
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="canido-0"
-                                    placeholder="name"
+                                    placeholder="Graphic Design"
                                     oninput="updateCanidoArray('0', 'name', this.value)">
                                 </div>
                                 <div class="mb-3 col-md-5">
-                                    <input type="text" class="form-control" id="canido-icon-0"
-                                    placeholder="icon"
+                                    <select type="text" class="form-control" id="canido-icon-0"
+                                    placeholder="icon flaticon-layers-icon"
                                         oninput="updateCanidoArray('0', 'icon', this.value)">
+                                        <option value="icon flaticon-layers-icon">Graphic Design Icon</option>
+                                        <option value="icon flaticon-responsive-design-symbol">Web Design Icon</option>
+                                        <option value="icon flaticon-technology">Photography Icon</option>
+                                        <option value="icon flaticon-technology">Icon Lainnya</option>
+                                    </select>  
                                 </div>
                                 <div class="mb-3 col-md-2">
                                     <button type="button" class="btn btn-danger" id="canido-delete-0" onclick="removeCanido('0')">
@@ -213,7 +222,7 @@
                                 </div>
                             </div>
                             <div class="mb-3 col-md-12">
-                                <input style="display: none" type="text" class="form-control" id="canido" name="canido" value='{"data":[{"name":"","icon":""}]}' placeholder="Can I Do" readonly>
+                                <input type="text" style="display: none" class="form-control" id="canido" name="canido" value='{"data":[{"name":"","icon":""}]}' placeholder="Can I Do" readonly>
                             </div>
 
                             <script>
@@ -287,8 +296,8 @@
                                     canidoElement.innerHTML = '<input type="text" class="form-control" id="canido-' + position + '" name="canido-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'name\', this.value)">';
 
                                     var canidoIconElement = document.createElement('div');
-                                    canidoIconElement.setAttribute('class', 'mb-3 col-md-5');
-                                    canidoIconElement.innerHTML = '<input type="text" class="form-control" id="canido-icon-' + position + '" name="canido-icon-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'icon\', this.value)">';
+                                    canidoIconElement.setAttribute('class', 'mb-3 col-md-5');                                    
+                                    canidoIconElement.innerHTML = '<select type="text" class="form-control" id="canido-icon-' + position + '" name="canido-icon-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'icon\', this.value)"><option value="icon flaticon-layers-icon">Graphic Design Icon</option><option value="icon flaticon-responsive-design-symbol">Web Design Icon</option><option value="icon flaticon-technology">Photography Icon</option><option value="icon flaticon-technology">Icon Lainnya</option></select>';
 
                                     var canidoDeleteElement = document.createElement('div');
                                     canidoDeleteElement.setAttribute('class', 'mb-3 col-md-2');
@@ -309,12 +318,12 @@
                             <div class="row" id="skill-container">
                                     <div class="mb-3 col-md-5">
                                         <input type="text" class="form-control" id="skill-0"
-                                        placeholder="name"
+                                        placeholder="HTML"
                                         oninput="updateSkillArray('0', 'name', this.value)">
                                     </div>
                                     <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="skill-percentage-0"
-                                        placeholder="percentage"
+                                        placeholder="92"
                                         oninput="updateSkillArray('0', 'percentage', this.value)">
                                     </div>
                                     <div class="mb-3 col-md-2">
@@ -432,25 +441,25 @@
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="educational-0"
                                             {{-- name="educational-0"  --}}
-                                            placeholder="degree"
+                                            placeholder="Master Degree"
                                             oninput="updateEducationalArray('0', 'degree', this.value)">
                                 </div>
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="educational-university-0"
                                             {{-- name="educational-university-0"  --}}
-                                            placeholder="university"
+                                            placeholder="University of Oxford"
                                             oninput="updateEducationalArray('0', 'university', this.value)">
                                 </div>
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="educational-year-0"
                                             {{-- name="educational-year-0"  --}}
-                                            placeholder="year"
+                                            placeholder="Jan 2015 - Dec 2017"
                                             oninput="updateEducationalArray('0', 'year', this.value)">
                                 </div>
                                 <div class="mb-5 col-md-5">
                                     <input type="text" class="form-control" id="educational-description-0"
                                             {{-- name="educational-description-0"  --}}
-                                            placeholder="description"
+                                            placeholder="I am study hard 1"
                                             oninput="updateEducationalArray('0', 'description', this.value)">
                                 </div>
                                 <div class="mb-5 col-md-2">
@@ -581,25 +590,25 @@
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="working-0"
                                             {{-- name="working-0"  --}}
-                                            placeholder="position"
+                                            placeholder="UI/UX"
                                             oninput="updateWorkingArray('0', 'position', this.value)">
                                 </div>
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="working-company-0"
                                             {{-- name="working-company-0"  --}}
-                                            placeholder="company"
+                                            placeholder="University of Oxford"
                                             oninput="updateWorkingArray('0', 'company', this.value)">
                                 </div>
                                 <div class="mb-3 col-md-5">
                                     <input type="text" class="form-control" id="working-year-0"
                                             {{-- name="working-year-0"  --}}
-                                            placeholder="year"
+                                            placeholder="Jan 2015 - Dec 2017"
                                             oninput="updateWorkingArray('0', 'year', this.value)">
                                 </div>
                                 <div class="mb-5 col-md-5">
                                     <input type="text" class="form-control" id="working-description-0"
                                             {{-- name="working-description-0"  --}}
-                                            placeholder="description"
+                                            placeholder="i am working hard"
                                             oninput="updateWorkingArray('0', 'description', this.value)">
                                 </div>
                                 <div class="mb-3 col-md-2">

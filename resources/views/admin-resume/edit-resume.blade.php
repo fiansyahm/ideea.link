@@ -10,15 +10,19 @@
                     <div class="mb-3">
                         <label for="id-bridge" class="form-label">ID Undangan</label>
                         <input type="text" class="form-control @error('id') is-invalid @enderror" id="id"
-                            name="id" value="{{ $resume['id'] }}" placeholder="ID Undangan">
+                            name="id" value="{{ $resume['id'] }}" placeholder="ID Undangan" readonly>
                         @error('id')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label for="theme" class="form-label">Tema Undangan</label>
-                        <input type="text" class="form-control @error('theme') is-invalid @enderror" id="theme"
+                        <select type="text" class="form-control @error('theme') is-invalid @enderror" id="theme"
                             name="theme" value="{{ $resume->theme }}" placeholder="Tema Undangan">
+                            <option @if($resume->theme == '1') selected @endif value="1">Tema 1</option>
+                            <option @if($resume->theme == '2') selected @endif value="2">Tema 2</option>
+                            <option @if($resume->theme == '3') selected @endif value="3">Tema 3</option>
+                        </select>
   
                         @error('theme')
                             <div class="alert alert-danger">{{ $message }}</div>
