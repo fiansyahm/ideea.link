@@ -295,7 +295,7 @@
                 <ul class="list-unstyled components mb-5">
                   
                   <li class="nav-item @yield('navbar_dashboard')">
-                    <a class="nav-link" href="/admin/wedding/dashboard">
+                    <a class="nav-link" href="/admin/resume/dashboard">
                         Dashboard
                     </a>
                   </li>
@@ -344,17 +344,17 @@
                     </ul>
                   </li>
 
-                  <li class="@yield('navbar_menu_wedding')">
-                      <a class="nav-link" href="#submenu_wedding_1" data-toggle="collapse" aria-expanded="false"
-                          class="dropdown-toggle">Wedding Invitation</a>
-                      <ul class="collapse list-unstyled" id="submenu_wedding_1">
+                  <li class="@yield('navbar_menu_resume')">
+                      <a class="nav-link" href="#submenu_resume_1" data-toggle="collapse" aria-expanded="false"
+                          class="dropdown-toggle">Personal Resume</a>
+                      <ul class="collapse list-unstyled" id="submenu_resume_1">
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin/wedding/list/all">
-                                Daftar Undangan
+                            <a class="nav-link" href="/admin/resume/list/all">
+                                Daftar Resume
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/wedding/konfirmasi">
+                            <a class="nav-link" href="/resume/konfirmasi">
                                 Daftar Konfirmasi
                             </a>
                         </li>

@@ -164,12 +164,6 @@ class ResumeController extends Controller
          }
      }
 
-     public function AdminEdit($id)
-     {
-      $resume = Resume::find($id);
-      return view('admin-resume.edit-resume-admin',['resume'=>$resume]);
-     }
-
      public function updateResume(Request $request){
       $resumeData = $request->except(['id', '_token']); // Exclude the 'id' and '_token' fields
       Resume::where('id', $request->id)->update($resumeData);

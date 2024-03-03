@@ -47,16 +47,16 @@ Route::get('/register-resume', [ResumeController::class, 'registerResume']);
 Route::post('/register-resume', [ResumeController::class, 'addResume']);
 
 Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
-Route::get('/admin/resume/edit/{id}', [ResumeController::class, 'AdminEdit']);
 Route::get('/flipbook/home', [FlipbookController::class, 'index']);
 Route::get('/flipbook/default-book', [FlipbookController::class, 'defaultBook']);
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/wpadmin', [AdminController::class, 'wpadmin']);
-    Route::get('/admin/wedding/dashboard', [AdminController::class, 'AdminDashboard']);
-    Route::get('/admin/wedding/list', [AdminController::class, 'AdminList']);
-    Route::get('/admin/wedding/edit/{id}', [AdminController::class, 'AdminEdit']);
-    Route::get('/admin/wedding/delete/{id}', [AdminController::class, 'AdminDelete']);
+    Route::get('/admin/resume/dashboard', [AdminController::class, 'AdminDashboard']);
+    Route::get('/admin/resume/list/{data}', [AdminController::class, 'AdminList']);
+    Route::get('/admin/wedding/search/{data}', [AdminController::class, 'AdminSearch']);
+    Route::get('/admin/resume/edit/{id}', [AdminController::class, 'AdminEdit']);
+    Route::get('/admin/resume/delete/{id}', [AdminController::class, 'AdminDelete']);
 });
 
 // Route::get('/user/wedding/edit/{id}/{couple1}/{couple2}', [WeddingController::class, 'UserEdit']);

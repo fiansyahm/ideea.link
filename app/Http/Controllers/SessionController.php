@@ -16,7 +16,7 @@ class SessionController extends Controller
     function index()
     {
         if (Auth::check()) {
-            return redirect('/admin/wedding/dashboard');
+            return redirect('/admin/resume/dashboard');
         }
         return view('session.index');
     }
@@ -35,7 +35,7 @@ class SessionController extends Controller
 
         if ($user && Hash::check($request->password, $user->password)&& $user->isAdmin == true) {
             Auth::login($user); // Use Auth::login() to perform the login
-            return redirect('/admin/wedding/dashboard')->with('success', 'Login berhasil');
+            return redirect('/admin/resume/dashboard')->with('success', 'Login berhasil');
         } else {
             return redirect('/wpadmin-login')->withErrors('Email atau password salah');
         }
