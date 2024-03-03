@@ -59,7 +59,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/resume/delete/{id}', [AdminController::class, 'AdminDelete']);
 });
 
-// Route::get('/user/wedding/edit/{id}/{couple1}/{couple2}', [WeddingController::class, 'UserEdit']);
+Route::get('/user/resume/edit/{id}/{nickname}/{fulname}', [AdminController::class, 'UserEdit']);
 Route::post('/update-resume', [ResumeController::class, 'updateResume']);
 
 

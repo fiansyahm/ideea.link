@@ -75,4 +75,17 @@ class AdminController extends Controller
          }
       }
 
+      public function UserEdit($id, $nickname, $fullname){
+        $name1 = ucwords($nickname);
+        $resume = Resume::all()->where('id', $id)->where('nickname', $name1);
+        if(count($resume)>0){
+         // nanti diganti ya,buatin sendiri
+            $resume = Resume::all()->where('id', $id)->first();
+            return view('admin-resume.edit-resume-user',['resume'=>$resume]);
+        }
+        else{
+            return "Data Tidak Ditemukan";
+        }
+    }
+
 }

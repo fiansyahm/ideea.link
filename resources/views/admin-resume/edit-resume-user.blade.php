@@ -1,2 +1,2 @@
-@extends('invitation.template')
-@include('admin-wedding.edit-wedding')
+@extends('template-admin')
+@include('admin-resume.edit-resume')
