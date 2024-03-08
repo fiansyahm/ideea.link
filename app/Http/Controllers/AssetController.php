@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Asset;
 
 class AssetController extends Controller
 {
@@ -14,7 +15,35 @@ class AssetController extends Controller
      */
     public function index()
     {
-        //
+        return view('asset.index');
+    }
+
+    public function view($id)
+    {
+        $asset=Asset::find($id);
+        return view('asset.view',compact('asset'));
+    }
+
+    public function geoapify($id)
+    {
+        $asset=Asset::find($id);
+        return view('asset.geoapify',compact('asset'));
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+        $asset = Asset::where('certificate_number','like',"%".$search."%")
+        ->orWhere('registration_number','like',"%".$search."%")
+        ->orWhere('year_of_acquisition','like',"%".$search."%")
+        ->orWhere('acquisition_value','like',"%".$search."%")
+        ->orWhere('asset_area','like',"%".$search."%")
+        ->orWhere('location_latitude','like',"%".$search."%")
+        ->orWhere('location_longitude','like',"%".$search."%")
+        ->orWhere('allotment','like',"%".$search."%")
+        ->orWhere('picture','like',"%".$search."%")
+        ->get()->first();
+        return redirect('/asset/view/'.$asset->id);
     }
 
     /**

@@ -18,7 +18,7 @@
     <div id="my-map"></div>
     <script type="text/javascript">
         // The Leaflet map Object
-        var map = L.map('my-map').setView([-8.051215, 111.918359], 15);
+        var map = L.map('my-map').setView([{{$asset->location_latitude}}, {{$asset->location_longitude}}], 15);
         
         // the attribution is required for the Geoapify Free tariff plan
         map.attributionControl.setPrefix('').addAttribution('Powered by <a href="https://www.geoapify.com/" target="_blank">Geoapify</a> | © OpenStreetMap <a href="https://www.openstreetmap.org/copyright" target="_blank">contributors</a>');

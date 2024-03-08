@@ -1,4 +1,4 @@
-@extends('template-admin')
+@extends('template-user')
 @section('main')
 
 <div class="container mt-5">

@@ -8,7 +8,7 @@ use App\Models\Song;
 use App\Models\Code;
 use App\Models\Pendingpayment;
 use App\Models\Catalog;
-use App\Models\Resume;
+use App\Models\Asset;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
@@ -38,6 +38,28 @@ class AdminController extends Controller
          return view('admin.dashboard');
      }
 
+     public function AdminCreate(){
+        return view('admin.create-asset');
+     }
+
+     public function AdminStore(Request $request){
+        $validatedData = $request->validate([
+            'certificate_number' => 'required|string',
+            'registration_number' => 'required|string',
+            'year_of_acquisition' => 'required|integer',
+            'acquisition_value' => 'required|string',
+            'asset_area' => 'required|string',
+            'location_latitude' => 'required|string',
+            'location_longitude' => 'required|string',
+            'allotment' => 'required|string',
+            'picture' => 'required|string',
+        ]);
+
+        $asset = Asset::create($validatedData);
+
+        return redirect('/admin/asset/list/all')->with('success', 'Aset berhasil ditambahkan.');
+     }
+
      public function AdminSearch($data){
         return redirect("/admin/resume/list/$data");
     }
@@ -45,29 +67,35 @@ class AdminController extends Controller
     public function AdminList($data)
     {
         if ($data === 'all') {
-            $resume = Resume::query();
-            $resume = $resume->paginate(10);
+            $asset = Asset::query();
+            $asset = $asset->paginate(10);
         } else {
-            $resume = Resume::where('id', 'like', '%' . $data . '%')
+            $asset = Asset::where('id', 'like', '%' . $data . '%')
                 ->orWhere('nickname', 'like', '%' . $data . '%')
                 ->orWhere('fullname', 'like', '%' . $data . '%');
-            $resume = $resume->paginate(10);
+            $asset = $asset->paginate(10);
         }
     
-        return view('admin-resume.list-resume', ['resume' => $resume]);
+        return view('admin.list-asset', ['assets' => $asset]);
+        // return $asset;
     }
     
      public function AdminEdit($id){
-        $resume = Resume::find($id);
-        return view('admin-resume.edit-resume-admin',['resume'=>$resume]);
+        $asset = Asset::find($id);
+        return view('admin.edit-asset',['asset'=>$asset]);
      }
 
+    public function AdminUpdate(Request $request, $id){
+        Asset::where('id', $id)->update($request->except('_token', '_method'));
+        return redirect('/admin/asset/list/all')->with('success', 'Aset berhasil diubah.');
+    }
+
      public function AdminDelete($id){
-         $resume = Cache::remember('resume_' . $id, 60, function () use ($id) {
-            return Resume::find($id);
+         $asset = Cache::remember('asset_' . $id, 60, function () use ($id) {
+            return Asset::find($id);
          });
          if(Auth::check()&& Auth::user()->isAdmin=='1'){
-            $resume->delete();
+            $asset->delete();
             return redirect()->back()->with('status', 'Data Sukses Dihapus');
          }
          else{

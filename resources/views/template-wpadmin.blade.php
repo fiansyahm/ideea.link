@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Arijaya Printing</title>
+    <title>TA YESI</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style id="" media="all">
@@ -295,13 +295,13 @@
                 <ul class="list-unstyled components mb-5">
                   
                   <li class="nav-item @yield('navbar_dashboard')">
-                    <a class="nav-link" href="/admin/resume/dashboard">
+                    <a class="nav-link" href="/admin/dashboard">
                         Dashboard
                     </a>
                   </li>
 
-                  <li class="nav-item @yield('navbar_dashboard')">
-                    <a class="nav-link" href="/admin/resume/dashboard">
+                  <li class="nav-item @yield('navbar_asset')">
+                    <a class="nav-link" href="/admin/asset/list/all">
                         Management Asset 
                     </a>
                   </li>
