@@ -27,7 +27,7 @@ class AdminController extends Controller
 
      public function wpadmin(){
         if(Auth::check()){
-           return redirect('/admin/resume/dashboard');
+           return redirect('/admin/dashboard');
         }
         else{
            return redirect('/wpadmin-login');
@@ -35,7 +35,7 @@ class AdminController extends Controller
     }
 
      public function AdminDashboard(){
-         return view('admin-resume.dashboard');
+         return view('admin.dashboard');
      }
 
      public function AdminSearch($data){
