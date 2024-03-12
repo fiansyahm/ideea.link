@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>TA YESI</title>
+    <title>Arijaya Printing</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style id="" media="all">
@@ -295,19 +295,56 @@
                 <ul class="list-unstyled components mb-5">
                   
                   <li class="nav-item @yield('navbar_dashboard')">
-                    <a class="nav-link" href="/admin/dashboard">
+                    <a class="nav-link" href="/admin/resume/dashboard">
                         Dashboard
                     </a>
                   </li>
 
-                  <li class="nav-item @yield('navbar_asset')">
-                    <a class="nav-link" href="/admin/asset/list/all">
-                        Management Asset 
+                  <li class="nav-item @yield('navbar_code')">
+                    <a class="nav-link" href="/code">
+                        Kode
                     </a>
                   </li>
 
-              
-                  {{-- <li class="@yield('navbar_menu_resume')">
+                  <li class="@yield('navbar_menu_absence')">
+                    <a class="nav-link" href="#submenu_absence" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Report</a>
+                    <ul class="collapse list-unstyled" id="submenu_absence">
+                        <?php
+                            // get current month
+                            $day = date('d');
+                            $month = date('m');
+                            $year = date('Y');
+                        ?>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/absence/{{$day}}/{{$month}}/{{$year}}/all">
+                              Daftar Absensi
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/absence/create">
+                              Absensi Online
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/absence/absent">
+                              Form Izin
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/absence/report/list/{{$day}}/{{$month}}/{{$year}}/all">
+                            List Laporan
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="/absence/report">
+                              Form Laporan
+                          </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="@yield('navbar_menu_resume')">
                       <a class="nav-link" href="#submenu_resume_1" data-toggle="collapse" aria-expanded="false"
                           class="dropdown-toggle">Personal Resume</a>
                       <ul class="collapse list-unstyled" id="submenu_resume_1">
@@ -322,7 +359,130 @@
                             </a>
                         </li>
                       </ul>
-                  </li> --}}
+                  </li>
+                    <?php
+                        $hostname = $_SERVER['HTTP_HOST'];
+                    ?>
+                    {{-- <script>
+                        alert("{{$hostname}}")
+                    </script> --}}
+
+                    @if ($hostname != 'ikad.in')
+
+                        <li class="@yield('navbar_menu_khitan')">
+                            <a class="nav-link" href="#submenu_wedding_khitan" data-toggle="collapse" aria-expanded="false"
+                                class="dropdown-toggle">Khitan Invitation</a>
+                            <ul class="collapse list-unstyled" id="submenu_wedding_khitan">
+                            <li class="nav-item">
+                                <a class="nav-link @yield('navbar_produk')" href="/admin/khitan/list/all">
+                                    Daftar Undangan
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @yield('navbar_konfirmasi')" href="/khitan/konfirmasi">
+                                    Daftar Konfirmasi
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+                        <li class="@yield('navbar_menu_aqiqah')">
+                            <a class="nav-link" href="#submenu_wedding_aqiqah" data-toggle="collapse" aria-expanded="false"
+                                class="dropdown-toggle">Aqiqah Invitation</a>
+                            <ul class="collapse list-unstyled" id="submenu_wedding_aqiqah">
+                            <li class="nav-item">
+                                <a class="nav-link @yield('navbar_produk')" href="/admin/aqiqah/list/all">
+                                    Daftar Undangan
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @yield('navbar_konfirmasi')" href="/aqiqah/konfirmasi">
+                                    Daftar Konfirmasi
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+                        <li class="@yield('navbar_menu_polaroid')">
+                            <a class="nav-link" href="#submenu_wedding_polaroid" data-toggle="collapse" aria-expanded="false"
+                                class="dropdown-toggle">Polaroid</a>
+                            <ul class="collapse list-unstyled" id="submenu_wedding_polaroid">
+                            <li class="nav-item">
+                                <a class="nav-link @yield('navbar_produk')" href="/polaroid/home">
+                                    Menu Utama
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @yield('navbar_konfirmasi')" href="/polaroid/background">
+                                    Background Foto
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_song')">
+                            <a class="nav-link" href="/song/list/all">
+                                Lagu
+                            </a>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_video')">
+                            <a class="nav-link" href="/video">
+                                Video
+                            </a>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_menu_attendance')">
+                            <a class="nav-link" href="/myattendance">
+                                Attendance
+                            </a>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_pendingpayment')">
+                            <a class="nav-link" href="/pendingpayment">
+                                Pending Payment
+                            </a>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_menu_catalog')">
+                            <a class="nav-link" href="/catalog">
+                                Catalog
+                            </a>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_menu_order')">
+                            <a class="nav-link" href="/order/pending/all">
+                                Order
+                            </a>
+                        </li>
+
+                        <li class="nav-item @yield('navbar_menu_rating')">
+                                <?php
+                                // get current month
+                                $day = date('d');
+                                $month = date('m');
+                                $year = date('Y');
+
+                                $date = $year . '-' . $month . '-' . $day;
+
+                                // get -1 month
+                                $last_date = strtotime('-1 month', strtotime($date));
+                                $last_month = date('m', $last_date);
+                                $last_year = date('Y', $last_date);
+                                $last_day = date('d', $last_date);
+                                ?>
+
+                            <a class="nav-link" href="/ratingpoin/{{$last_day}}/{{$last_month}}/{{$last_year}}/{{$day}}/{{$month}}/{{$year}}">
+                                Rating
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item @yield('navbar_menu_problem')">
+                            <a class="nav-link" href="/problem">
+                                Problem
+                            </a>
+                        </li>
+                    @endif
                 </ul>
                 <div class="footer">
                     <p>
