@@ -398,34 +398,44 @@
 
                          <!-- Card List -->
                         <div class="row justify-content-center">
-                            
+                            {{-- Katalog 1 --}}
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">Desain Web Undangan Digital</h5>
-                                    <img src="https://i.ibb.co/Qc9T3C4/desain-figma.png" class="card-img-top" alt="Desain Digital Invitation">
+                                    <h5 class="card-title">Desain Website Undangan Digital</h5>
+                                    <img src="https://i.ibb.co/5cvxXpP/Mockup-desain-web-undangan.png" class="card-img-top" alt="Desain Digital Invitation">
                                     <p class="card-text">Desain web untuk undangan digital pernikahan, aqiqah, khitanan, dan acara lainnya.</p>
                                     <a href="https://www.veed.io/view/3bbf5231-f822-4cf3-b688-2702e620928d?panel=share" class="btn btn-primary">Lihat Demo</a>
-                                    <a href="https://www.figma.com/file/j9f990aLGZCcOY4oZcHEV2/Project-Akad.in?type=design&node-id=0-1&mode=design" class="btn btn-success">Link Figma</a>
+                                    <a href="https://www.figma.com/proto/ARR3DiIWyyqMAngj13FxgV/Desain-Website-Undangan-Digital?page-id=0%3A1&type=design&node-id=2-4434&viewport=408%2C474%2C0.05&t=WYcL6BOeMbHGY5Fv-1&scaling=scale-down&starting-point-node-id=2%3A4434&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
                             </div>
-
+                            {{-- Katalog 2 --}}
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">Desain Aplikasi Android Pengiriman Uang Online</h5>
-                                    <img src="https://i.ibb.co/3hF85Dz/global-money.png" class="card-img-top" alt="Desain Pengiriman Uang">
+                                    <h5 class="card-title">Desain Aplikasi Transfer Uang ke Luar Negeri</h5>
+                                    <img src="https://i.ibb.co/NKDgqp1/Desain-Aplikasi-Kirim-Uang.png" class="card-img-top" alt="Desain Pengiriman Uang">
                                     <p class="card-text">Desain aplikasi pengiriman uang online yang memudahkan pengguna dalam melakukan transaksi.</p>
                                     <a href="https://www.veed.io/view/d23f9f4b-cb9d-4a9e-b872-f5fe8ccc7ab7?panel=share" class="btn btn-primary">Lihat Demo</a>
-                                    <a href="https://www.figma.com/file/j9f990aLGZCcOY4oZcHEV2/Project-Akad.in?type=design&node-id=239-175&mode=design" class="btn btn-success">Link Figma</a>
+                                    <a href="https://www.figma.com/proto/OhFQtt4LmuWuJi4xnLoT82/Desain-Aplikasi-Transfer-Uang-ke-Luar-Negeri?page-id=4%3A2196&type=design&node-id=4-2198&viewport=408%2C307%2C0.09&t=FWCEaW5VIEDozhLK-1&scaling=scale-down&starting-point-node-id=4%3A2198&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
                             </div>
-
+                            {{-- Katalog 3 --}}
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">Desain Aplikasi Web Perpustasakan Digital</h5>
-                                    <img src="https://i.ibb.co/9WLRY0Z/Libra-Tech.png" class="card-img-top" alt="Desain Perpustakaan">
-                                    <p class="card-text">Desain aplikasi web perpustakaan digital yang memudahkan pengguna dalam mencari buku.</p>
+                                    <h5 class="card-title">Desain Website Perpustasakan Digital</h5>
+                                    <img src="https://i.ibb.co/4s8VXvV/library.png" class="card-img-top" alt="Desain Perpustakaan">
+                                    <p class="card-text">Desain website perpustakaan digital yang memudahkan pengguna dalam mencari buku dan melakukan peminjaman.</p>
                                     <a href="https://www.veed.io/view/68f1dbec-5be2-4fce-9c76-ecc9010c00f8?panel=share" class="btn btn-primary">Lihat Demo</a>
-                                    <a href="https://www.figma.com/file/j9f990aLGZCcOY4oZcHEV2/Project-Akad.in?type=design&node-id=241-1489&mode=design" class="btn btn-success">Link Figma</a>
+                                    <a href="https://www.figma.com/proto/lsX3mgLxHiZyMjIMKVWQrZ/LibraTech?page-id=0%3A1&type=design&node-id=2-198&viewport=408%2C307%2C0.05&t=qFyq48jMUMXNKUkG-1&scaling=scale-down&mode=design" class="btn btn-success">Link Figma</a>
+                                </div>
+                            </div>
+                            {{-- Katalog 4 --}}
+                            <div class="col-md-5 mx-2 card mt-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Desain Aplikasi Public Tranportation</h5>
+                                    <img src="https://i.ibb.co/PtwHbxd/Public-app.png" class="card-img-top" alt="Desain Perpustakaan">
+                                    <p class="card-text">Desain aplikasi public transportation yang memudahkan pengguna dalam mencari transportasi umum di daerah Jabodetabek.</p>
+                                    <a href="https://www.veed.io/view/4b25bfdc-5f03-4794-90cf-1f8980163b2f?panel=share" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
                             </div>
 
