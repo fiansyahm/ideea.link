@@ -438,7 +438,26 @@
                                     <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
                             </div>
-
+                            {{-- Katalog 5 --}}
+                            {{-- <div class="col-md-5 mx-2 card mt-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Desain Aplikasi Public Tranportation</h5>
+                                    <img src="https://i.ibb.co/PtwHbxd/Public-app.png" class="card-img-top" alt="Desain Perpustakaan">
+                                    <p class="card-text">Desain aplikasi public transportation yang memudahkan pengguna dalam mencari transportasi umum di daerah Jabodetabek.</p>
+                                    <a href="https://www.veed.io/view/4b25bfdc-5f03-4794-90cf-1f8980163b2f?panel=share" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
+                                </div>
+                            </div> --}}
+                            {{-- Katalog 6 --}}
+                            {{-- <div class="col-md-5 mx-2 card mt-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Desain Aplikasi Public Tranportation</h5>
+                                    <img src="https://i.ibb.co/PtwHbxd/Public-app.png" class="card-img-top" alt="Desain Perpustakaan">
+                                    <p class="card-text">Desain aplikasi public transportation yang memudahkan pengguna dalam mencari transportasi umum di daerah Jabodetabek.</p>
+                                    <a href="https://www.veed.io/view/4b25bfdc-5f03-4794-90cf-1f8980163b2f?panel=share" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
+                                </div>
+                            </div> --}}
                         </div>
 
                     </div>
