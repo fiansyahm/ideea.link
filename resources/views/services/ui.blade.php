@@ -439,25 +439,25 @@
                                 </div>
                             </div>
                             {{-- Katalog 5 --}}
-                            {{-- <div class="col-md-5 mx-2 card mt-4">
+                            <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">Desain Aplikasi Public Tranportation</h5>
-                                    <img src="https://i.ibb.co/PtwHbxd/Public-app.png" class="card-img-top" alt="Desain Perpustakaan">
-                                    <p class="card-text">Desain aplikasi public transportation yang memudahkan pengguna dalam mencari transportasi umum di daerah Jabodetabek.</p>
-                                    <a href="https://www.veed.io/view/4b25bfdc-5f03-4794-90cf-1f8980163b2f?panel=share" class="btn btn-primary">Lihat Demo</a>
-                                    <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
+                                    <h5 class="card-title">Desain Aplikasi Food Order</h5>
+                                    <img src="https://i.ibb.co/6P0945s/Frame-4.png" class="card-img-top" alt="Desain Food Order">
+                                    <p class="card-text">Desain aplikasi food order yang memudahkan pengguna dalam memesan makanan tanpa perlu antri ditempat.</p>
+                                    <a href="https://www.veed.io/view/9dd8059b-3cd2-49c7-ace9-8c3470126b31?panel=share" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="https://www.figma.com/proto/4CmY3fV7TupN2Yt8hm0BuO/Food-Order?page-id=0%3A1&type=design&node-id=1-266&viewport=561%2C310%2C0.12&t=AZlgHEN3TXxaeSxo-1&scaling=scale-down&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
-                            </div> --}}
+                            </div>
                             {{-- Katalog 6 --}}
-                            {{-- <div class="col-md-5 mx-2 card mt-4">
+                            <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
-                                    <h5 class="card-title">Desain Aplikasi Public Tranportation</h5>
-                                    <img src="https://i.ibb.co/PtwHbxd/Public-app.png" class="card-img-top" alt="Desain Perpustakaan">
-                                    <p class="card-text">Desain aplikasi public transportation yang memudahkan pengguna dalam mencari transportasi umum di daerah Jabodetabek.</p>
-                                    <a href="https://www.veed.io/view/4b25bfdc-5f03-4794-90cf-1f8980163b2f?panel=share" class="btn btn-primary">Lihat Demo</a>
-                                    <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
+                                    <h5 class="card-title">Desain Aplikasi Chatting</h5>
+                                    <img src="https://i.ibb.co/LC4rCbk/Frame-7.png" class="card-img-top" alt="Desain Chatting App">
+                                    <p class="card-text">Desain aplikasi chatting yang memudahkan pengguna dalam berkomunikasi dengan keluarga diberbagai negara.</p>
+                                    <a href="https://www.veed.io/view/d8348b18-2cd4-4fab-b889-fd51517c9bb6?panel=share" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="https://www.figma.com/proto/AspM2uqjYc91P1ZX0YEgtE/Chatting-App?page-id=0%3A1&type=design&node-id=1-794&viewport=-112%2C255%2C0.05&t=RNMl2TppeAPqoYIo-1&scaling=scale-down&starting-point-node-id=1%3A794&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
 
                     </div>
