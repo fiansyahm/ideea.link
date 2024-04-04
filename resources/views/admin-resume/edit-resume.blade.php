@@ -193,24 +193,26 @@
                                 <div class="btn btn-success my-2" onclick="addCanido()">Add Can I Do</div>
                                 <div class="row" id="canido-container">
                                     @foreach ($canido['data'] as $item)
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="canido-{{ $counter }}"
-                                                   {{-- name="canido-{{ $counter }}"  --}}
-                                                   value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
-                                                   oninput="updateCanidoArray('{{ $counter }}', 'name', this.value)">
-                                        </div>
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="canido-icon-{{ $counter }}"
-                                                   {{-- name="canido-icon-{{ $counter }}"  --}}
-                                                   value="{{ $item['icon'] }}" placeholder="{{ $item['icon'] }}"
-                                                   oninput="updateCanidoArray('{{ $counter }}', 'icon', this.value)">
-                                        </div>
-                                        <div class="mb-3 col-md-2">
-                                            <button type="button" class="btn btn-danger" id="canido-delete-{{ $counter }}" onclick="removeCanido('{{ $counter }}')">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </div>
-                                        <?php $counter++; ?>
+                                        @if($item!=null)
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="canido-{{ $counter }}"
+                                                    {{-- name="canido-{{ $counter }}"  --}}
+                                                    value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
+                                                    oninput="updateCanidoArray('{{ $counter }}', 'name', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="canido-icon-{{ $counter }}"
+                                                    {{-- name="canido-icon-{{ $counter }}"  --}}
+                                                    value="{{ $item['icon'] }}" placeholder="{{ $item['icon'] }}"
+                                                    oninput="updateCanidoArray('{{ $counter }}', 'icon', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <button type="button" class="btn btn-danger" id="canido-delete-{{ $counter }}" onclick="removeCanido('{{ $counter }}')">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        @endif
+                                    <?php $counter++; ?>
                                     @endforeach
                                 </div>
                                 <div class="mb-3 col-md-12">
@@ -319,23 +321,25 @@
                             <div class="btn btn-success my-2" onclick="addSkill()">Add Skill</div>
                                 <div class="row" id="skill-container">
                                     @foreach ($skill['data'] as $item)
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="skill-{{ $counter }}"
-                                                   {{-- name="skill-{{ $counter }}"  --}}
-                                                   value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
-                                                   oninput="updateSkillArray('{{ $counter }}', 'name', this.value)">
-                                        </div>
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="skill-percentage-{{ $counter }}"
-                                                   {{-- name="skill-percentage-{{ $counter }}"  --}}
-                                                   value="{{ $item['percentage'] }}" placeholder="{{ $item['percentage'] }}"
-                                                   oninput="updateSkillArray('{{ $counter }}', 'percentage', this.value)">
-                                        </div>
-                                        <div class="mb-3 col-md-2">
-                                            <button type="button" class="btn btn-danger" id="skill-delete-{{ $counter }}" onclick="removeSkill('{{ $counter }}')">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </div>
+                                        @if($item!=null)
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="skill-{{ $counter }}"
+                                                    {{-- name="skill-{{ $counter }}"  --}}
+                                                    value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
+                                                    oninput="updateSkillArray('{{ $counter }}', 'name', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="skill-percentage-{{ $counter }}"
+                                                    {{-- name="skill-percentage-{{ $counter }}"  --}}
+                                                    value="{{ $item['percentage'] }}" placeholder="{{ $item['percentage'] }}"
+                                                    oninput="updateSkillArray('{{ $counter }}', 'percentage', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <button type="button" class="btn btn-danger" id="skill-delete-{{ $counter }}" onclick="removeSkill('{{ $counter }}')">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        @endif
                                         <?php $counter++; ?>
                                     @endforeach
                                 </div>
@@ -448,36 +452,37 @@
                                 <div class="btn btn-success my-2" onclick="addEducational()">Add Educational</div>
                                 <div class="row" id="educational-container">
                                     @foreach ($educational['data'] as $item)
-                                    
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="educational-{{ $counter }}"
-                                                   {{-- name="educational-{{ $counter }}"  --}}
-                                                   value="{{ $item['degree'] }}" placeholder="{{ $item['degree'] }}"
-                                                   oninput="updateEducationalArray('{{ $counter }}', 'degree', this.value)">
-                                        </div>
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="educational-university-{{ $counter }}"
-                                                   {{-- name="educational-university-{{ $counter }}"  --}}
-                                                   value="{{ $item['university'] }}" placeholder="{{ $item['university'] }}"
-                                                   oninput="updateEducationalArray('{{ $counter }}', 'university', this.value)">
-                                        </div>
-                                        <div class="mb-3 col-md-5">
-                                            <input type="text" class="form-control" id="educational-year-{{ $counter }}"
-                                                   {{-- name="educational-year-{{ $counter }}"  --}}
-                                                   value="{{ $item['year'] }}" placeholder="{{ $item['year'] }}"
-                                                   oninput="updateEducationalArray('{{ $counter }}', 'year', this.value)">
-                                        </div>
-                                        <div class="mb-5 col-md-5">
-                                            <input type="text" class="form-control" id="educational-description-{{ $counter }}"
-                                                   {{-- name="educational-description-{{ $counter }}"  --}}
-                                                   value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
-                                                   oninput="updateEducationalArray('{{ $counter }}', 'description', this.value)">
-                                        </div>
-                                        <div class="mb-5 col-md-2">
-                                            <button type="button" class="btn btn-danger" id="educational-delete-{{ $counter }}" onclick="removeEducational('{{ $counter }}')">
-                                                <i class="fa fa-trash"></i>
-                                            </button>
-                                        </div>
+                                        @if($item!=null)
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="educational-{{ $counter }}"
+                                                    {{-- name="educational-{{ $counter }}"  --}}
+                                                    value="{{ $item['degree'] }}" placeholder="{{ $item['degree'] }}"
+                                                    oninput="updateEducationalArray('{{ $counter }}', 'degree', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="educational-university-{{ $counter }}"
+                                                    {{-- name="educational-university-{{ $counter }}"  --}}
+                                                    value="{{ $item['university'] }}" placeholder="{{ $item['university'] }}"
+                                                    oninput="updateEducationalArray('{{ $counter }}', 'university', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="educational-year-{{ $counter }}"
+                                                    {{-- name="educational-year-{{ $counter }}"  --}}
+                                                    value="{{ $item['year'] }}" placeholder="{{ $item['year'] }}"
+                                                    oninput="updateEducationalArray('{{ $counter }}', 'year', this.value)">
+                                            </div>
+                                            <div class="mb-5 col-md-5">
+                                                <input type="text" class="form-control" id="educational-description-{{ $counter }}"
+                                                    {{-- name="educational-description-{{ $counter }}"  --}}
+                                                    value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
+                                                    oninput="updateEducationalArray('{{ $counter }}', 'description', this.value)">
+                                            </div>
+                                            <div class="mb-5 col-md-2">
+                                                <button type="button" class="btn btn-danger" id="educational-delete-{{ $counter }}" onclick="removeEducational('{{ $counter }}')">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        @endif
                                         <?php $counter++; ?>
                                     
                                     @endforeach
@@ -607,6 +612,7 @@
                             <div class="btn btn-success my-2" onclick="addWorking()">Add working</div>
                                 <div class="row" id="working-container">
                                     @foreach ($working['data'] as $item)
+                                    @if($item!=null)
                                         <div class="mb-3 col-md-5">
                                             <input type="text" class="form-control" id="working-{{ $counter }}"
                                                    {{-- name="working-{{ $counter }}"  --}}
@@ -636,6 +642,7 @@
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </div>
+                                    @endif
                                         <?php $counter++; ?>
                                     @endforeach
                                 </div>

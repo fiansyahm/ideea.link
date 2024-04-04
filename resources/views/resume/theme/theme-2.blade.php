@@ -167,12 +167,14 @@ help you for our Friendshiop. </em></p>
                 ?>
                 <ul>
                   @if(isset($canido['data']))
-                  @foreach ($canido['data'] as $item)
-                    <li>
-                      <span class="{{ $item['icon'] }}"></span>
-                      <p>{{ $item['name'] }}</p>
-                    </li>
-                  @endforeach
+                    @foreach ($canido['data'] as $item)
+                      @if($item!=null)
+                        <li>
+                          <span class="{{ $item['icon'] }}"></span>
+                          <p>{{ $item['name'] }}</p>
+                        </li>
+                      @endif
+                    @endforeach
                   @endif
                 </ul>
             </div><!-- about job -->
@@ -185,16 +187,18 @@ help you for our Friendshiop. </em></p>
                     $skill = json_decode($resume->skill, true);
                   ?>
                   @if(isset($skill['data']))
-                  @foreach ($skill['data'] as $item)
-                  <div class="progress_item">
-                    <p class="progress_title">{{ $item['name'] }}</p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" data-transitiongoal="{{ $item['percentage'] }}"><span class="pg_indicator"></span>
-                      </div>
-                    </div>
-                    <p class="progress_percent">{{ $item['percentage'] }}</p>
-                  </div>
-                  @endforeach
+                    @foreach ($skill['data'] as $item)
+                      @if($item!=null)
+                        <div class="progress_item">
+                          <p class="progress_title">{{ $item['name'] }}</p>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" data-transitiongoal="{{ $item['percentage'] }}"><span class="pg_indicator"></span>
+                            </div>
+                          </div>
+                          <p class="progress_percent">{{ $item['percentage'] }}</p>
+                        </div>
+                      @endif
+                    @endforeach
                   @endif
 
               </div><!-- skills progress -->
@@ -227,13 +231,15 @@ help you for our Friendshiop. </em></p>
                       $educational = json_decode($resume->educational, true);
                   ?>
                   @if(isset($educational['data']))
-                  @foreach ($educational['data'] as $item)
-                  <div class="experience">
-                    <h4>{{ $item['degree'] }}</h4>
-                    <p>{{ $item['university'] }} / <span>{{ $item['year'] }}</span></p>
-                    <p class="ex_details">{{ $item['description'] }}.</p>
-                  </div><!-- experience -->
-                  @endforeach
+                    @foreach ($educational['data'] as $item)
+                      @if($item!=null)
+                        <div class="experience">
+                          <h4>{{ $item['degree'] }}</h4>
+                          <p>{{ $item['university'] }} / <span>{{ $item['year'] }}</span></p>
+                          <p class="ex_details">{{ $item['description'] }}.</p>
+                        </div><!-- experience -->
+                      @endif
+                    @endforeach
                   @endif
               </div><!-- experience -->
             </div>
@@ -246,13 +252,15 @@ help you for our Friendshiop. </em></p>
                       $working = json_decode($resume->working, true);
                   ?>
                   @if(isset($working['data']))
-                  @foreach ($working['data'] as $item)
-                  <div class="experience">
-                    <h4>{{ $item['position'] }}</h4>
-                    <p>{{ $item['company'] }} / <span>{{ $item['year'] }}</span></p>
-                    <p class="ex_details">{{ $item['description'] }}.</p>
-                  </div><!-- experience -->
-                  @endforeach
+                    @foreach ($working['data'] as $item)
+                      @if($item!=null)
+                        <div class="experience">
+                          <h4>{{ $item['position'] }}</h4>
+                          <p>{{ $item['company'] }} / <span>{{ $item['year'] }}</span></p>
+                          <p class="ex_details">{{ $item['description'] }}.</p>
+                        </div><!-- experience -->
+                      @endif
+                    @endforeach
                   @endif
 
               </div><!-- experience -->

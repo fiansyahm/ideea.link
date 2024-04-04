@@ -324,45 +324,49 @@
 					?>
 					{{-- make if isset --}}
 					@if(isset($educational['data']))
-					@foreach ($educational['data'] as $item)
-					<?php $counter++; ?>
-					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-						<div class="exp-inner">
-							<div class="exp-thumb">
-								<img src="{{ asset('theme/maxino/assets/images/exp/0' . $counter . '.png') }}" alt="experience">
-								<h6>{{ $item['university'] }}</h6>
-								<div class="exp-cata">
-									<span>{{ $item['year'] }}</span>
+						@foreach ($educational['data'] as $item)
+						<?php $counter++; ?>
+							@if($item!=null)
+								<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+									<div class="exp-inner">
+										<div class="exp-thumb">
+											<img src="{{ asset('theme/maxino/assets/images/exp/0' . $counter . '.png') }}" alt="experience">
+											<h6>{{ $item['university'] }}</h6>
+											<div class="exp-cata">
+												<span>{{ $item['year'] }}</span>
+											</div>
+										</div>
+										<div class="exp-content">
+											<h3>{{ $item['degree'] }}</h3>
+											<p>{{ $item['description'] }}</p>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="exp-content">
-								<h3>{{ $item['degree'] }}</h3>
-								<p>{{ $item['description'] }}</p>
-							</div>
-						</div>
-					</div>
-					@endforeach
+							@endif
+						@endforeach
 					@endif
 
 					@if(isset($working['data']))
-					@foreach ($working['data'] as $item)
-					<?php $counter++; ?>
-					<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-						<div class="exp-inner">
-							<div class="exp-thumb">
-								<img src="{{ asset('theme/maxino/assets/images/exp/0' . $counter . '.png') }}" alt="experience">
-								<h6>{{ $item['company'] }}</h6>
-								<div class="exp-cata">
-									<span>{{ $item['year'] }}</span>
+						@foreach ($working['data'] as $item)
+						<?php $counter++; ?>
+							@if($item!=null)
+								<div class="exp-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+									<div class="exp-inner">
+										<div class="exp-thumb">
+											<img src="{{ asset('theme/maxino/assets/images/exp/0' . $counter . '.png') }}" alt="experience">
+											<h6>{{ $item['company'] }}</h6>
+											<div class="exp-cata">
+												<span>{{ $item['year'] }}</span>
+											</div>
+										</div>
+										<div class="exp-content">
+											<h3>{{ $item['position'] }}</h3>
+											<p>{{ $item['description'] }}</p>
+										</div>
+									</div>
 								</div>
-							</div>
-							<div class="exp-content">
-								<h3>{{ $item['position'] }}</h3>
-								<p>{{ $item['description'] }}</p>
-							</div>
-						</div>
-					</div>
-					@endforeach
+							@endif
+						@endforeach
 					@endif
 					
 					
@@ -388,26 +392,28 @@
                 ?>
 				<div class="section-wrapper">
 					@if(isset($skill['data']))
-					@foreach ($skill['data'] as $item)
-					<?php $counter++; ?>
-					<div class="service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-						<div class="service-inner">
-							<div class="service-content">
-								<h3>{{ $item['name'] }}</h3>
-								{{-- <p>Mnique deplo scalable catals forin Monec formu was unique</p>
-								<ul>
-									<li>Motion Graphic Design</li>
-									<li>3D animation Design</li>
-									<li>Info Graphic Design</li>
-									<li>Vector Design</li>
-								</ul> --}}
-							</div>
-							<div class="service-thumb">
-								<img src="{{ asset('theme/maxino/assets/images/service/0' . $counter . '.png')}}" alt="services">
-							</div>
-						</div>
-					</div>
-					@endforeach
+						@foreach ($skill['data'] as $item)
+						<?php $counter++; ?>
+							@if($item!=null)
+								<div class="service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+									<div class="service-inner">
+										<div class="service-content">
+											<h3>{{ $item['name'] }}</h3>
+											{{-- <p>Mnique deplo scalable catals forin Monec formu was unique</p>
+											<ul>
+												<li>Motion Graphic Design</li>
+												<li>3D animation Design</li>
+												<li>Info Graphic Design</li>
+												<li>Vector Design</li>
+											</ul> --}}
+										</div>
+										<div class="service-thumb">
+											<img src="{{ asset('theme/maxino/assets/images/service/0' . $counter . '.png')}}" alt="services">
+										</div>
+									</div>
+								</div>
+							@endif
+						@endforeach
 					@endif
 				</div>
 			</div>
