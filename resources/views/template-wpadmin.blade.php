@@ -304,16 +304,13 @@
                       <a class="nav-link" href="#submenu_resume_1" data-toggle="collapse" aria-expanded="false"
                           class="dropdown-toggle">Personal Resume</a>
                       <ul class="collapse list-unstyled" id="submenu_resume_1">
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/resume/list/all">
                                 Daftar Resume
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/resume/konfirmasi">
-                                Daftar Konfirmasi
-                            </a>
-                        </li>
+            
                       </ul>
                   </li>
                     
