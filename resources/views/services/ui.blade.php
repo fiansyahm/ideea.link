@@ -461,10 +461,10 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Aplikasi Coffee Shop</h5>
-                                    <img src="" class="card-img-top" alt="Desain Chatting App">
+                                    <img src="https://i.imghippo.com/files/SnOaa1716190827.png" class="card-img-top" alt="Desain Chatting App">
                                     <p class="card-text">Desain aplikasi coffee shop yang memudahkan pengguna dalam memesan kopi tanpa perlu mengantri.</p>
-                                    <a href="" class="btn btn-primary">Lihat Demo</a>
-                                    <a href="" class="btn btn-success">Link Figma</a>
+                                    <a href="https://www.veed.io/view/8ebbfe1d-849e-4d43-b59e-0ef3fca23f2d?panel=share" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="https://www.figma.com/proto/EbJ4EthHkef6SRXS3u7bVm/Kavore?page-id=0%3A1&node-id=1-1553&viewport=1030%2C615%2C0.13&t=qaxvz33U1H0FpPbo-1&scaling=scale-down&starting-point-node-id=1%3A1553&show-proto-sidebar=1" class="btn btn-success">Link Figma</a>
                                 </div>
                             </div>
 
