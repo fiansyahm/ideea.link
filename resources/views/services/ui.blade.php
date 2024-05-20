@@ -48,7 +48,7 @@
                     </div>
                     {{-- Gambar animasi UI/UX --}}
                     <div class="col-md">
-                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/9HfZrwY/uiux.png">
+                        <img class="img-fluid mt-4 pt-4" src="https://i.imghippo.com/files/eepE61716170750.png">
                     </div>
 
                 </div>
@@ -97,7 +97,7 @@
                 <div class="row">
                     <div class="col-md-4 mb-5">
                         <div class="card" style="width: 18rem;">
-                            <img src="https://i.ibb.co/h2wPNRC/desainmobile.png" class="card-img-top" alt="Desain Mobile">
+                            <img src="https://i.imghippo.com/files/CdEaD1716172545.png" class="card-img-top" alt="Desain Mobile">
                             <div class="card-body">
                                 <h5 class="card-title">Desain Mobile</h5>
                                 <p class="card-text">Desain yang cantik, kreatif, dan modern untuk semua ukuran layar
@@ -109,7 +109,7 @@
                     </div>
                     <div class="col-md-4 mb-5">
                         <div class="card" style="width: 18rem;">
-                            <img src="https://i.ibb.co/nBDnMwn/desainweb.png" class="card-img-top" alt="Desain Web">
+                            <img src="https://i.imghippo.com/files/AL7Zj1716173185.png" class="card-img-top" alt="Desain Web">
                             <div class="card-body">
                                 <h5 class="card-title">Desain Web</h5>
                                 <p class="card-text">Desain web untuk laptop, tablet, dan PC dengan kualitas Full HD. Kami
@@ -120,7 +120,7 @@
                     </div>
                     <div class="col-md-4 mb-5">
                         <div class="card" style="width: 18rem;">
-                            <img src="https://i.ibb.co/7pGns7k/desainmobile.png" class="card-img-top" alt="Desain Baru">
+                            <img src="https://i.imghippo.com/files/w2u1t1716172859.png" class="card-img-top" alt="Desain Baru">
                             <div class="card-body">
                                 <h5 class="card-title">Desain Terbaru</h5>
                                 <p class="card-text">Kami akan melakukan riset tren terkini dan menganalisa identitas brand
@@ -171,7 +171,7 @@
                         </ul>
                     </div>
                     <div class="col-md-4 mb-5">
-                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/VC9KTKY/Frame-614.png">
+                        <img class="img-fluid mt-4 pt-1" src="https://i.imghippo.com/files/r7qKa1716173309.png">
                     </div>
                     <div class="col-md-4 mb-5">
                         <!-- Apply the common class to the <ul> element -->
@@ -211,7 +211,7 @@
                     <div class="col-md-4 mb-5">
                         <!-- Content for Column 1 -->
                         <div class="col-md-12 mb-5">
-                            <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/z2Y6TY0/step1.png">
+                            <img class="img-fluid mt-4 pt-4" src="https://i.imghippo.com/files/o5km51716174573.png">
                         </div>
                         <!-- Apply the common class to the <ul> element -->
                     </div>
@@ -256,7 +256,7 @@
                     <div class="col-md-4 mb-5">
                         <!-- Content for Column 2 -->
                         <div class="col-md-12 mb-5">
-                            <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/1RHVgJK/step2.png">
+                            <img class="img-fluid mt-4 pt-4" src="https://i.imghippo.com/files/mYQAU1716173783.png">
                         </div>
                         <!-- Apply the common class to the <ul> element -->
                     </div>
@@ -269,7 +269,7 @@
                     <div class="col-md-4 mb-5">
                         <!-- Content for Column 1 -->
                         <div class="col-md-12 mb-5">
-                            <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/FK04xrt/step3.png">
+                            <img class="img-fluid mt-4 pt-4" src="https://i.imghippo.com/files/Ec2ss1716174001.png">
                         </div>
                         <!-- Apply the common class to the <ul> element -->
                     </div>
@@ -309,7 +309,7 @@
                     <div class="col-md-4 mb-5">
                         <!-- Content for Column 2 -->
                         <div class="col-md-12 mb-5">
-                            <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/vvyFW2Q/step4.png">
+                            <img class="img-fluid mt-4 pt-4" src="https://i.imghippo.com/files/1xEYS1716173566.png">
                         </div>
                         <!-- Apply the common class to the <ul> element -->
                     </div>
@@ -402,7 +402,7 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Website Undangan Digital</h5>
-                                    <img src="https://i.ibb.co/5cvxXpP/Mockup-desain-web-undangan.png" class="card-img-top" alt="Desain Digital Invitation">
+                                    <img src="https://i.imghippo.com/files/9qlBv1716177245.png" class="card-img-top" alt="Desain Digital Invitation">
                                     <p class="card-text">Desain web untuk undangan digital pernikahan, aqiqah, khitanan, dan acara lainnya.</p>
                                     <a href="https://www.veed.io/view/3bbf5231-f822-4cf3-b688-2702e620928d?panel=share" class="btn btn-primary">Lihat Demo</a>
                                     <a href="https://www.figma.com/proto/ARR3DiIWyyqMAngj13FxgV/Desain-Website-Undangan-Digital?page-id=0%3A1&type=design&node-id=2-4434&viewport=408%2C474%2C0.05&t=WYcL6BOeMbHGY5Fv-1&scaling=scale-down&starting-point-node-id=2%3A4434&mode=design" class="btn btn-success">Link Figma</a>
@@ -412,7 +412,7 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Aplikasi Transfer Uang ke Luar Negeri</h5>
-                                    <img src="https://i.ibb.co/NKDgqp1/Desain-Aplikasi-Kirim-Uang.png" class="card-img-top" alt="Desain Pengiriman Uang">
+                                    <img src="https://i.imghippo.com/files/atBpC1716177375.png" class="card-img-top" alt="Desain Pengiriman Uang">
                                     <p class="card-text">Desain aplikasi pengiriman uang online yang memudahkan pengguna dalam melakukan transaksi.</p>
                                     <a href="https://www.veed.io/view/d23f9f4b-cb9d-4a9e-b872-f5fe8ccc7ab7?panel=share" class="btn btn-primary">Lihat Demo</a>
                                     <a href="https://www.figma.com/proto/OhFQtt4LmuWuJi4xnLoT82/Desain-Aplikasi-Transfer-Uang-ke-Luar-Negeri?page-id=4%3A2196&type=design&node-id=4-2198&viewport=408%2C307%2C0.09&t=FWCEaW5VIEDozhLK-1&scaling=scale-down&starting-point-node-id=4%3A2198&mode=design" class="btn btn-success">Link Figma</a>
@@ -422,7 +422,7 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Website Perpustasakan Digital</h5>
-                                    <img src="https://i.ibb.co/4s8VXvV/library.png" class="card-img-top" alt="Desain Perpustakaan">
+                                    <img src="https://i.imghippo.com/files/ncfxE1716177390.png" class="card-img-top" alt="Desain Perpustakaan">
                                     <p class="card-text">Desain website perpustakaan digital yang memudahkan pengguna dalam mencari buku dan melakukan peminjaman.</p>
                                     <a href="https://www.veed.io/view/68f1dbec-5be2-4fce-9c76-ecc9010c00f8?panel=share" class="btn btn-primary">Lihat Demo</a>
                                     <a href="https://www.figma.com/proto/lsX3mgLxHiZyMjIMKVWQrZ/LibraTech?page-id=0%3A1&type=design&node-id=2-198&viewport=408%2C307%2C0.05&t=qFyq48jMUMXNKUkG-1&scaling=scale-down&mode=design" class="btn btn-success">Link Figma</a>
@@ -432,7 +432,7 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Aplikasi Public Tranportation</h5>
-                                    <img src="https://i.ibb.co/PtwHbxd/Public-app.png" class="card-img-top" alt="Desain Perpustakaan">
+                                    <img src="https://i.imghippo.com/files/6mCZ81716177485.png" class="card-img-top" alt="Desain Perpustakaan">
                                     <p class="card-text">Desain aplikasi public transportation yang memudahkan pengguna dalam mencari transportasi umum di daerah Jabodetabek.</p>
                                     <a href="https://www.veed.io/view/4b25bfdc-5f03-4794-90cf-1f8980163b2f?panel=share" class="btn btn-primary">Lihat Demo</a>
                                     <a href="https://www.figma.com/proto/717igCCoD6mQpQwwhFB0Xt/PUBLICAPP?page-id=0%3A1&type=design&node-id=125-2272&viewport=632%2C1134%2C0.2&t=WCTQmDj7YPqLYCRv-1&scaling=scale-down&starting-point-node-id=125%3A2023&show-proto-sidebar=1&mode=design" class="btn btn-success">Link Figma</a>
@@ -442,7 +442,7 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Aplikasi Food Order</h5>
-                                    <img src="https://i.ibb.co/6P0945s/Frame-4.png" class="card-img-top" alt="Desain Food Order">
+                                    <img src="https://i.imghippo.com/files/Rj98O1716177491.png" class="card-img-top" alt="Desain Food Order">
                                     <p class="card-text">Desain aplikasi food order yang memudahkan pengguna dalam memesan makanan tanpa perlu antri ditempat.</p>
                                     <a href="https://www.veed.io/view/9dd8059b-3cd2-49c7-ace9-8c3470126b31?panel=share" class="btn btn-primary">Lihat Demo</a>
                                     <a href="https://www.figma.com/proto/4CmY3fV7TupN2Yt8hm0BuO/Food-Order?page-id=0%3A1&type=design&node-id=1-266&viewport=561%2C310%2C0.12&t=AZlgHEN3TXxaeSxo-1&scaling=scale-down&mode=design" class="btn btn-success">Link Figma</a>
@@ -452,12 +452,22 @@
                             <div class="col-md-5 mx-2 card mt-4">
                                 <div class="card-body">
                                     <h5 class="card-title">Desain Aplikasi Chatting</h5>
-                                    <img src="https://i.ibb.co/LC4rCbk/Frame-7.png" class="card-img-top" alt="Desain Chatting App">
+                                    <img src="https://i.imghippo.com/files/huOtJ1716177560.png" class="card-img-top" alt="Desain Chatting App">
                                     <p class="card-text">Desain aplikasi chatting yang memudahkan pengguna dalam berkomunikasi dengan keluarga diberbagai negara.</p>
                                     <a href="https://www.veed.io/view/d8348b18-2cd4-4fab-b889-fd51517c9bb6?panel=share" class="btn btn-primary">Lihat Demo</a>
                                     <a href="https://www.figma.com/proto/AspM2uqjYc91P1ZX0YEgtE/Chatting-App?page-id=0%3A1&type=design&node-id=1-794&viewport=-112%2C255%2C0.05&t=RNMl2TppeAPqoYIo-1&scaling=scale-down&starting-point-node-id=1%3A794&mode=design" class="btn btn-success">Link Figma</a>
                                 </div>
                             </div>
+                            <div class="col-md-5 mx-2 card mt-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Desain Aplikasi Coffee Shop</h5>
+                                    <img src="" class="card-img-top" alt="Desain Chatting App">
+                                    <p class="card-text">Desain aplikasi coffee shop yang memudahkan pengguna dalam memesan kopi tanpa perlu mengantri.</p>
+                                    <a href="" class="btn btn-primary">Lihat Demo</a>
+                                    <a href="" class="btn btn-success">Link Figma</a>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
@@ -494,7 +504,7 @@
                     </div>
                     {{-- Gambar animasi UI/UX --}}
                     <div class="col-md">
-                        <img class="img-fluid mt-4 pt-4" src="https://i.ibb.co/fGyhnf3/aboutus.png">
+                        <img class="img-fluid mt-4 pt-4" src="https://i.imghippo.com/files/iWyzB1716175055.png">
                     </div>
                 </div>
             </div>
