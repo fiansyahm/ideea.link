@@ -289,11 +289,11 @@
                                     // Add the HTML element
                                     var canidoElement = document.createElement('div');
                                     canidoElement.setAttribute('class', 'mb-3 col-md-5');
-                                    canidoElement.innerHTML = '<input type="text" class="form-control" id="canido-' + position + '" name="canido-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'name\', this.value)">';
+                                    canidoElement.innerHTML = '<input type="text" class="form-control" id="canido-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'name\', this.value)">';
 
                                     var canidoIconElement = document.createElement('div');
                                     canidoIconElement.setAttribute('class', 'mb-3 col-md-5');
-                                    canidoIconElement.innerHTML = '<input type="text" class="form-control" id="canido-icon-' + position + '" name="canido-icon-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'icon\', this.value)">';
+                                    canidoIconElement.innerHTML = '<input type="text" class="form-control" id="canido-icon-' + position + '" value="" placeholder="Can I Do" oninput="updateCanidoArray(\'' + position + '\', \'icon\', this.value)">';
 
                                     var canidoDeleteElement = document.createElement('div');
                                     canidoDeleteElement.setAttribute('class', 'mb-3 col-md-2');
@@ -417,11 +417,11 @@
                                     // Add the HTML element
                                     var skillElement = document.createElement('div');
                                     skillElement.setAttribute('class', 'mb-3 col-md-5');
-                                    skillElement.innerHTML = '<input type="text" class="form-control" id="skill-' + position + '" name="skill-' + position + '" value="" placeholder="Skill" oninput="updateSkillArray(\'' + position + '\', \'name\', this.value)">';
+                                    skillElement.innerHTML = '<input type="text" class="form-control" id="skill-' + position + '" value="" placeholder="Skill" oninput="updateSkillArray(\'' + position + '\', \'name\', this.value)">';
 
                                     var skillPercentageElement = document.createElement('div');
                                     skillPercentageElement.setAttribute('class', 'mb-3 col-md-5');
-                                    skillPercentageElement.innerHTML = '<input type="text" class="form-control" id="skill-percentage-' + position + '" name="skill-percentage-' + position + '" value="" placeholder="Skill" oninput="updateSkillArray(\'' + position + '\', \'percentage\', this.value)">';
+                                    skillPercentageElement.innerHTML = '<input type="text" class="form-control" id="skill-percentage-' + position + '" value="" placeholder="Skill" oninput="updateSkillArray(\'' + position + '\', \'percentage\', this.value)">';
 
                                     var skillDeleteElement = document.createElement('div');
                                     skillDeleteElement.setAttribute('class', 'mb-3 col-md-2');
@@ -568,19 +568,19 @@
                                     // Add the HTML element
                                     var educationalElement = document.createElement('div');
                                     educationalElement.setAttribute('class', 'mb-3 col-md-5');
-                                    educationalElement.innerHTML = '<input type="text" class="form-control" id="educational-' + position + '" name="educational-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'degree\', this.value)">';
+                                    educationalElement.innerHTML = '<input type="text" class="form-control" id="educational-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'degree\', this.value)">';
 
                                     var educationalUniversityElement = document.createElement('div');
                                     educationalUniversityElement.setAttribute('class', 'mb-3 col-md-5');
-                                    educationalUniversityElement.innerHTML = '<input type="text" class="form-control" id="educational-university-' + position + '" name="educational-university-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'university\', this.value)">';
+                                    educationalUniversityElement.innerHTML = '<input type="text" class="form-control" id="educational-university-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'university\', this.value)">';
 
                                     var educationalYearElement = document.createElement('div');
                                     educationalYearElement.setAttribute('class', 'mb-3 col-md-5');
-                                    educationalYearElement.innerHTML = '<input type="text" class="form-control" id="educational-year-' + position + '" name="educational-year-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'year\', this.value)">';
+                                    educationalYearElement.innerHTML = '<input type="text" class="form-control" id="educational-year-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'year\', this.value)">';
 
                                     var educationalDescriptionElement = document.createElement('div');
                                     educationalDescriptionElement.setAttribute('class', 'mb-3 col-md-5');
-                                    educationalDescriptionElement.innerHTML = '<input type="text" class="form-control" id="educational-description-' + position + '" name="educational-description-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'description\', this.value)">';
+                                    educationalDescriptionElement.innerHTML = '<input type="text" class="form-control" id="educational-description-' + position + '" value="" placeholder="Educational Data" oninput="updateEducationalArray(\'' + position + '\', \'description\', this.value)">';
 
                                     var educationalDeleteElement = document.createElement('div');
                                     educationalDeleteElement.setAttribute('class', 'mb-3 col-md-2');
@@ -726,19 +726,19 @@
                                     // Add the HTML element
                                     var workingElement = document.createElement('div');
                                     workingElement.setAttribute('class', 'mb-3 col-md-5');
-                                    workingElement.innerHTML = '<input type="text" class="form-control" id="working-' + position + '" name="working-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'position\', this.value)">';
+                                    workingElement.innerHTML = '<input type="text" class="form-control" id="working-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'position\', this.value)">';
 
                                     var workingCompanyElement = document.createElement('div');
                                     workingCompanyElement.setAttribute('class', 'mb-3 col-md-5');
-                                    workingCompanyElement.innerHTML = '<input type="text" class="form-control" id="working-company-' + position + '" name="working-company-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'company\', this.value)">';
+                                    workingCompanyElement.innerHTML = '<input type="text" class="form-control" id="working-company-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'company\', this.value)">';
 
                                     var workingYearElement = document.createElement('div');
                                     workingYearElement.setAttribute('class', 'mb-3 col-md-5');
-                                    workingYearElement.innerHTML = '<input type="text" class="form-control" id="working-year-' + position + '" name="working-year-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'year\', this.value)">';
+                                    workingYearElement.innerHTML = '<input type="text" class="form-control" id="working-year-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'year\', this.value)">';
 
                                     var workingDescriptionElement = document.createElement('div');
                                     workingDescriptionElement.setAttribute('class', 'mb-3 col-md-5');
-                                    workingDescriptionElement.innerHTML = '<input type="text" class="form-control" id="working-description-' + position + '" name="working-description-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'description\', this.value)">';
+                                    workingDescriptionElement.innerHTML = '<input type="text" class="form-control" id="working-description-' + position + '" value="" placeholder="working Data" oninput="updateWorkingArray(\'' + position + '\', \'description\', this.value)">';
 
                                     var workingDeleteElement = document.createElement('div');
                                     workingDeleteElement.setAttribute('class', 'mb-3 col-md-2');

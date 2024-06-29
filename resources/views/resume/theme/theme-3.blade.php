@@ -184,7 +184,7 @@
 						<div class="about-item">
 							<div class="title">
 								<span class="category wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">Hello World</span>
-								<h2 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I am <span>{{$resume->nickname}}</span> {{$resume->job}}. </h2>
+								<h2 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">I am <span>{{$resume->nickname}}</span> , I am {{$resume->job}}. </h2>
 								<p class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">{{$resume->aboutme}}</p>
 							</div>
 							<div class="about-content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
@@ -224,6 +224,16 @@
 										</div>
 										<div class="info">
 											<p>{{$resume->phone}}</p>
+										</div>
+									</li>
+									@endif
+									@if($resume->fax != null)
+									<li>
+										<div class="name">
+											<p>Fax</p>
+										</div>
+										<div class="info">
+											<p>{{$resume->fax}}</p>
 										</div>
 									</li>
 									@endif
@@ -268,39 +278,53 @@
 
 		<div class="sponsor wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="background-image: url(assets/images/sponsor/bg.png);">
 			<div class="container">
+				<div class="section-title" style="margin-bottom: 50px">
+					<span class="category wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">My Social Media</span>
+					<h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">You can find me on <span>My Social Media</span></h2>
+				</div>
 				<div class="section-wrapper">
 					<div class="sponsor-slider">
 					    <div class="swiper-wrapper">
+							@if($resume->linkedin != null)
 					      	<div class="swiper-slide">
 					      		<div class="sponsor-item">
-					      			<img src="{{ asset('theme/maxino/assets/images/sponsor/01.png')}}" alt="sponsor">
+					      			<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" height="50px" width="50px" alt="linkedin" onclick="window.open('{{$resume->linkedin}}')">
 					      		</div>
 					      	</div>
+							@endif
+							@if($resume->instagram != null)
 					      	<div class="swiper-slide">
 					      		<div class="sponsor-item">
-					      			<img src="{{ asset('theme/maxino/assets/images/sponsor/02.png')}}" alt="sponsor">
+					      			<img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/62-instagram-512.png" height="50px" width="50px" alt="instagram" onclick="window.open('{{$resume->instagram}}')">
 					      		</div>
 					      	</div>
+							@endif
+							@if($resume->facebook != null)
 					      	<div class="swiper-slide">
 					      		<div class="sponsor-item">
-					      			<img src="{{ asset('theme/maxino/assets/images/sponsor/03.png')}}" alt="sponsor">
+					      			<img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" height="50px" width="50px" alt="facebook" onclick="window.open('{{$resume->facebook}}')">
 					      		</div>
 					      	</div>
+							@endif
+							@if($resume->twitter != null)
 					      	<div class="swiper-slide">
 					      		<div class="sponsor-item">
-					      			<img src="{{ asset('theme/maxino/assets/images/sponsor/04.png')}}" alt="sponsor">
+					      			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2KxlMK7ZjMnKydbAbX9Tk2JHIESpR-Rx_4g&s" height="50px" width="50px" alt="twitter" onclick="window.open('{{$resume->twitter}}')">
 					      		</div>
 					      	</div>
+							@endif
+							@if($resume->github != null)
 					      	<div class="swiper-slide">
 					      		<div class="sponsor-item">
-					      			<img src="{{ asset('theme/maxino/assets/images/sponsor/05.png')}}" alt="sponsor">
+					      			<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" height="50px" width="50px" alt="github" onclick="window.open('{{$resume->github}}')">
 					      		</div>
 					      	</div>
-					      	<div class="swiper-slide">
+							@endif
+					      	{{-- <div class="swiper-slide">
 					      		<div class="sponsor-item">
 					      			<img src="{{ asset('theme/maxino/assets/images/sponsor/06.png')}}" alt="sponsor">
 					      		</div>
-					      	</div>
+					      	</div> --}}
 					    </div>
 				  	</div>
 				</div>
@@ -377,6 +401,7 @@
 			</div>
 		</section>
 
+	    <div style="display: none;">
 		<section class="services padding-tb" id="Services" style="background-image: url(assets/images/service/bg.png);">
 			<div class="container">
 				<div class="section-header">
@@ -886,6 +911,7 @@
 	    		</div>
 	    	</div>
 	    </section>
+		</div>
     </div>
     <!-- box lay out end -->
 
@@ -896,7 +922,7 @@
 	    		<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
 	    			&copy; 2019. Maxino Designed By <a href="https://themeforest.net/user/labartisan">LabArtisan</a>
 	    		</p>
-	    		<ul class="social-link-list wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+	    		{{-- <ul class="social-link-list wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 	    			<li>
 	    				<a href="#"><i class="icofont-twitter"></i></a>
 	    			</li>
@@ -912,7 +938,7 @@
 	    			<li>
 	    				<a href="#"><i class="icofont-instagram"></i></a>
 	    			</li>
-	    		</ul>
+	    		</ul> --}}
 	    	</div>
     	</div>
     </div>

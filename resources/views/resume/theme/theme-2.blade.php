@@ -58,7 +58,7 @@
               <span class="icon-bar second"></span>
               <span class="icon-bar third"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo" class="img-responsive"></a>
+            <a class="navbar-brand" href="/"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg" alt="logo" class="img-responsive" height="50px" width="50px"></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->

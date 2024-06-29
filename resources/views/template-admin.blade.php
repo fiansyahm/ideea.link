@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="https://i.ibb.co/7nkM7v0/logo-ideea-link.png"/>
+	<link rel="icon" type="image/png" href="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('theme/cprofile1/vendor/bootstrap/css/bootstrap.min.css') }}">
 <!--===============================================================================================-->
@@ -97,7 +97,7 @@
 				<div class="limiter-menu-desktop container">					
 					<!-- Logo desktop -->		
 					<div class="logo">
-						<a href="/"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
+						<a href="/"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg" height="100px" width="100px" alt="LOGO"></a>
 					</div>
 
 					<!-- Menu desktop -->
@@ -182,7 +182,7 @@
 			<div class="wrap-header-mobile">
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="/"><img src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" height="100px" width="100px" alt="LOGO"></a>
+					<a href="/"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg" height="100px" width="100px" alt="LOGO"></a>
 				</div>
 				
 
@@ -264,7 +264,7 @@
 					<div class="col-sm-8 col-md-4 col-lg-3 p-b-20">
 						<div class="size-h-1 flex-s-e p-b-6 m-b-18">
 							<a href="/">
-								<img class="max-s-full" src="https://i.ibb.co/7nkM7v0/logo-ideea-link.png" alt="LOGO">
+								<img class="max-s-full" height="50px" width="50px" src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg" alt="LOGO">
 							</a>
 						</div>
 

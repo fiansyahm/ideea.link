@@ -224,6 +224,9 @@
                   @if($resume->email != null)
                   <li><p>E-mail<span>:</span></p> <span> {{$resume->email}}</span></li>
                   @endif
+                  @if($resume->fax != null)
+                  <li><p>Fax<span>:</span></p> <span>{{$resume->fax}}</span></li>
+                  @endif
                   @if($resume->address != null)
                   <li><p>Address<span>:</span></p> <span>{{$resume->address}}</span></li>
                   @endif
