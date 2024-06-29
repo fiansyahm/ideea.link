@@ -59,6 +59,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/resume/delete/{id}', [AdminController::class, 'AdminDelete']);
 });
 
+Route::get('/list-resume/{resume}', [ResumeController::class, 'listResume']);
+
 Route::get('/user/resume/edit/{id}/{nickname}/{fulname}', [AdminController::class, 'UserEdit']);
 Route::post('/update-resume', [ResumeController::class, 'updateResume']);
 

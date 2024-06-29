@@ -166,6 +166,7 @@ class ResumeController extends Controller
 
      public function updateResume(Request $request){
       $resumeData = $request->except(['id', '_token']); // Exclude the 'id' and '_token' fields
+      
       Resume::where('id', $request->id)->update($resumeData);
   
       // You can return a response indicating the update was successful
@@ -175,9 +176,17 @@ class ResumeController extends Controller
   public function addResume(Request $request){
     $resumeData = $request->except(['id', '_token']); // Exclude the 'id' and '_token' fields
     Resume::create($resumeData);
-
+    $id = DB::table('resumes')->where('fullname', $request->fullname)->latest('id')->value('id');
+    $redirect="list-resume/$id";
     // You can return a response indicating the update was successful
-    return redirect()->back()->with('status', 'Data Sukses Ditambahkan');
+    return redirect($redirect)->with('status', 'Data Sukses Ditambahkan');
+  }
+
+  public function listResume($id){
+    $resume = Resume::where('id', $id)
+                     ->orWhere('nickname', $id)
+                     ->first();
+    return view('resume.list-resume',['resume'=>$resume]);
   }
 
 }

@@ -729,6 +729,165 @@
                     </div>
                 </div>
 
+                <div class="col-md-12">
+                    <div class="row">
+                        
+                        <div class="col-md-6">
+                            
+                            <label for="project" class="form-label">Project</label>
+                            {{-- add button add project --}}
+                            <div class="btn btn-success my-2" onclick="addproject()">Add Project</div>
+                            <div class="row" id="project-container">
+                                
+                                <div class="mb-3 col-md-5">
+                                    <input type="text" class="form-control" id="project-0"
+                                            {{-- name="project-0"  --}}
+                                            placeholder="ideea.link"
+                                            oninput="updateprojectArray('0', 'name', this.value)">
+                                </div>
+                                <div class="mb-3 col-md-5">
+                                    <input type="text" class="form-control" id="project-link-0"
+                                            {{-- name="project-link-0"  --}}
+                                            placeholder="link project"
+                                            oninput="updateprojectArray('0', 'link', this.value)">
+                                </div>
+                                <div class="mb-3 col-md-5">
+                                    <input type="text" class="form-control" id="project-thumbnail-0"
+                                            {{-- name="project-thumbnail-0"  --}}
+                                            placeholder="link thumbnail"
+                                            oninput="updateprojectArray('0', 'thumbnail', this.value)">
+                                </div>
+                                <div class="mb-5 col-md-5">
+                                    <input type="text" class="form-control" id="project-description-0"
+                                            {{-- name="project-description-0"  --}}
+                                            placeholder="this's beautiful project"
+                                            oninput="updateprojectArray('0', 'description', this.value)">
+                                </div>
+                                <div class="mb-5 col-md-2">
+                                    <button type="button" class="btn btn-danger" id="project-delete-0" onclick="removeproject('0')">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="mb-3 col-md-12">
+                                <input style="display: none" type="text" class="form-control" id="project" name="project" value='{"data":[{"name":"","link":"","thumbnail":"","description":""}]}'
+                                        placeholder="Can I Do" readonly>
+                            </div>
+                            
+                    
+                            <script>
+                                function updateprojectArray(index, key, value) {
+                                    // alert('index: ' + index + ', key: ' + key + ', value: ' + value)
+                                    // Update the project array dynamically
+                                    var projectContainer = document.getElementById('project-container');
+                                    var projectInput = document.getElementById('project');
+                                    var project = JSON.parse(projectInput.value);
+                    
+                                    // alert(value);
+                                    
+                                    // alert(project['data'][index][key])
+    
+                                    // Update the project array
+                                    project['data'][index][key] = value;
+                    
+                                    // Update the value in the readonly input field
+                                    projectInput.value = JSON.stringify(project);
+                    
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+    
+                                function removeproject(index) {
+                                    // alert('index: ' + index)
+                                    // Update the canido array dynamically
+                                    var projectContainer = document.getElementById('project-container');
+                                    var projectInput = document.getElementById('project');
+                                    var project = JSON.parse(projectInput.value);
+                    
+                                    // Remove the project array
+                                    // project['data'].splice(index, 1);
+                                    project['data'][index] = [];
+                    
+                                    // Update the value in the readonly input field
+                                    projectInput.value = JSON.stringify(project);
+    
+                                    // Remove the HTML element
+                                    var projectElement = document.getElementById('project-' + index);
+                                    projectElement.parentNode.removeChild(projectElement);
+    
+                                    var projectIconElement = document.getElementById('project-link-' + index);
+                                    projectIconElement.parentNode.removeChild(projectIconElement);
+    
+                                    var projectThumbnailElement = document.getElementById('project-thumbnail-' + index);
+                                    projectThumbnailElement.parentNode.removeChild(projectThumbnailElement);
+    
+                                    var projectDescriptionElement = document.getElementById('project-description-' + index);
+                                    projectDescriptionElement.parentNode.removeChild(projectDescriptionElement);
+    
+                                    var projectDeleteElement = document.getElementById('project-delete-' + index);
+                                    projectDeleteElement.parentNode.removeChild(projectDeleteElement);
+    
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+    
+                                function addproject(){
+                                    // alert('index: ' + index)
+                                    // Update the project array dynamically
+                                    var projectContainer = document.getElementById('project-container');
+                                    var projectInput = document.getElementById('project');
+                                    var project = JSON.parse(projectInput.value);
+                    
+                                    // Remove the project array
+                                    // project['data'].splice(index, 1);
+    
+                                    // {"name":"Graphic Design","icon":"icon flaticon-layers-icon"}
+                                    project['data'][project['data'].length] = {"name":"","link":"","thumbnail":"","description":""};
+                    
+                                    // Update the value in the readonly input field
+                                    projectInput.value = JSON.stringify(project);
+    
+                                    var position = project['data'].length - 1;
+    
+                                    // Add the HTML element
+                                    var projectElement = document.createElement('div');
+                                    projectElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectElement.innerHTML = '<input type="text" class="form-control" id="project-' + position + '" name="project-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'name\', this.value)">';
+    
+                                    var projectLinkElement = document.createElement('div');
+                                    projectLinkElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectLinkElement.innerHTML = '<input type="text" class="form-control" id="project-link-' + position + '" name="project-link-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'link\', this.value)">';
+    
+                                    var projectThumbnailElement = document.createElement('div');
+                                    projectThumbnailElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectThumbnailElement.innerHTML = '<input type="text" class="form-control" id="project-thumbnail-' + position + '" name="project-thumbnail-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'thumbnail\', this.value)">';
+    
+                                    var projectDescriptionElement = document.createElement('div');
+                                    projectDescriptionElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectDescriptionElement.innerHTML = '<input type="text" class="form-control" id="project-description-' + position + '" name="project-description-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'description\', this.value)">';
+    
+                                    var projectDeleteElement = document.createElement('div');
+                                    projectDeleteElement.setAttribute('class', 'mb-3 col-md-2');
+                                    projectDeleteElement.innerHTML = '<button type="button" class="btn btn-danger" id="project-delete-' + position + '" onclick="removeproject(\'' + position + '\')"><i class="fa fa-trash"></i></button>';
+    
+                                    projectContainer.appendChild(projectElement);
+                                    projectContainer.appendChild(projectLinkElement);
+                                    projectContainer.appendChild(projectThumbnailElement);
+                                    projectContainer.appendChild(projectDescriptionElement);
+                                    projectContainer.appendChild(projectDeleteElement);
+                                    // You can also send the updated array to the server using AJAX if needed
+    
+                                    
+                                }
+                            </script>
+                    
+                        </div>
+    
+
+                        {{-- soon --}}
+
+                    </div>
+                </div>
+
             </div>
 
             <div class="text-center">
