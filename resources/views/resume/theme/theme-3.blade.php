@@ -49,7 +49,8 @@
 		                	<li><a href="#Banner">Home</a></li>
 							<li><a href="#About">About Me</a></li>
 							<li><a href="#Resume">Resume</a></li>
-							{{-- <li><a href="#Services">Services</a></li>
+							<li><a href="#Services">Services</a></li>
+							{{-- 
 							<li><a href="#Portfolio">Portfolio</a></li>
 							<li><a href="#Pricing">Pricing</a></li>
 							<li><a href="#Clients">Clients</a></li>
@@ -84,7 +85,8 @@
 								<li><a href="#About">About Me</a></li>
 								<li><a href="#Resume">Resume</a></li>
 								<li><a href="#Services">Services</a></li>
-								{{-- <li><a href="#Portfolio">Portfolio</a></li>
+								<li><a href="#Portfolio">Portfolio</a></li>
+								{{-- 
 								<li><a href="#Pricing">Pricing</a></li>
 								<li><a href="#Clients">Clients</a></li>
 								<li><a href="#Blog">Blog</a></li>

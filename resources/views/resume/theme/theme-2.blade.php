@@ -67,7 +67,8 @@
               <li><a class="page-scroll" href="#header">Home</a></li>
               <li><a class="page-scroll" href="#about">About Me</a></li>
               <li><a class="page-scroll" href="#resume">Resume</a></li>
-              {{-- <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>              
+              <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>              
+              {{-- 
               <li><a class="page-scroll" href="#services">Services</a></li>
               <li><a class="page-scroll" href="#blog">Blog</a></li>
               <li><a class="page-scroll" href="#pricing">Pricing</a></li>
@@ -274,22 +275,50 @@ help you for our Friendshiop. </em></p>
 
 
     <!-- Portfolio section start here -->
-    {{-- <section id="portfolio" class="portfolio padding_140">
+    <section id="portfolio" class="portfolio padding_140">
       <div class="container">
         <div class="section_header">
           <h2>Portfolio</h2>
         </div><!-- section header -->
 
-        <ul class="portfolio_menu">
+        {{-- <ul class="portfolio_menu">
             <li class="active" data-filter="*">All Items</li>
             <li data-filter=".design">Design</li>
             <li data-filter=".photography">Photography</li>
             <li data-filter=".illustration">Illustration</li>
             <li data-filter=".vector">Vector</li>
-        </ul>
+        </ul> --}}
 
         <div class="portfolio_items">
-          <div class="portfolio_item design illustration">
+          
+          <?php
+            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+            $project = json_decode($resume->project, true);
+            $counter=0;
+          ?>
+          {{-- make if isset --}}
+          @if(isset($project['data']))
+            @foreach ($project['data'] as $item)
+              <?php $counter++; ?>
+              @if($item!=null)
+                <div class="portfolio_item">
+                  <div class="pos_rel">
+                    <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                    <div class="overlay"></div>
+                    <div class="port_caption">
+                      <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                      <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                      <h4>{{ $item['name'] }}</h4>
+                      <p>{{ $item['description'] }}</p>
+                    </div>
+                  </div>
+                </div><!-- portfolio item -->
+              @endif
+            @endforeach
+          @endif
+
+
+          {{-- <div class="portfolio_item design illustration">
             <div class="pos_rel">
               <img src="assets/images/portfolio_01.jpg" alt="portfolio Image" class="img-responsive"/>
               <div class="overlay"></div>
@@ -299,8 +328,8 @@ help you for our Friendshiop. </em></p>
                 <h4>Project Title Goes Here</h4>
                 <p>Logo Design</p>
               </div>
-            </div>
-          </div><!-- portfolio item -->
+          </div>
+          </div>
           <div class="portfolio_item photography vector">
             <div class="pos_rel">
               <img src="assets/images/portfolio_02.jpg" alt="portfolio Image" class="img-responsive"/>
@@ -312,7 +341,7 @@ help you for our Friendshiop. </em></p>
                 <p>Photography</p>
               </div>
             </div>
-          </div><!-- portfolio item -->
+          </div>
           <div class="portfolio_item design illustration">
             <div class="pos_rel">
               <img src="assets/images/portfolio_03.jpg" alt="portfolio Image" class="img-responsive"/>
@@ -324,7 +353,7 @@ help you for our Friendshiop. </em></p>
                 <p>Illustration</p>
               </div>
             </div>
-          </div><!-- portfolio item -->
+          </div>
           <div class="portfolio_item  vector">
             <div class="pos_rel">
               <img src="assets/images/portfolio_04.jpg" alt="portfolio Image" class="img-responsive"/>
@@ -336,7 +365,7 @@ help you for our Friendshiop. </em></p>
                 <p>Vector</p>
               </div>
             </div>
-          </div><!-- portfolio item -->
+          </div>
           <div class="portfolio_item design illustration">
             <div class="pos_rel">
               <img src="assets/images/portfolio_05.jpg" alt="portfolio Image" class="img-responsive"/>
@@ -348,7 +377,7 @@ help you for our Friendshiop. </em></p>
                 <p>Illustration</p>
               </div>
             </div>            
-          </div><!-- portfolio item -->
+          </div>
           <div class="portfolio_item photography">
             <div class="pos_rel">
               <img src="assets/images/portfolio_06.jpg" alt="portfolio Image" class="img-responsive"/>
@@ -360,11 +389,13 @@ help you for our Friendshiop. </em></p>
                 <p>Photography</p>
               </div>
             </div>
-          </div><!-- portfolio item -->
+          </div> --}}
+
+
         </div><!-- portfolio items -->
         
       </div><!-- container -->
-    </section> --}}
+    </section>
     <!-- Portfolio section end here -->
 
 
