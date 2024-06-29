@@ -49,12 +49,12 @@
 		                	<li><a href="#Banner">Home</a></li>
 							<li><a href="#About">About Me</a></li>
 							<li><a href="#Resume">Resume</a></li>
-							<li><a href="#Services">Services</a></li>
+							{{-- <li><a href="#Services">Services</a></li>
 							<li><a href="#Portfolio">Portfolio</a></li>
 							<li><a href="#Pricing">Pricing</a></li>
 							<li><a href="#Clients">Clients</a></li>
 							<li><a href="#Blog">Blog</a></li>
-							<li><a href="#Contact">Contact</a></li>
+							<li><a href="#Contact">Contact</a></li> --}}
 			            </ul>
 		                <ul class="social-link-list d-flex flex-wrap">
 		                    <li><a href="#" class="facebook"><i class="icofont-facebook"></i></a></li>
@@ -84,11 +84,11 @@
 								<li><a href="#About">About Me</a></li>
 								<li><a href="#Resume">Resume</a></li>
 								<li><a href="#Services">Services</a></li>
-								<li><a href="#Portfolio">Portfolio</a></li>
+								{{-- <li><a href="#Portfolio">Portfolio</a></li>
 								<li><a href="#Pricing">Pricing</a></li>
 								<li><a href="#Clients">Clients</a></li>
 								<li><a href="#Blog">Blog</a></li>
-								<li><a href="#Contact">Contact</a></li>
+								<li><a href="#Contact">Contact</a></li> --}}
 							</ul>
 						</div>
 					</div>
@@ -401,7 +401,7 @@
 			</div>
 		</section>
 
-	    <div style="display: none;">
+	    
 		<section class="services padding-tb" id="Services" style="background-image: url(assets/images/service/bg.png);">
 			<div class="container">
 				<div class="section-header">
@@ -457,15 +457,38 @@
 					</div>
 					<div class="portfolio-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
 						<ul>
-							<li data-filter="*" class="active"><i class="icofont-star"></i><span>All</span>Gallery</li>
+							{{-- <li data-filter="*" class="active"><i class="icofont-star"></i><span>All</span>Gallery</li>
 							<li data-filter=".g-img"><i class="icofont-image"></i><span>Images</span>Gallery</li>
-							<li data-filter=".v-img"><i class="icofont-play-alt-1"></i><span>Video</span>Gallery</li>
+							<li data-filter=".v-img"><i class="icofont-play-alt-1"></i><span>Video</span>Gallery</li> --}}
 						</ul>
 					</div>
 				</div>
 	    		<div class="section-wrapper">
 	    			<div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-	    				<div class="grid-item g-img">
+	    				<?php
+							// Konversi string JSON ke dalam bentuk array menggunakan json_decode
+							$project = json_decode($resume->project, true);
+							$counter=0;
+						?>
+						{{-- make if isset --}}
+						@if(isset($project['data']))
+							@foreach ($project['data'] as $item)
+								<?php $counter++; ?>
+								@if($item!=null)
+								<div class="grid-item g-img">
+									<div class="grid-inner">
+										<div class="thumb">
+											<a href="{{ $item['link'] }}" target="_blank">
+												<img src="{{ $item['thumbnail'] }}" alt="portfolio">
+											</a>
+										</div>
+									</div>
+								</div>
+								@endif
+							@endforeach
+						@endif
+						
+						{{-- <div class="grid-item g-img">
 		    				<div class="grid-inner">
 		    					<div class="thumb">
 		    						<a href="{{ asset('theme/maxino/assets/images/portfolio/01.jpg')}}" data-rel="lightcase:myCollection"><img src="{{ asset('theme/maxino/assets/images/portfolio/01.jpg')}}" alt="portfolio"></a>
@@ -512,12 +535,14 @@
 		    						</div>
 		    					</div>
 		    				</div>
-	    				</div>
+	    				</div> --}}
+
 	    			</div>
 	    		</div>
 	    	</div>
 	    </section>
 
+		<div style="display: none;">
 	    <section class="pricing padding-tb" id="Pricing" style="background-image: url(assets/images/pricing/bg.png);">
 	    	<div class="container">
 	    		<div class="section-header">

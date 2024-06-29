@@ -178,7 +178,8 @@
                     $canido = json_decode($resume->canido, true);
                     $counter=0;
                 ?>
-                <h1 class="text-center">Skill & Experience</h1>     
+                <h1 class="text-center my-5">Skill & Experience</h1>     
+                
                 <div class="col-md-12">
                     <div class="row">
                         <?php
@@ -755,6 +756,172 @@
                             </script>
                             
                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <?php
+                        // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                        $project = json_decode($resume->project, true);
+                        $counter = 0;
+                        ?>
+                        <div class="col-md-6">
+                            @if(isset($project['data']))
+                                <label for="project" class="form-label">project</label>
+                                {{-- add button add project --}}
+                                <div class="btn btn-success my-2" onclick="addproject()">Add project</div>
+                                <div class="row" id="project-container">
+                                    @foreach ($project['data'] as $item)
+                                        @if($item!=null)
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="project-{{ $counter }}"
+                                                    {{-- name="project-{{ $counter }}"  --}}
+                                                    value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
+                                                    oninput="updateprojectArray('{{ $counter }}', 'name', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="project-link-{{ $counter }}"
+                                                    {{-- name="project-link-{{ $counter }}"  --}}
+                                                    value="{{ $item['link'] }}" placeholder="{{ $item['link'] }}"
+                                                    oninput="updateprojectArray('{{ $counter }}', 'link', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="project-thumbnail-{{ $counter }}"
+                                                    {{-- name="project-thumbnail-{{ $counter }}"  --}}
+                                                    value="{{ $item['thumbnail'] }}" placeholder="{{ $item['thumbnail'] }}"
+                                                    oninput="updateprojectArray('{{ $counter }}', 'thumbnail', this.value)">
+                                            </div>
+                                            <div class="mb-5 col-md-5">
+                                                <input type="text" class="form-control" id="project-description-{{ $counter }}"
+                                                    {{-- name="project-description-{{ $counter }}"  --}}
+                                                    value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
+                                                    oninput="updateprojectArray('{{ $counter }}', 'description', this.value)">
+                                            </div>
+                                            <div class="mb-5 col-md-2">
+                                                <button type="button" class="btn btn-danger" id="project-delete-{{ $counter }}" onclick="removeproject('{{ $counter }}')">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        <?php $counter++; ?>
+                                    
+                                    @endforeach
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <input style="display: none" type="text" class="form-control" id="project" name="project" value="{{ json_encode($project) }}"
+                                           placeholder="Can I Do" readonly>
+                                </div>
+                            @endif
+                    
+                            <script>
+                                function updateprojectArray(index, key, value) {
+                                    // alert('index: ' + index + ', key: ' + key + ', value: ' + value)
+                                    // Update the project array dynamically
+                                    var projectContainer = document.getElementById('project-container');
+                                    var projectInput = document.getElementById('project');
+                                    var project = JSON.parse(projectInput.value);
+                    
+                                    // alert(value);
+                                    
+                                    // alert(project['data'][index][key])
+
+                                    // Update the project array
+                                    project['data'][index][key] = value;
+                    
+                                    // Update the value in the readonly input field
+                                    projectInput.value = JSON.stringify(project);
+                    
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+
+                                function removeproject(index) {
+                                    // alert('index: ' + index)
+                                    // Update the canido array dynamically
+                                    var projectContainer = document.getElementById('project-container');
+                                    var projectInput = document.getElementById('project');
+                                    var project = JSON.parse(projectInput.value);
+                    
+                                    // Remove the project array
+                                    // project['data'].splice(index, 1);
+                                    project['data'][index] = [];
+                    
+                                    // Update the value in the readonly input field
+                                    projectInput.value = JSON.stringify(project);
+
+                                    // Remove the HTML element
+                                    var projectElement = document.getElementById('project-' + index);
+                                    projectElement.parentNode.removeChild(projectElement);
+
+                                    var projectIconElement = document.getElementById('project-link-' + index);
+                                    projectIconElement.parentNode.removeChild(projectIconElement);
+
+                                    var projectThumbnailElement = document.getElementById('project-thumbnail-' + index);
+                                    projectThumbnailElement.parentNode.removeChild(projectThumbnailElement);
+
+                                    var projectDescriptionElement = document.getElementById('project-description-' + index);
+                                    projectDescriptionElement.parentNode.removeChild(projectDescriptionElement);
+
+                                    var projectDeleteElement = document.getElementById('project-delete-' + index);
+                                    projectDeleteElement.parentNode.removeChild(projectDeleteElement);
+
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+
+                                function addproject(){
+                                    // alert('index: ' + index)
+                                    // Update the project array dynamically
+                                    var projectContainer = document.getElementById('project-container');
+                                    var projectInput = document.getElementById('project');
+                                    var project = JSON.parse(projectInput.value);
+                    
+                                    // Remove the project array
+                                    // project['data'].splice(index, 1);
+
+                                    // {"name":"Graphic Design","icon":"icon flaticon-layers-icon"}
+                                    project['data'][project['data'].length] = {"name":"","link":"","thumbnail":"","description":""};
+                    
+                                    // Update the value in the readonly input field
+                                    projectInput.value = JSON.stringify(project);
+
+                                    var position = project['data'].length - 1;
+
+                                    // Add the HTML element
+                                    var projectElement = document.createElement('div');
+                                    projectElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectElement.innerHTML = '<input type="text" class="form-control" id="project-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'name\', this.value)">';
+
+                                    var projectLinkElement = document.createElement('div');
+                                    projectLinkElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectLinkElement.innerHTML = '<input type="text" class="form-control" id="project-link-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'link\', this.value)">';
+
+                                    var projectThumbnailElement = document.createElement('div');
+                                    projectThumbnailElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectThumbnailElement.innerHTML = '<input type="text" class="form-control" id="project-thumbnail-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'thumbnail\', this.value)">';
+
+                                    var projectDescriptionElement = document.createElement('div');
+                                    projectDescriptionElement.setAttribute('class', 'mb-3 col-md-5');
+                                    projectDescriptionElement.innerHTML = '<input type="text" class="form-control" id="project-description-' + position + '" value="" placeholder="project Data" oninput="updateprojectArray(\'' + position + '\', \'description\', this.value)">';
+
+                                    var projectDeleteElement = document.createElement('div');
+                                    projectDeleteElement.setAttribute('class', 'mb-3 col-md-2');
+                                    projectDeleteElement.innerHTML = '<button type="button" class="btn btn-danger" id="project-delete-' + position + '" onclick="removeproject(\'' + position + '\')"><i class="fa fa-trash"></i></button>';
+
+                                    projectContainer.appendChild(projectElement);
+                                    projectContainer.appendChild(projectLinkElement);
+                                    projectContainer.appendChild(projectThumbnailElement);
+                                    projectContainer.appendChild(projectDescriptionElement);
+                                    projectContainer.appendChild(projectDeleteElement);
+                                    // You can also send the updated array to the server using AJAX if needed
+
+                                    
+                                }
+                            </script>
+                    
+                        </div>
+
+                        {{-- soon --}}
+                       
                     </div>
                 </div>
 
