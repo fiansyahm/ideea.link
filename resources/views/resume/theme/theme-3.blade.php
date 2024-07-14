@@ -482,6 +482,8 @@
 										<div class="thumb">
 											<a href="{{ $item['link'] }}" target="_blank">
 												<img src="{{ $item['thumbnail'] }}" alt="portfolio">
+												<h6 class="title">{{ $item['name'] }}</h6>
+												<p>{{ $item['description'] }}</p>
 											</a>
 										</div>
 									</div>

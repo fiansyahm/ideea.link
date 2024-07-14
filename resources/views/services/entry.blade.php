@@ -60,7 +60,7 @@
 
                             <!-- Centered button container -->
                             <div class="button-container">
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" class="btn btn-primary" type="button">WHATSAPP</a>
+                                <a href="https://api.whatsapp.com/send?phone=6285812570358&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" class="btn btn-primary" type="button">WHATSAPP</a>
                                 <a href="#price" class="btn btn-primary" type="button">LIHAT HARGA</a>
                             </div>
                         </div>
@@ -195,7 +195,7 @@
 
                             <!-- Centered button container -->
                             <div class="img img-fluid my-5" id="kontak">
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=6285812570358&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" target="_blank">
                                     <img width="300px" height="100px" class="text-center justify-content-center" src="https://internetindihomebekasi.files.wordpress.com/2020/02/wa-only.png" alt="">
                                 </a>
                             </div>

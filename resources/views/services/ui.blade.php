@@ -41,7 +41,7 @@
                                     baik
                                     sesuai dengan kebutuhan user Anda.
                                 </p>
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20UI/UX%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="btn btn-primary btn-lg">Hubungi Kami</a>
+                                <a href="https://api.whatsapp.com/send?phone=6285812570358&text=Saya%20ingin%20order%20jasa%20UI/UX%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="btn btn-primary btn-lg">Hubungi Kami</a>
                             </div>
                         </div>
 
@@ -340,7 +340,7 @@
                     </div>
                     <div class="col-md">
                         <div class="mt-5 pt-3 container">
-                            <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20UI/UX%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="btn btn-primary btn-lg">Hubungi Kami</a>
+                            <a href="https://api.whatsapp.com/send?phone=6285812570358&text=Saya%20ingin%20order%20jasa%20UI/UX%20dan%20bayar%20hanya%20setelah%20saya%20puas" type="button" class="btn btn-primary btn-lg">Hubungi Kami</a>
                         </div>
                     </div>
                 </div>

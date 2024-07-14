@@ -313,8 +313,20 @@
             
                       </ul>
                   </li>
+                  <li class="nav-item @yield('navbar_watermark')">
+                    <a class="nav-link" href="/register-watermark">
+                        Tambah Watermark
+                    </a>
+                  </li>
+
+                  <li class="nav-item @yield('navbar_menu_ideelink')">
+                    <a class="nav-link" href="/admin/ideelink/list/all">
+                        Daftar Ideelink
+                    </a>
+                  </li>
                     
                 </ul>
+                
                 <div class="footer">
                     <p>
                         Copyright &copy;

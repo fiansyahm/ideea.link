@@ -11,8 +11,8 @@
             <h1 class="text-center"><strong>Jasa Pembuatan Personal Profile</strong> Elegan dan Interaktif</span></h1>
             <div class="img img-fluid text-center justify-content-center my-5">
                 <img class="img img-fluid text-center justify-content-center"
-                    src="https://i.ibb.co/FzDGyBn/personal-profile.png"
-                    alt="izin" width="500" height="500" style="border: 2px solid #000; /* Warna hitam */">
+                    src="https://cdn-icons-png.flaticon.com/512/2919/2919906.png"
+                    alt="izin" width="300" height="300" style="border: 2px solid #000; /* Warna hitam */">
             </div>
 
             <div class="container">
@@ -45,7 +45,7 @@
 
                             <!-- Centered button container -->
                             <div class="button-container">
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" class="btn btn-primary" type="button">WHATSAPP</a>
+                                <a href="https://api.whatsapp.com/send?phone=6285812570358&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" class="btn btn-primary" type="button">WHATSAPP</a>
                                 <a href="#price" class="btn btn-primary" type="button">LIHAT CONTOH</a>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><strong>Personal Profile</strong> 1</h5>
                             <img class="img img-fluid text-center justify-content-center"
-                    src="https://i.ibb.co/FzDGyBn/personal-profile.png"
+                    src="https://i.ibb.co.com/QNpsJN9/Screenshot-2024-07-10-184558.png"
                     alt="izin" width="500" height="500" style="border: 2px solid #000; /* Warna hitam */">
                             <ul class="list-fitur">
                                 <li> Isi Form Langsung Jadi </li>
@@ -120,16 +120,16 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><strong>Personal Profile</strong> 2</h5>
+                            <h5 class="card-title"><strong>Personal Profile</strong> 3</h5>
                             <img class="img img-fluid text-center justify-content-center"
-                    src="https://i.ibb.co/NxsCTc0/Screenshot-2024-01-27-121430.png"
+                    src="https://i.ibb.co.com/Sn7Rwbg/tema-3.png"
                     alt="izin" width="500" height="500" style="border: 2px solid #000; /* Warna hitam */">
                             <ul class="list-fitur">
                                 <li> Isi Form Langsung Jadi </li>
                                 <li> Desain Elegan dan Interaktif </li>
                                 <li> Bisa Edit Kapanpun </li>
                             </ul>
-                            <a href="/personal-profile/6" class="btn btn-primary text-white">Lihat Contoh</a> 
+                            <a href="/personal-profile/5" class="btn btn-primary text-white">Lihat Contoh</a> 
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
 
                             <!-- Centered button container -->
                             <div class="img img-fluid my-5" id="kontak">
-                                <a href="https://api.whatsapp.com/send?phone=6287888971186&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=6285812570358&text=Saya%20ingin%20order%20jasa%20entry%20data%20dan%20bayar%20hanya%20setelah%20saya%20puas" target="_blank">
                                     <img width="300px" height="100px" class="text-center justify-content-center" src="https://internetindihomebekasi.files.wordpress.com/2020/02/wa-only.png" alt="">
                                 </a>
                             </div>

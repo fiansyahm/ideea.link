@@ -369,6 +369,46 @@
 					</div>
 				</div>
 
+				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
+					<div class="bg-10 h-full">
+						<a href="/service/resume" class="hov-img0 of-hidden bg-0">
+							<img src="https://i.ibb.co.com/QNpsJN9/Screenshot-2024-07-10-184558.png" alt="IMG">
+						</a>
+
+						<div class="p-rl-30 p-t-26 p-b-20">
+							<h4 class="p-b-9">
+								<a href="/service/resume" class="t1-m-1 cl-0 hov-link2 trans-02">
+									Jasa Pembuatan Web Resume
+								</a>
+							</h4>
+
+							<p class="t1-s-2 cl-13">
+								Kami membantu anda dalam pembuatan web resume untuk keperluan bisnis anda.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
+					<div class="bg-10 h-full">
+						<a href="/service/watermark" class="hov-img0 of-hidden bg-0">
+							<img src="https://glints.com/id/lowongan/wp-content/uploads/2021/05/watermark-dokumen-kerja-fisik.jpg" alt="IMG">
+						</a>
+
+						<div class="p-rl-30 p-t-26 p-b-20">
+							<h4 class="p-b-9">
+								<a href="/service/watermark" class="t1-m-1 cl-0 hov-link2 trans-02">
+									Jasa Pemberian Watermark PDF
+								</a>
+							</h4>
+
+							<p class="t1-s-2 cl-13">
+								Kami membantu anda dalam pembuatan watermark pdf untuk keperluan bisnis anda.
+							</p>
+						</div>
+					</div>
+				</div>
+
                 {{-- <div class="col-sm-10 col-md-8 col-lg-4 p-b-40">
 					<div class="bg-10 h-full">
 						<a href="services-detail-01.html" class="hov-img0 of-hidden bg-0">
@@ -564,7 +604,7 @@
 								var name = document.getElementById("name").value;
 								var phone = document.getElementById("phone").value;
 								var message = document.getElementById("message").value;
-								var url = "https://api.whatsapp.com/send?phone=6287888971186&text=Halo%20Admin%20Ideea.link%2C%20saya%20"+name+"%20dari%20"+phone+"%20ingin%20bertanya%20tentang%20"+message;
+								var url = "https://api.whatsapp.com/send?phone=6285812570358&text=Halo%20Admin%20Ideea.link%2C%20saya%20"+name+"%20dari%20"+phone+"%20ingin%20bertanya%20tentang%20"+message;
 								window.open(url, '_blank');
 							}
 						</script>

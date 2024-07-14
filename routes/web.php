@@ -21,10 +21,8 @@ use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\CekresiController;
 use App\Http\Controllers\ConfirmationController;
 use App\Http\Controllers\SessionController;
-use App\Http\Controllers\CodeController;
-use App\Http\Controllers\MidtransController;
-use App\Http\Controllers\SongController;
-use App\Http\Controllers\VideoController;
+use App\Http\Controllers\IdeelinkController;
+use App\Http\Controllers\WatermarkController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\InvitationController;
 use App\Http\Controllers\FlipbookController;
@@ -46,9 +44,31 @@ Route::get('/wpadmin-login', [SessionController::class, 'index'])->name('login')
 Route::get('/register-resume', [ResumeController::class, 'registerResume']);
 Route::post('/register-resume', [ResumeController::class, 'addResume']);
 
+Route::get('/register-watermark', [WatermarkController::class, 'index']);
+Route::post('/register-watermark', [WatermarkController::class, 'output']);
+
 Route::get('/personal-profile/{id}', [ResumeController::class, 'personalProfile']);
 Route::get('/flipbook/home', [FlipbookController::class, 'index']);
 Route::get('/flipbook/default-book', [FlipbookController::class, 'defaultBook']);
+
+Route::get('/sosmed',function (){
+    return view('invitation.linktree');
+});
+
+// ideelink
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin/ideelink/list/{ideelink}', [IdeelinkController::class, 'AdminList']);
+    Route::get('/admin/ideelink/edit/{ideelink}', [IdeelinkController::class, 'AdminEdit']);
+    Route::get('/admin/ideelink/delete/{ideelink}', [IdeelinkController::class, 'AdminDelete']);
+});
+Route::get('/user/ideelink/edit/{id}/{name}', [IdeelinkController::class, 'UserEdit']);
+Route::post('update-ideelink', [IdeelinkController::class, 'updateIdeelink']);
+
+Route::get('/register-ideelink', [IdeelinkController::class, 'registerIdeelink']);
+Route::post('/add-ideelink', [IdeelinkController::class, 'addIdeelink']);
+Route::get('/list-ideelink/{ideelink}', [IdeelinkController::class, 'listIdeelink']);
+Route::get('/ideelink/{ideelink}', [IdeelinkController::class, 'showIdeelink']);
+
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/wpadmin', [AdminController::class, 'wpadmin']);
