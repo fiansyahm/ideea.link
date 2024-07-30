@@ -376,30 +376,31 @@
           <?php
             // Konversi string JSON ke dalam bentuk array menggunakan json_decode
             $project = json_decode($resume->project, true);
+            $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
             $counter=0;
           ?>
-          {{-- make if isset --}}
-          @if(isset($project['data']))
-            @foreach ($project['data'] as $item)
-              <?php $counter++; ?>
-              <div class="portfolio_items">
-                <div class="portfolio_item design illustration">
-                  <div class="pos_rel">
-                    <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
-                    <div class="overlay"></div>
-                    <div class="port_caption">
-                      <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                      <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                      <h4>{{ $item['name'] }}</h4>
-                      <p>{{ $item['description'] }}</p>
+          <div class="portfolio_items">
+            {{-- make if isset --}}
+            @if(isset($project['data']))
+              @foreach ($project['data'] as $item)
+                <?php $counter++; ?>
+                  <div class="portfolio_item {{ $list_array[$counter-1] }}">
+                    <div class="pos_rel">
+                      <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                      <div class="overlay"></div>
+                      <div class="port_caption">
+                        <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                        <h4>{{ $item['name'] }}</h4>
+                        <p>{{ $item['description'] }}</p>
+                      </div>
                     </div>
-                  </div>
-              </div><!-- portfolio item -->
-            @endforeach
-          @endif
-            {{-- 
-            <div class="portfolio_items">
-              <div class="portfolio_item design illustration">
+                  </div><!-- portfolio item -->
+              @endforeach
+            @endif
+          
+            {{--             
+            <div class="portfolio_item design illustration">
                 <div class="pos_rel">
                   <img src="{{ asset('theme/gentleman/assets/images/portfolio_01.jpg')}}" alt="portfolio Image" class="img-responsive"/>
                   <div class="overlay"></div>
@@ -470,7 +471,56 @@
                   <p>Photography</p>
                 </div>
               </div>
-            </div> --}}
+            </div> 
+            --}}
+
+          </div><!-- portfolio items -->
+          
+        </div><!-- container -->
+      </section>
+      <!-- Portfolio section end here -->
+
+      <!-- Portfolio section start here -->
+      <section id="portfolio" class="portfolio portfolio_two padding_140">
+        <div class="body_container">
+          <div class="section_header">
+            <h2>Certificate</h2>
+          </div><!-- section header -->
+
+          {{-- <ul class="portfolio_menu">
+              <li class="active" data-filter="*">All Items</li>
+              <li data-filter=".design">Design</li>
+              <li data-filter=".photography">Photography</li>
+              <li data-filter=".illustration">Illustration</li>
+              <li data-filter=".vector">Vector</li>
+          </ul> --}}
+
+          <?php
+            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+            $certificate = json_decode($resume->certificate, true);
+            $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
+            $counter=0;
+          ?>
+          <div class="portfolio_items">
+            {{-- make if isset --}}
+            @if(isset($certificate['data']))
+              
+              @foreach ($certificate['data'] as $item)
+                <?php $counter++; ?>
+                  <div class="portfolio_item {{ $list_array[$counter-1] }}">
+                    <div class="pos_rel">
+                      <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                      <div class="overlay"></div>
+                      <div class="port_caption">
+                        <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                        <h4>{{ $item['name'] }}</h4>
+                        <p>{{ $item['description'] }}</p>
+                      </div>
+                    </div>
+                  </div><!-- portfolio item -->
+              @endforeach
+            @endif
 
           </div><!-- portfolio items -->
           

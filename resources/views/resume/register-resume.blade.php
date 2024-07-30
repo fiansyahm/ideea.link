@@ -883,7 +883,155 @@
                         </div>
     
 
-                        {{-- soon --}}
+                        <div class="col-md-6">
+                            
+                            <label for="certificate" class="form-label">Sertifikat</label>
+                            {{-- add button add certificate --}}
+                            <div class="btn btn-success my-2" onclick="addcertificate()">Add Sertifikat</div>
+                            <div class="row" id="certificate-container">
+                                
+                                <div class="mb-3 col-md-5">
+                                    <input type="text" class="form-control" id="certificate-0"
+                                            {{-- name="certificate-0"  --}}
+                                            placeholder="ideea.link"
+                                            oninput="updatecertificateArray('0', 'name', this.value)">
+                                </div>
+                                <div class="mb-3 col-md-5">
+                                    <input type="text" class="form-control" id="certificate-link-0"
+                                            {{-- name="certificate-link-0"  --}}
+                                            placeholder="link certificate"
+                                            oninput="updatecertificateArray('0', 'link', this.value)">
+                                </div>
+                                <div class="mb-3 col-md-5">
+                                    <input type="text" class="form-control" id="certificate-thumbnail-0"
+                                            {{-- name="certificate-thumbnail-0"  --}}
+                                            placeholder="link thumbnail"
+                                            oninput="updatecertificateArray('0', 'thumbnail', this.value)">
+                                </div>
+                                <div class="mb-5 col-md-5">
+                                    <input type="text" class="form-control" id="certificate-description-0"
+                                            {{-- name="certificate-description-0"  --}}
+                                            placeholder="this's beautiful certificate"
+                                            oninput="updatecertificateArray('0', 'description', this.value)">
+                                </div>
+                                <div class="mb-5 col-md-2">
+                                    <button type="button" class="btn btn-danger" id="certificate-delete-0" onclick="removecertificate('0')">
+                                        <i class="fa fa-trash"></i>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="mb-3 col-md-12">
+                                <input style="display: none" type="text" class="form-control" id="certificate" name="certificate" value='{"data":[{"name":"","link":"","thumbnail":"","description":""}]}'
+                                        placeholder="Can I Do" readonly>
+                            </div>
+                            
+                    
+                            <script>
+                                function updatecertificateArray(index, key, value) {
+                                    // alert('index: ' + index + ', key: ' + key + ', value: ' + value)
+                                    // Update the certificate array dynamically
+                                    var certificateContainer = document.getElementById('certificate-container');
+                                    var certificateInput = document.getElementById('certificate');
+                                    var certificate = JSON.parse(certificateInput.value);
+                    
+                                    // alert(value);
+                                    
+                                    // alert(certificate['data'][index][key])
+    
+                                    // Update the certificate array
+                                    certificate['data'][index][key] = value;
+                    
+                                    // Update the value in the readonly input field
+                                    certificateInput.value = JSON.stringify(certificate);
+                    
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+    
+                                function removecertificate(index) {
+                                    // alert('index: ' + index)
+                                    // Update the canido array dynamically
+                                    var certificateContainer = document.getElementById('certificate-container');
+                                    var certificateInput = document.getElementById('certificate');
+                                    var certificate = JSON.parse(certificateInput.value);
+                    
+                                    // Remove the certificate array
+                                    // certificate['data'].splice(index, 1);
+                                    certificate['data'][index] = [];
+                    
+                                    // Update the value in the readonly input field
+                                    certificateInput.value = JSON.stringify(certificate);
+    
+                                    // Remove the HTML element
+                                    var certificateElement = document.getElementById('certificate-' + index);
+                                    certificateElement.parentNode.removeChild(certificateElement);
+    
+                                    var certificateIconElement = document.getElementById('certificate-link-' + index);
+                                    certificateIconElement.parentNode.removeChild(certificateIconElement);
+    
+                                    var certificateThumbnailElement = document.getElementById('certificate-thumbnail-' + index);
+                                    certificateThumbnailElement.parentNode.removeChild(certificateThumbnailElement);
+    
+                                    var certificateDescriptionElement = document.getElementById('certificate-description-' + index);
+                                    certificateDescriptionElement.parentNode.removeChild(certificateDescriptionElement);
+    
+                                    var certificateDeleteElement = document.getElementById('certificate-delete-' + index);
+                                    certificateDeleteElement.parentNode.removeChild(certificateDeleteElement);
+    
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+    
+                                function addcertificate(){
+                                    // alert('index: ' + index)
+                                    // Update the certificate array dynamically
+                                    var certificateContainer = document.getElementById('certificate-container');
+                                    var certificateInput = document.getElementById('certificate');
+                                    var certificate = JSON.parse(certificateInput.value);
+                    
+                                    // Remove the certificate array
+                                    // certificate['data'].splice(index, 1);
+    
+                                    // {"name":"Graphic Design","icon":"icon flaticon-layers-icon"}
+                                    certificate['data'][certificate['data'].length] = {"name":"","link":"","thumbnail":"","description":""};
+                    
+                                    // Update the value in the readonly input field
+                                    certificateInput.value = JSON.stringify(certificate);
+    
+                                    var position = certificate['data'].length - 1;
+    
+                                    // Add the HTML element
+                                    var certificateElement = document.createElement('div');
+                                    certificateElement.setAttribute('class', 'mb-3 col-md-5');
+                                    certificateElement.innerHTML = '<input type="text" class="form-control" id="certificate-' + position + '" name="certificate-' + position + '" value="" placeholder="certificate Data" oninput="updatecertificateArray(\'' + position + '\', \'name\', this.value)">';
+    
+                                    var certificateLinkElement = document.createElement('div');
+                                    certificateLinkElement.setAttribute('class', 'mb-3 col-md-5');
+                                    certificateLinkElement.innerHTML = '<input type="text" class="form-control" id="certificate-link-' + position + '" name="certificate-link-' + position + '" value="" placeholder="certificate Data" oninput="updatecertificateArray(\'' + position + '\', \'link\', this.value)">';
+    
+                                    var certificateThumbnailElement = document.createElement('div');
+                                    certificateThumbnailElement.setAttribute('class', 'mb-3 col-md-5');
+                                    certificateThumbnailElement.innerHTML = '<input type="text" class="form-control" id="certificate-thumbnail-' + position + '" name="certificate-thumbnail-' + position + '" value="" placeholder="certificate Data" oninput="updatecertificateArray(\'' + position + '\', \'thumbnail\', this.value)">';
+    
+                                    var certificateDescriptionElement = document.createElement('div');
+                                    certificateDescriptionElement.setAttribute('class', 'mb-3 col-md-5');
+                                    certificateDescriptionElement.innerHTML = '<input type="text" class="form-control" id="certificate-description-' + position + '" name="certificate-description-' + position + '" value="" placeholder="certificate Data" oninput="updatecertificateArray(\'' + position + '\', \'description\', this.value)">';
+    
+                                    var certificateDeleteElement = document.createElement('div');
+                                    certificateDeleteElement.setAttribute('class', 'mb-3 col-md-2');
+                                    certificateDeleteElement.innerHTML = '<button type="button" class="btn btn-danger" id="certificate-delete-' + position + '" onclick="removecertificate(\'' + position + '\')"><i class="fa fa-trash"></i></button>';
+    
+                                    certificateContainer.appendChild(certificateElement);
+                                    certificateContainer.appendChild(certificateLinkElement);
+                                    certificateContainer.appendChild(certificateThumbnailElement);
+                                    certificateContainer.appendChild(certificateDescriptionElement);
+                                    certificateContainer.appendChild(certificateDeleteElement);
+                                    // You can also send the updated array to the server using AJAX if needed
+    
+                                    
+                                }
+                            </script>
+                    
+                        </div>
 
                     </div>
                 </div>
