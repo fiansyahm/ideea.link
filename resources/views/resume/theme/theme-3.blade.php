@@ -86,6 +86,7 @@
 								<li><a href="#Resume">Resume</a></li>
 								<li><a href="#Services">Services</a></li>
 								<li><a href="#Portfolio">Portfolio</a></li>
+								<li><a href="#Certificate">Certificate</a></li>
 								{{-- 
 								<li><a href="#Pricing">Pricing</a></li>
 								<li><a href="#Clients">Clients</a></li>
@@ -116,7 +117,7 @@
 										<b class="gold-title">Web Designer</b> --}}
 									</h1>
 								</div>
-								<a class="btn" href="{{$resume->resume}}"><span>View My Resume</span><img src="{{ asset('theme/maxino/assets/images/icon/btn-1.png')}}" alt="icon" class="img-fluid"></a>
+								<a class="btn" href="#Portfolio"><span>View My Portofolio</span><img src="{{ asset('theme/maxino/assets/images/icon/btn-1.png')}}" alt="icon" class="img-fluid"></a>
 							</div>
 		                </div>
 		                <div class="col-lg-6 col-12">
@@ -271,7 +272,9 @@
 									@endif
 								</ul>
 							</div>
-							<a class="btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" href="{{$resume->resume}}"><span>Download Resume</span><img src="{{ asset('theme/maxino/assets/images/icon/btn-1.png')}}" alt="icon" class="img-fluid"></a>
+							@if($resume->resume!=null)
+								<a class="btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" onclick="downloadResume()"><span>Download My Resume</span><img src="{{ asset('theme/maxino/assets/images/icon/btn-1.png')}}" alt="icon" class="img-fluid"></a>
+							@endif
 						</div>
 					</div>
 				</div>
@@ -397,9 +400,18 @@
 					
 					
 				</div>
+				@if($resume->resume!=null)
 				<div class="text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-					<a class="btn" href="{{$resume->resume}}"><span>Download My Resume</span><img src="{{ asset('theme/maxino/assets/images/icon/btn-1.png')}}" alt="icon" class="img-fluid"></a>
+					<a class="btn" onclick="downloadResume()"><span>Download My Resume</span><img src="{{ asset('theme/maxino/assets/images/icon/btn-1.png')}}" alt="icon" class="img-fluid"></a>
 				</div>
+				@endif
+				<script>
+					function downloadResume() {
+						window.location.href = "{{$resume->resume}}";
+					}
+				</script>
+
+
 			</div>
 		</section>
 
@@ -546,7 +558,7 @@
 	    	</div>
 	    </section>
 
-		<section class="portfolio padding-tb" id="Portfolio">
+		<section class="portfolio padding-tb" id="Certificate">
 	    	<div class="container">
 	    		<div class="portfolio-top">
 					<div class="portfolio-left">

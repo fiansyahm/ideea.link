@@ -68,6 +68,7 @@
               <li><a class="page-scroll" href="#about">About Me</a></li>
               <li><a class="page-scroll" href="#resume">Resume</a></li>
               <li><a class="page-scroll" href="#portfolio">Portfolio</a></li>              
+              <li><a class="page-scroll" href="#certificate">Certificate</a></li>             
               {{-- 
               <li><a class="page-scroll" href="#services">Services</a></li>
               <li><a class="page-scroll" href="#blog">Blog</a></li>
@@ -91,7 +92,7 @@
         <div class="banner_content">
           <h4>Hi There! I am</h4>
           <h2>{{$resume->fullname}}</h2>
-          <p>{{$resume->job}}</p>
+          <p style="color: azure">{{$resume->job}}</p>
           <ul class="banner_social">
             @if($resume->linkedin != null)
             <li><a href="{{$resume->linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -110,7 +111,7 @@
             @endif
             @if($resume->resume != null)
             <li><a href="{{$resume->resume}}"><i class="fa fa-file" aria-hidden="true"></i></a></li>
-            <span style="color: white">Resume</span>
+            {{-- <span style="color: white">Resume</span> --}}
             @endif
             {{-- <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li> --}}
@@ -155,6 +156,16 @@ help you for our Friendshiop. </em></p>
                 @endif
                 @if($resume->freelance != null)
                 <li><p>Freelance<span>:</span></p> <span>{{$resume->freelance}}</span></li>
+                @endif
+                @if($resume->freelance != null)
+                <li style="margin-top: 40px">
+                  <button class="btn btn-primary" onclick="downloadResume()">Download Resume</button>
+                </li>
+                <script>
+                  function downloadResume() {
+                    window.location.href = "{{$resume->resume}}";
+                  }
+                </script>
                 @endif
               </ul>
             </div><!-- about details -->
@@ -399,7 +410,7 @@ help you for our Friendshiop. </em></p>
     <!-- Portfolio section end here -->
 
     <!-- Portfolio section start here -->
-    <section id="portfolio" class="portfolio padding_140">
+    <section id="certificate" class="portfolio padding_140">
       <div class="container">
         <div class="section_header">
           <h2>Certificate</h2>

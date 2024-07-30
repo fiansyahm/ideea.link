@@ -138,6 +138,14 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="mb-3">
+                        <label for="resume" class="form-label">Resume<a style="color:orange;">(Wajib)</a></label>
+                        <input type="text" class="form-control @error('resume') is-invalid @enderror" id="resume"
+                            name="resume" value="{{ $resume['resume'] }}" placeholder="Resume">
+                        @error('resume')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
                 
                 <div class="col-md-2"></div>

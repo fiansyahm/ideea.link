@@ -105,6 +105,18 @@
               </div>
             </a>
           </li>
+
+          <li>
+            <a class="page-scroll" href="#certificate">
+              <div class="menu_item">
+                <div class="menu_icon flaticon-technology"></div>
+                <div class="menu_content">
+                  <h4>Certificate</h4>
+                  <p>Get in Touch</p>
+                </div>
+              </div>
+            </a>
+          </li>
           {{--
           <li>
             <a class="page-scroll" href="#services">
@@ -150,17 +162,7 @@
               </div>
             </a>
           </li>
-          <li>
-            <a class="page-scroll" href="#contact">
-              <div class="menu_item">
-                <div class="menu_icon flaticon-technology"></div>
-                <div class="menu_content">
-                  <h4>Contact</h4>
-                  <p>Get in Touch</p>
-                </div>
-              </div>
-            </a>
-          </li> --}}
+           --}}
 
         </ul>
       </div>
@@ -239,6 +241,16 @@
                   @endif
                   @if($resume->freelance != null)
                   <li><p>Freelance<span>:</span></p> <span>{{$resume->freelance}}</span></li>
+                  @endif
+                  @if($resume->freelance != null)
+                  <li style="margin-top: 40px">
+                    <button class="btn btn-primary" onclick="downloadResume()">Download Resume</button>
+                  </li>
+                  <script>
+                    function downloadResume() {
+                      window.location.href = "{{$resume->resume}}";
+                    }
+                  </script>
                   @endif
                 </ul>
               </div><!-- about details -->
@@ -481,7 +493,7 @@
       <!-- Portfolio section end here -->
 
       <!-- Portfolio section start here -->
-      <section id="portfolio" class="portfolio portfolio_two padding_140">
+      <section id="certificate" class="portfolio portfolio_two padding_140">
         <div class="body_container">
           <div class="section_header">
             <h2>Certificate</h2>
