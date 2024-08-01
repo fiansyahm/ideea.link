@@ -24,7 +24,9 @@
 	<div class="mobile-menu">
 		<nav class="mobile-header d-xl-none">
 			<div class="header-logo">
-				<a href="index.html" class="logo"><img src="{{ asset('theme/maxino/assets/images/logo/logo.gif')}}" alt="logo"></a>
+				<a href="index.html" class="logo"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg
+					{{-- {{ asset('theme/maxino/assets/images/logo/logo.gif')}} --}}
+					 " alt="logo" height="50" width="50"></a>
 			</div>
 			<div class="header-bar" id="open-button">
 	            <span></span>
@@ -42,7 +44,9 @@
 				<div class="mobile-menu-area d-xl-none">
 			        <div class="mobile-menu-area-inner" id="scrollbar">
 		                <div class="header-bar m-menu-bar">
-		                    <a href="index.html" class="logo"><img src="{{ asset('theme/maxino/assets/images/logo/logo.gif')}}" alt="logo"></a>
+		                    <a href="index.html" class="logo"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg
+								{{-- {{ asset('theme/maxino/assets/images/logo/logo.gif')}} --}}
+								 " alt="logo" height="50" width="50"></a>
 		                    <div class="close-button" id="close-button"></div>
 		                </div>
 			            <ul class="m-menu">
@@ -78,7 +82,9 @@
 					<div class="menu-area">
 						<div class="row no-gutters justify-content-between align-items-center">
 							<div class="header-logo">
-								<a href="index.html" class="logo"><img src="{{ asset('theme/maxino/assets/images/logo/logo.gif')}}" alt="logo"></a>
+								<a href="index.html" class="logo"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg
+									{{-- {{ asset('theme/maxino/assets/images/logo/logo.gif')}} --}}
+									 " alt="logo" height="50" width="50"></a>
 							</div>
 							<ul class="main-menu d-flex">
 								<li class="active"><a href="#Banner">Home</a></li>
@@ -1009,9 +1015,12 @@
     <div class="footer">
     	<div class="container">
     		<div class="text-center">
-	    		<a href="index.html" class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><img src="{{ asset('theme/maxino/assets/images/logo/footer-logo.png')}}" alt="footer"></a>
+	    		<a href="index.html" class="footer-logo wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"><img src="https://i.ibb.co.com/8zZ7CdS/ideea-logo.jpg
+					{{-- {{ asset('theme/maxino/assets/images/logo/footer-logo.png')}} --}}
+					 " alt="footer" height="50" width="50"></a>
 	    		<p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-	    			&copy; 2019. Maxino Designed By <a href="https://themeforest.net/user/labartisan">LabArtisan</a>
+	    			&copy; 2024. ideea.link
+					{{-- Maxino Designed By <a href="https://themeforest.net/user/labartisan">LabArtisan</a> --}}
 	    		</p>
 	    		{{-- <ul class="social-link-list wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
 	    			<li>
