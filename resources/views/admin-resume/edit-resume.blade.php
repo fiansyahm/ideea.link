@@ -938,6 +938,7 @@
                                 <label for="certificate" class="form-label">certificate</label>
                                 {{-- add button add certificate --}}
                                 <div class="btn btn-success my-2" onclick="addcertificate()">Add certificate</div>
+                                <a href="https://smallpdf.com/id/dokumen-berbagi" target="_blank" class="">Upload PDF Online</a>
                                 <div class="row" id="certificate-container">
                                     @foreach ($certificate['data'] as $item)
                                         @if($item!=null)
@@ -1086,6 +1087,173 @@
                             </script>
                     
                         </div>
+                       
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <?php
+                        // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                        $file = json_decode($resume->file, true);
+                        $counter = 0;
+                        ?>
+                        <div class="col-md-6">
+                            @if(isset($file['data']))
+                                <label for="file" class="form-label">file</label>
+                                {{-- add button add file --}}
+                                <div class="btn btn-success my-2" onclick="addfile()">Add file</div>
+                                <a href="https://smallpdf.com/id/dokumen-berbagi" target="_blank" class="">Upload PDF Online</a>
+                                <div class="row" id="file-container">
+                                    @foreach ($file['data'] as $item)
+                                        @if($item!=null)
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="file-{{ $counter }}"
+                                                    {{-- name="file-{{ $counter }}"  --}}
+                                                    value="{{ $item['name'] }}" placeholder="{{ $item['name'] }}"
+                                                    oninput="updatefileArray('{{ $counter }}', 'name', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="file-link-{{ $counter }}"
+                                                    {{-- name="file-link-{{ $counter }}"  --}}
+                                                    value="{{ $item['link'] }}" placeholder="{{ $item['link'] }}"
+                                                    oninput="updatefileArray('{{ $counter }}', 'link', this.value)">
+                                            </div>
+                                            <div class="mb-3 col-md-5">
+                                                <input type="text" class="form-control" id="file-thumbnail-{{ $counter }}"
+                                                    {{-- name="file-thumbnail-{{ $counter }}"  --}}
+                                                    value="{{ $item['thumbnail'] }}" placeholder="{{ $item['thumbnail'] }}"
+                                                    oninput="updatefileArray('{{ $counter }}', 'thumbnail', this.value)">
+                                            </div>
+                                            <div class="mb-5 col-md-5">
+                                                <input type="text" class="form-control" id="file-description-{{ $counter }}"
+                                                    {{-- name="file-description-{{ $counter }}"  --}}
+                                                    value="{{ $item['description'] }}" placeholder="{{ $item['description'] }}"
+                                                    oninput="updatefileArray('{{ $counter }}', 'description', this.value)">
+                                            </div>
+                                            <div class="mb-5 col-md-2">
+                                                <button type="button" class="btn btn-danger" id="file-delete-{{ $counter }}" onclick="removefile('{{ $counter }}')">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        @endif
+                                        <?php $counter++; ?>
+                                    
+                                    @endforeach
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <input style="display: none" type="text" class="form-control" id="file" name="file" value="{{ json_encode($file) }}"
+                                           placeholder="Can I Do" readonly>
+                                </div>
+                            @endif
+                    
+                            <script>
+                                function updatefileArray(index, key, value) {
+                                    // alert('index: ' + index + ', key: ' + key + ', value: ' + value)
+                                    // Update the file array dynamically
+                                    var fileContainer = document.getElementById('file-container');
+                                    var fileInput = document.getElementById('file');
+                                    var file = JSON.parse(fileInput.value);
+                    
+                                    // alert(value);
+                                    
+                                    // alert(file['data'][index][key])
+
+                                    // Update the file array
+                                    file['data'][index][key] = value;
+                    
+                                    // Update the value in the readonly input field
+                                    fileInput.value = JSON.stringify(file);
+                    
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+
+                                function removefile(index) {
+                                    // alert('index: ' + index)
+                                    // Update the canido array dynamically
+                                    var fileContainer = document.getElementById('file-container');
+                                    var fileInput = document.getElementById('file');
+                                    var file = JSON.parse(fileInput.value);
+                    
+                                    // Remove the file array
+                                    // file['data'].splice(index, 1);
+                                    file['data'][index] = [];
+                    
+                                    // Update the value in the readonly input field
+                                    fileInput.value = JSON.stringify(file);
+
+                                    // Remove the HTML element
+                                    var fileElement = document.getElementById('file-' + index);
+                                    fileElement.parentNode.removeChild(fileElement);
+
+                                    var fileIconElement = document.getElementById('file-link-' + index);
+                                    fileIconElement.parentNode.removeChild(fileIconElement);
+
+                                    var fileThumbnailElement = document.getElementById('file-thumbnail-' + index);
+                                    fileThumbnailElement.parentNode.removeChild(fileThumbnailElement);
+
+                                    var fileDescriptionElement = document.getElementById('file-description-' + index);
+                                    fileDescriptionElement.parentNode.removeChild(fileDescriptionElement);
+
+                                    var fileDeleteElement = document.getElementById('file-delete-' + index);
+                                    fileDeleteElement.parentNode.removeChild(fileDeleteElement);
+
+                                    // You can also send the updated array to the server using AJAX if needed
+                                }
+
+                                function addfile(){
+                                    // alert('index: ' + index)
+                                    // Update the file array dynamically
+                                    var fileContainer = document.getElementById('file-container');
+                                    var fileInput = document.getElementById('file');
+                                    var file = JSON.parse(fileInput.value);
+                    
+                                    // Remove the file array
+                                    // file['data'].splice(index, 1);
+
+                                    // {"name":"Graphic Design","icon":"icon flaticon-layers-icon"}
+                                    file['data'][file['data'].length] = {"name":"","link":"","thumbnail":"","description":""};
+                    
+                                    // Update the value in the readonly input field
+                                    fileInput.value = JSON.stringify(file);
+
+                                    var position = file['data'].length - 1;
+
+                                    // Add the HTML element
+                                    var fileElement = document.createElement('div');
+                                    fileElement.setAttribute('class', 'mb-3 col-md-5');
+                                    fileElement.innerHTML = '<input type="text" class="form-control" id="file-' + position + '" value="" placeholder="file Data" oninput="updatefileArray(\'' + position + '\', \'name\', this.value)">';
+
+                                    var fileLinkElement = document.createElement('div');
+                                    fileLinkElement.setAttribute('class', 'mb-3 col-md-5');
+                                    fileLinkElement.innerHTML = '<input type="text" class="form-control" id="file-link-' + position + '" value="" placeholder="file Data" oninput="updatefileArray(\'' + position + '\', \'link\', this.value)">';
+
+                                    var fileThumbnailElement = document.createElement('div');
+                                    fileThumbnailElement.setAttribute('class', 'mb-3 col-md-5');
+                                    fileThumbnailElement.innerHTML = '<input type="text" class="form-control" id="file-thumbnail-' + position + '" value="" placeholder="file Data" oninput="updatefileArray(\'' + position + '\', \'thumbnail\', this.value)">';
+
+                                    var fileDescriptionElement = document.createElement('div');
+                                    fileDescriptionElement.setAttribute('class', 'mb-3 col-md-5');
+                                    fileDescriptionElement.innerHTML = '<input type="text" class="form-control" id="file-description-' + position + '" value="" placeholder="file Data" oninput="updatefileArray(\'' + position + '\', \'description\', this.value)">';
+
+                                    var fileDeleteElement = document.createElement('div');
+                                    fileDeleteElement.setAttribute('class', 'mb-3 col-md-2');
+                                    fileDeleteElement.innerHTML = '<button type="button" class="btn btn-danger" id="file-delete-' + position + '" onclick="removefile(\'' + position + '\')"><i class="fa fa-trash"></i></button>';
+
+                                    fileContainer.appendChild(fileElement);
+                                    fileContainer.appendChild(fileLinkElement);
+                                    fileContainer.appendChild(fileThumbnailElement);
+                                    fileContainer.appendChild(fileDescriptionElement);
+                                    fileContainer.appendChild(fileDeleteElement);
+                                    // You can also send the updated array to the server using AJAX if needed
+
+                                    
+                                }
+                            </script>
+                    
+                        </div>
+
+                        {{-- next --}}
                        
                     </div>
                 </div>
