@@ -570,7 +570,7 @@
 					<div class="portfolio-left">
 						<div class="section-header">
 							<div class="title">
-								<span class="category wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">My Portfolio</span>
+								<span class="category wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">My Certificate</span>
 								<h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">We Have Done Lot's of <span>My Certificate</span> Lets Check Some of Them</h2>
 							</div>
 						</div>
@@ -593,6 +593,56 @@
 						{{-- make if isset --}}
 						@if(isset($certificate['data']))
 							@foreach ($certificate['data'] as $item)
+								<?php $counter++; ?>
+								@if($item!=null)
+								<div class="grid-item g-img">
+									<div class="grid-inner">
+										<div class="thumb">
+											<a href="{{ $item['link'] }}" target="_blank">
+												<img src="{{ $item['thumbnail'] }}" alt="portfolio">
+												<h6 class="title">{{ $item['name'] }}</h6>
+												<p>{{ $item['description'] }}</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								@endif
+							@endforeach
+						@endif
+	    			</div>
+	    		</div>
+	    	</div>
+	    </section>
+
+		<section class="portfolio padding-tb" id="File">
+	    	<div class="container">
+	    		<div class="portfolio-top">
+					<div class="portfolio-left">
+						<div class="section-header">
+							<div class="title">
+								<span class="category wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">My Document</span>
+								<h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">We Have Done Lot's of <span>My Document</span> Lets Check Some of Them</h2>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+						<ul>
+							{{-- <li data-filter="*" class="active"><i class="icofont-star"></i><span>All</span>Gallery</li>
+							<li data-filter=".g-img"><i class="icofont-image"></i><span>Images</span>Gallery</li>
+							<li data-filter=".v-img"><i class="icofont-play-alt-1"></i><span>Video</span>Gallery</li> --}}
+						</ul>
+					</div>
+				</div>
+	    		<div class="section-wrapper">
+	    			<div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+	    				<?php
+							// Konversi string JSON ke dalam bentuk array menggunakan json_decode
+							$file = json_decode($resume->file, true);
+							$counter=0;
+						?>
+						{{-- make if isset --}}
+						@if(isset($file['data']))
+							@foreach ($file['data'] as $item)
 								<?php $counter++; ?>
 								@if($item!=null)
 								<div class="grid-item g-img">
