@@ -422,6 +422,12 @@
 		</section>
 
 	    
+		<?php
+			// Konversi string JSON ke dalam bentuk array menggunakan json_decode
+			$skill = json_decode($resume->skill, true);
+			$counter=0;
+		?>
+		@if(isset($skill['data']))
 		<section class="services padding-tb" id="Services" style="background-image: url(assets/images/service/bg.png);">
 			<div class="container">
 				<div class="section-header">
@@ -430,40 +436,40 @@
 						<h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">We Have Done Lot's of <span>My Best Services</span> Lets Check Some of Them</h2>
 					</div>
 				</div>
-				<?php
-                    // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                    $skill = json_decode($resume->skill, true);
-					$counter=0;
-                ?>
 				<div class="section-wrapper">
-					@if(isset($skill['data']))
-						@foreach ($skill['data'] as $item)
-						<?php $counter++; ?>
-							@if($item!=null)
-								<div class="service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-									<div class="service-inner">
-										<div class="service-content">
-											<h3>{{ $item['name'] }}</h3>
-											{{-- <p>Mnique deplo scalable catals forin Monec formu was unique</p>
-											<ul>
-												<li>Motion Graphic Design</li>
-												<li>3D animation Design</li>
-												<li>Info Graphic Design</li>
-												<li>Vector Design</li>
-											</ul> --}}
-										</div>
-										<div class="service-thumb">
-											<img src="{{ asset('theme/maxino/assets/images/service/0' . $counter . '.png')}}" alt="services">
-										</div>
+					@foreach ($skill['data'] as $item)
+					<?php $counter++; ?>
+						@if($item!=null)
+							<div class="service-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+								<div class="service-inner">
+									<div class="service-content">
+										<h3>{{ $item['name'] }}</h3>
+										{{-- <p>Mnique deplo scalable catals forin Monec formu was unique</p>
+										<ul>
+											<li>Motion Graphic Design</li>
+											<li>3D animation Design</li>
+											<li>Info Graphic Design</li>
+											<li>Vector Design</li>
+										</ul> --}}
+									</div>
+									<div class="service-thumb">
+										<img src="{{ asset('theme/maxino/assets/images/service/0' . $counter . '.png')}}" alt="services">
 									</div>
 								</div>
-							@endif
-						@endforeach
-					@endif
+							</div>
+						@endif
+					@endforeach
 				</div>
 			</div>
 		</section>
+		@endif
 
+		<?php
+			// Konversi string JSON ke dalam bentuk array menggunakan json_decode
+			$project = json_decode($resume->project, true);
+			$counter=0;
+		?>
+		@if(isset($project['data']))
 		<section class="portfolio padding-tb" id="Portfolio">
 	    	<div class="container">
 	    		<div class="portfolio-top">
@@ -485,31 +491,23 @@
 				</div>
 	    		<div class="section-wrapper">
 	    			<div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-	    				<?php
-							// Konversi string JSON ke dalam bentuk array menggunakan json_decode
-							$project = json_decode($resume->project, true);
-							$counter=0;
-						?>
-						{{-- make if isset --}}
-						@if(isset($project['data']))
-							@foreach ($project['data'] as $item)
-								<?php $counter++; ?>
-								@if($item!=null)
-								<div class="grid-item g-img">
-									<div class="grid-inner">
-										<div class="thumb">
-											<a href="{{ $item['link'] }}" target="_blank">
-												<img src="{{ $item['thumbnail'] }}" alt="portfolio">
-												<h6 class="title">{{ $item['name'] }}</h6>
-												<p>{{ $item['description'] }}</p>
-											</a>
-										</div>
+	    				{{-- make if isset --}}
+						@foreach ($project['data'] as $item)
+							<?php $counter++; ?>
+							@if($item!=null)
+							<div class="grid-item g-img">
+								<div class="grid-inner">
+									<div class="thumb">
+										<a href="{{ $item['link'] }}" target="_blank">
+											<img src="{{ $item['thumbnail'] }}" alt="portfolio">
+											<h6 class="title">{{ $item['name'] }}</h6>
+											<p>{{ $item['description'] }}</p>
+										</a>
 									</div>
 								</div>
-								@endif
-							@endforeach
-						@endif
-						
+							</div>
+							@endif
+						@endforeach
 						{{-- <div class="grid-item g-img">
 		    				<div class="grid-inner">
 		    					<div class="thumb">
@@ -563,7 +561,14 @@
 	    		</div>
 	    	</div>
 	    </section>
+		@endif
 
+		<?php
+			// Konversi string JSON ke dalam bentuk array menggunakan json_decode
+			$certificate = json_decode($resume->certificate, true);
+			$counter=0;
+		?>
+		@if(isset($certificate['data']))
 		<section class="portfolio padding-tb" id="Certificate">
 	    	<div class="container">
 	    		<div class="portfolio-top">
@@ -585,35 +590,35 @@
 				</div>
 	    		<div class="section-wrapper">
 	    			<div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-	    				<?php
-							// Konversi string JSON ke dalam bentuk array menggunakan json_decode
-							$certificate = json_decode($resume->certificate, true);
-							$counter=0;
-						?>
-						{{-- make if isset --}}
-						@if(isset($certificate['data']))
-							@foreach ($certificate['data'] as $item)
-								<?php $counter++; ?>
-								@if($item!=null)
-								<div class="grid-item g-img">
-									<div class="grid-inner">
-										<div class="thumb">
-											<a href="{{ $item['link'] }}" target="_blank">
-												<img src="{{ $item['thumbnail'] }}" alt="portfolio">
-												<h6 class="title">{{ $item['name'] }}</h6>
-												<p>{{ $item['description'] }}</p>
-											</a>
-										</div>
+	    				{{-- make if isset --}}
+						@foreach ($certificate['data'] as $item)
+							<?php $counter++; ?>
+							@if($item!=null)
+							<div class="grid-item g-img">
+								<div class="grid-inner">
+									<div class="thumb">
+										<a href="{{ $item['link'] }}" target="_blank">
+											<img src="{{ $item['thumbnail'] }}" alt="portfolio">
+											<h6 class="title">{{ $item['name'] }}</h6>
+											<p>{{ $item['description'] }}</p>
+										</a>
 									</div>
 								</div>
-								@endif
-							@endforeach
-						@endif
+							</div>
+							@endif
+						@endforeach
 	    			</div>
 	    		</div>
 	    	</div>
 	    </section>
+		@endif
 
+		<?php
+			// Konversi string JSON ke dalam bentuk array menggunakan json_decode
+			$file = json_decode($resume->file, true);
+			$counter=0;
+		?>
+		@if(isset($file['data']))
 		<section class="portfolio padding-tb" id="File">
 	    	<div class="container">
 	    		<div class="portfolio-top">
@@ -635,34 +640,28 @@
 				</div>
 	    		<div class="section-wrapper">
 	    			<div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-	    				<?php
-							// Konversi string JSON ke dalam bentuk array menggunakan json_decode
-							$file = json_decode($resume->file, true);
-							$counter=0;
-						?>
-						{{-- make if isset --}}
-						@if(isset($file['data']))
-							@foreach ($file['data'] as $item)
-								<?php $counter++; ?>
-								@if($item!=null)
-								<div class="grid-item g-img">
-									<div class="grid-inner">
-										<div class="thumb">
-											<a href="{{ $item['link'] }}" target="_blank">
-												<img src="{{ $item['thumbnail'] }}" alt="portfolio">
-												<h6 class="title">{{ $item['name'] }}</h6>
-												<p>{{ $item['description'] }}</p>
-											</a>
-										</div>
+						{{-- make if isset --}}	
+						@foreach ($file['data'] as $item)
+							<?php $counter++; ?>
+							@if($item!=null)
+							<div class="grid-item g-img">
+								<div class="grid-inner">
+									<div class="thumb">
+										<a href="{{ $item['link'] }}" target="_blank">
+											<img src="{{ $item['thumbnail'] }}" alt="portfolio">
+											<h6 class="title">{{ $item['name'] }}</h6>
+											<p>{{ $item['description'] }}</p>
+										</a>
 									</div>
 								</div>
-								@endif
-							@endforeach
-						@endif
+							</div>
+							@endif
+						@endforeach
 	    			</div>
 	    		</div>
 	    	</div>
 	    </section>
+		@endif
 
 		<div style="display: none;">
 	    <section class="pricing padding-tb" id="Pricing" style="background-image: url(assets/images/pricing/bg.png);">

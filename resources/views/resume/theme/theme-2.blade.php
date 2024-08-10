@@ -285,6 +285,12 @@ help you for our Friendshiop. </em></p>
 
 
 
+    <?php
+        // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+      $project = json_decode($resume->project, true);
+      $counter=0;
+    ?>
+    @if(isset($project['data']))
     <!-- Portfolio section start here -->
     <section id="portfolio" class="portfolio padding_140">
       <div class="container">
@@ -299,35 +305,27 @@ help you for our Friendshiop. </em></p>
             <li data-filter=".illustration">Illustration</li>
             <li data-filter=".vector">Vector</li>
         </ul> --}}
-
+        
         <div class="portfolio_items">
-          
-          <?php
-            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-            $project = json_decode($resume->project, true);
-            $counter=0;
-          ?>
           {{-- make if isset --}}
-          @if(isset($project['data']))
-            @foreach ($project['data'] as $item)
-              <?php $counter++; ?>
-              @if($item!=null)
-                <div class="portfolio_item">
-                  <div class="pos_rel">
-                    <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
-                    <div class="overlay"></div>
-                    <div class="port_caption">
-                      <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                      <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                      <h4>{{ $item['name'] }}</h4>
-                      <p>{{ $item['description'] }}</p>
-                    </div>
+         
+          @foreach ($project['data'] as $item)
+            <?php $counter++; ?>
+            @if($item!=null)
+              <div class="portfolio_item">
+                <div class="pos_rel">
+                  <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                  <div class="overlay"></div>
+                  <div class="port_caption">
+                    <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <h4>{{ $item['name'] }}</h4>
+                    <p>{{ $item['description'] }}</p>
                   </div>
-                </div><!-- portfolio item -->
-              @endif
-            @endforeach
-          @endif
-
+                </div>
+              </div><!-- portfolio item -->
+            @endif
+          @endforeach
 
           {{-- <div class="portfolio_item design illustration">
             <div class="pos_rel">
@@ -408,7 +406,14 @@ help you for our Friendshiop. </em></p>
       </div><!-- container -->
     </section>
     <!-- Portfolio section end here -->
+    @endif
 
+    <?php
+      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+      $certificate = json_decode($resume->certificate, true);
+      $counter=0;
+    ?>
+    @if(isset($certificate['data']))
     <!-- Certificate section start here -->
     <section id="certificate" class="portfolio padding_140">
       <div class="container">
@@ -425,14 +430,7 @@ help you for our Friendshiop. </em></p>
         </ul> --}}
 
         <div class="portfolio_items">
-          
-          <?php
-            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-            $certificate = json_decode($resume->certificate, true);
-            $counter=0;
-          ?>
           {{-- make if isset --}}
-          @if(isset($certificate['data']))
             @foreach ($certificate['data'] as $item)
               <?php $counter++; ?>
               @if($item!=null)
@@ -450,13 +448,19 @@ help you for our Friendshiop. </em></p>
                 </div><!-- portfolio item -->
               @endif
             @endforeach
-          @endif
         </div><!-- portfolio items -->
         
       </div><!-- container -->
     </section>
     <!-- Certificate section end here -->
+    @endif
 
+    <?php
+      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+      $file = json_decode($resume->file, true);
+      $counter=0;
+    ?>
+    @if(isset($file['data']))
     <!-- File section start here -->
     <section id="file" class="portfolio padding_140">
       <div class="container">
@@ -473,14 +477,7 @@ help you for our Friendshiop. </em></p>
         </ul> --}}
 
         <div class="portfolio_items">
-          
-          <?php
-            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-            $file = json_decode($resume->file, true);
-            $counter=0;
-          ?>
           {{-- make if isset --}}
-          @if(isset($file['data']))
             @foreach ($file['data'] as $item)
               <?php $counter++; ?>
               @if($item!=null)
@@ -498,12 +495,12 @@ help you for our Friendshiop. </em></p>
                 </div><!-- portfolio item -->
               @endif
             @endforeach
-          @endif
         </div><!-- portfolio items -->
         
       </div><!-- container -->
     </section>
     <!-- File section end here -->
+    @endif
 
 
     <!-- Services section start here -->
