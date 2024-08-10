@@ -257,48 +257,50 @@
             </div><!-- column -->
             <div class="col-md-6 col-sm-12 col-xs-12">
               <div class="about_job">
-                <h3>What can i Do</h3>
                 <?php
                   // Konversi string JSON ke dalam bentuk array menggunakan json_decode
                   $canido = json_decode($resume->canido, true);
                 ?>
-                <ul>
-                  @if(isset($canido['data']))
-                    @foreach ($canido['data'] as $item)
-                      @if($item!=null)
-                        <li>
-                          <span class="{{ $item['icon'] }}"></span>
-                          <p>{{ $item['name'] }}</p>
-                        </li>
-                      @endif
-                    @endforeach
-                  @endif
-                </ul>
+                @if(isset($canido['data']))
+                  <h3>What can i Do</h3>
+                  <ul>
+                      @foreach ($canido['data'] as $item)
+                        @if($item!=null)
+                          <li>
+                            <span class="{{ $item['icon'] }}"></span>
+                            <p>{{ $item['name'] }}</p>
+                          </li>
+                        @endif
+                      @endforeach
+                  </ul>
+                @endif
               </div><!-- about job -->
 
               <div class="about_skills">
-                <h3>My Skills</h3>
-                <div class="skills_progress">
-                  <?php
-                    // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                    $skill = json_decode($resume->skill, true);
-                  ?>
-                  @if(isset($skill['data']))
-                    @foreach ($skill['data'] as $item)
-                      @if($item!=null)
-                        <div class="progress_item">
-                          <p class="progress_title">{{ $item['name'] }}</p>
-                          <div class="progress">
-                            <div class="progress-bar" role="progressbar" data-transitiongoal="{{ $item['percentage'] }}"><span class="pg_indicator"></span>
+                <?php
+                  // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                  $skill = json_decode($resume->skill, true);
+                ?>
+                @if(isset($skill['data']))
+                  <h3>My Skills</h3>
+                  <div class="skills_progress">
+                    
+                      @foreach ($skill['data'] as $item)
+                        @if($item!=null)
+                          <div class="progress_item">
+                            <p class="progress_title">{{ $item['name'] }}</p>
+                            <div class="progress">
+                              <div class="progress-bar" role="progressbar" data-transitiongoal="{{ $item['percentage'] }}"><span class="pg_indicator"></span>
+                              </div>
                             </div>
+                            <p class="progress_percent">{{ $item['percentage'] }}</p>
                           </div>
-                          <p class="progress_percent">{{ $item['percentage'] }}</p>
-                        </div>
-                      @endif
-                    @endforeach
-                  @endif
+                        @endif
+                      @endforeach
 
-                </div><!-- skills progress -->
+                  </div><!-- skills progress -->
+                @endif
+
               </div><!-- about skills -->
             </div><!-- column -->
           </div><!--   -->
@@ -320,47 +322,49 @@
           <div class="resume_items">
             <div class="row">
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <h3>Educational Experience</h3>
-                <div class="experiences left">
-                  <?php
-                      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                      $educational = json_decode($resume->educational, true);
-                  ?>
-                  @if(isset($educational['data']))
-                    @foreach ($educational['data'] as $item)
-                      @if($item!=null)
-                        <div class="experience">
-                          <h4>{{ $item['degree'] }}</h4>
-                          <p>{{ $item['university'] }} / <span>{{ $item['year'] }}</span></p>
-                          <p class="ex_details">{{ $item['description'] }}.</p>
-                        </div><!-- experience -->
-                      @endif
-                    @endforeach
-                  @endif
+                <?php
+                    // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                    $educational = json_decode($resume->educational, true);
+                ?>
+                @if(isset($educational['data']))
+                  <h3>Educational Experience</h3>
+                  <div class="experiences left">
+                    
+                      @foreach ($educational['data'] as $item)
+                        @if($item!=null)
+                          <div class="experience">
+                            <h4>{{ $item['degree'] }}</h4>
+                            <p>{{ $item['university'] }} / <span>{{ $item['year'] }}</span></p>
+                            <p class="ex_details">{{ $item['description'] }}.</p>
+                          </div><!-- experience -->
+                        @endif
+                      @endforeach
 
-                </div><!-- experience -->
+                  </div><!-- experience -->
+                @endif
               </div>
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <h3>Working Experience</h3>
-                <div class="experiences right">
+                <?php
+                    // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+                    $working = json_decode($resume->working, true);
+                ?>
+                @if(isset($working['data']))
+                  <h3>Working Experience</h3>
+                  <div class="experiences right">
 
-                  <?php
-                      // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-                      $working = json_decode($resume->working, true);
-                  ?>
-                  @if(isset($working['data']))
-                    @foreach ($working['data'] as $item)
-                      @if($item!=null)
-                        <div class="experience">
-                          <h4>{{ $item['position'] }}</h4>
-                          <p>{{ $item['company'] }} / <span>{{ $item['year'] }}</span></p>
-                          <p class="ex_details">{{ $item['description'] }}.</p>
-                        </div><!-- experience -->
-                      @endif
-                    @endforeach
-                  @endif
+                      @foreach ($working['data'] as $item)
+                        @if($item!=null)
+                          <div class="experience">
+                            <h4>{{ $item['position'] }}</h4>
+                            <p>{{ $item['company'] }} / <span>{{ $item['year'] }}</span></p>
+                            <p class="ex_details">{{ $item['description'] }}.</p>
+                          </div><!-- experience -->
+                        @endif
+                      @endforeach
 
-                </div><!-- experience -->
+                  </div><!-- experience -->
+                @endif
+
               </div>
             </div><!--   -->
           </div><!-- resume items -->
@@ -371,223 +375,229 @@
 
 
       <!-- Portfolio section start here -->
+      <?php
+        // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+        $project = json_decode($resume->project, true);
+        $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
+        $counter=0;
+      ?>
+      @if(isset($project['data']))
       <section id="portfolio" class="portfolio portfolio_two padding_140">
         <div class="body_container">
-          <div class="section_header">
-            <h2>Portfolio</h2>
-          </div><!-- section header -->
-
-          {{-- <ul class="portfolio_menu">
-              <li class="active" data-filter="*">All Items</li>
-              <li data-filter=".design">Design</li>
-              <li data-filter=".photography">Photography</li>
-              <li data-filter=".illustration">Illustration</li>
-              <li data-filter=".vector">Vector</li>
-          </ul> --}}
-
-          <?php
-            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-            $project = json_decode($resume->project, true);
-            $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
-            $counter=0;
-          ?>
-          <div class="portfolio_items">
-            {{-- make if isset --}}
-            @if(isset($project['data']))
-              @foreach ($project['data'] as $item)
-                <?php $counter++; ?>
-                  <div class="portfolio_item {{ $list_array[$counter-1] }}">
-                    <div class="pos_rel">
-                      <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
-                      <div class="overlay"></div>
-                      <div class="port_caption">
-                        <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                        <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        <h4>{{ $item['name'] }}</h4>
-                        <p>{{ $item['description'] }}</p>
-                      </div>
-                    </div>
-                  </div><!-- portfolio item -->
-              @endforeach
-            @endif
           
-            {{--             
-            <div class="portfolio_item design illustration">
+            <div class="section_header">
+              <h2>Portfolio</h2>
+            </div><!-- section header -->
+            {{-- <ul class="portfolio_menu">
+                <li class="active" data-filter="*">All Items</li>
+                <li data-filter=".design">Design</li>
+                <li data-filter=".photography">Photography</li>
+                <li data-filter=".illustration">Illustration</li>
+                <li data-filter=".vector">Vector</li>
+            </ul> --}}
+
+            <div class="portfolio_items">
+              {{-- make if isset --}}
+              
+                @foreach ($project['data'] as $item)
+                  <?php $counter++; ?>
+                  @if($item!=null)
+                    <div class="portfolio_item {{ $list_array[$counter-1] }}">
+                      <div class="pos_rel">
+                        <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                        <div class="overlay"></div>
+                        <div class="port_caption">
+                          <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                          <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                          <h4>{{ $item['name'] }}</h4>
+                          <p>{{ $item['description'] }}</p>
+                        </div>
+                      </div>
+                    </div><!-- portfolio item -->
+                  @endif
+                @endforeach
+            
+              {{--             
+              <div class="portfolio_item design illustration">
+                  <div class="pos_rel">
+                    <img src="{{ asset('theme/gentleman/assets/images/portfolio_01.jpg')}}" alt="portfolio Image" class="img-responsive"/>
+                    <div class="overlay"></div>
+                    <div class="port_caption">
+                      <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_06.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                      <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_01.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                      <h4>Project Title Goes Here</h4>
+                      <p>Logo Design</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="portfolio_item photography vector">
                 <div class="pos_rel">
-                  <img src="{{ asset('theme/gentleman/assets/images/portfolio_01.jpg')}}" alt="portfolio Image" class="img-responsive"/>
+                  <img src="{{ asset('theme/gentleman/assets/images/portfolio_02.jpg')}}" alt="portfolio Image" class="img-responsive"/>
+                  <div class="overlay"></div>
+                  <div class="port_caption">
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_02.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_02.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <h4>Project Title Goes Here</h4>
+                    <p>Photography</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio_item design illustration">
+                <div class="pos_rel">
+                  <img src="{{ asset('theme/gentleman/assets/images/portfolio_03.jpg')}}" alt="portfolio Image" class="img-responsive"/>
+                  <div class="overlay"></div>
+                  <div class="port_caption">
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_03.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_03.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <h4>Project Title Goes Here</h4>
+                    <p>Illustration</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio_item  vector">
+                <div class="pos_rel">
+                  <img src="{{ asset('theme/gentleman/assets/images/portfolio_04.jpg')}}" alt="portfolio Image" class="img-responsive"/>
+                  <div class="overlay"></div>
+                  <div class="port_caption">
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_04.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_04.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <h4>Project Title Goes Here</h4>
+                    <p>Vector</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio_item design illustration">
+                <div class="pos_rel">
+                  <img src="{{ asset('theme/gentleman/assets/images/portfolio_05.jpg')}}" alt="portfolio Image" class="img-responsive"/>
+                  <div class="overlay"></div>
+                  <div class="port_caption">
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_05.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_05.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <h4>Project Title Goes Here</h4>
+                    <p>Illustration</p>
+                  </div>
+                </div>            
+              </div>
+              <div class="portfolio_item photography">
+                <div class="pos_rel">
+                  <img src="{{ asset('theme/gentleman/assets/images/portfolio_06.jpg')}}" alt="portfolio Image" class="img-responsive"/>
                   <div class="overlay"></div>
                   <div class="port_caption">
                     <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_06.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_01.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_06.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
                     <h4>Project Title Goes Here</h4>
-                    <p>Logo Design</p>
+                    <p>Photography</p>
                   </div>
                 </div>
-            </div>
-            <div class="portfolio_item photography vector">
-              <div class="pos_rel">
-                <img src="{{ asset('theme/gentleman/assets/images/portfolio_02.jpg')}}" alt="portfolio Image" class="img-responsive"/>
-                <div class="overlay"></div>
-                <div class="port_caption">
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_02.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_02.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                  <h4>Project Title Goes Here</h4>
-                  <p>Photography</p>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio_item design illustration">
-              <div class="pos_rel">
-                <img src="{{ asset('theme/gentleman/assets/images/portfolio_03.jpg')}}" alt="portfolio Image" class="img-responsive"/>
-                <div class="overlay"></div>
-                <div class="port_caption">
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_03.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_03.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                  <h4>Project Title Goes Here</h4>
-                  <p>Illustration</p>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio_item  vector">
-              <div class="pos_rel">
-                <img src="{{ asset('theme/gentleman/assets/images/portfolio_04.jpg')}}" alt="portfolio Image" class="img-responsive"/>
-                <div class="overlay"></div>
-                <div class="port_caption">
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_04.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_04.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                  <h4>Project Title Goes Here</h4>
-                  <p>Vector</p>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio_item design illustration">
-              <div class="pos_rel">
-                <img src="{{ asset('theme/gentleman/assets/images/portfolio_05.jpg')}}" alt="portfolio Image" class="img-responsive"/>
-                <div class="overlay"></div>
-                <div class="port_caption">
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_05.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_05.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                  <h4>Project Title Goes Here</h4>
-                  <p>Illustration</p>
-                </div>
-              </div>            
-            </div>
-            <div class="portfolio_item photography">
-              <div class="pos_rel">
-                <img src="{{ asset('theme/gentleman/assets/images/portfolio_06.jpg')}}" alt="portfolio Image" class="img-responsive"/>
-                <div class="overlay"></div>
-                <div class="port_caption">
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_06.jpg')}}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                  <a href="{{ asset('theme/gentleman/assets/images/portfolio_big_06.jpg')}}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                  <h4>Project Title Goes Here</h4>
-                  <p>Photography</p>
-                </div>
-              </div>
-            </div> 
-            --}}
+              </div> 
+              --}}
 
-          </div><!-- portfolio items -->
-          
+            </div><!-- portfolio items -->
+
         </div><!-- container -->
       </section>
       <!-- Portfolio section end here -->
+      @endif
+      
 
+      <?php
+        // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+        $certificate = json_decode($resume->certificate, true);
+        $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
+        $counter=0;
+      ?>
+
+      @if(isset($certificate['data']))
       <!-- Certificate section start here -->
-      <section id="certificate" class="portfolio portfolio_two padding_140">
-        <div class="body_container">
-          <div class="section_header">
-            <h2>Certificate</h2>
-          </div><!-- section header -->
-
-          {{-- <ul class="portfolio_menu">
-              <li class="active" data-filter="*">All Items</li>
-              <li data-filter=".design">Design</li>
-              <li data-filter=".photography">Photography</li>
-              <li data-filter=".illustration">Illustration</li>
-              <li data-filter=".vector">Vector</li>
-          </ul> --}}
-
-          <?php
-            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-            $certificate = json_decode($resume->certificate, true);
-            $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
-            $counter=0;
-          ?>
-          <div class="portfolio_items">
-            {{-- make if isset --}}
-            @if(isset($certificate['data']))
-              
-              @foreach ($certificate['data'] as $item)
-                <?php $counter++; ?>
-                  <div class="portfolio_item {{ $list_array[$counter-1] }}">
-                    <div class="pos_rel">
-                      <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
-                      <div class="overlay"></div>
-                      <div class="port_caption">
-                        <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                        <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        <h4>{{ $item['name'] }}</h4>
-                        <p>{{ $item['description'] }}</p>
-                      </div>
-                    </div>
-                  </div><!-- portfolio item -->
-              @endforeach
-            @endif
-
-          </div><!-- portfolio items -->
+        <section id="certificate" class="portfolio portfolio_two padding_140">
           
-        </div><!-- container -->
-      </section>
+          <div class="body_container">
+              <div class="section_header">
+                <h2>Certificate</h2>
+              </div><!-- section header -->
+
+              {{-- <ul class="portfolio_menu">
+                  <li class="active" data-filter="*">All Items</li>
+                  <li data-filter=".design">Design</li>
+                  <li data-filter=".photography">Photography</li>
+                  <li data-filter=".illustration">Illustration</li>
+                  <li data-filter=".vector">Vector</li>
+              </ul> --}}
+
+              <div class="portfolio_items">
+                {{-- make if isset --}}  
+                  @foreach ($certificate['data'] as $item)
+                    <?php $counter++; ?>
+                    @if($item!=null)
+                      <div class="portfolio_item {{ $list_array[$counter-1] }}">
+                        <div class="pos_rel">
+                          <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                          <div class="overlay"></div>
+                          <div class="port_caption">
+                            <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                            <h4>{{ $item['name'] }}</h4>
+                            <p>{{ $item['description'] }}</p>
+                          </div>
+                        </div>
+                      </div><!-- portfolio item -->
+                    @endif
+                  @endforeach
+              </div><!-- portfolio items -->
+          </div><!-- container -->
+
+        </section>
       <!-- Certificate section end here -->
+      @endif
 
+      <?php
+        // Konversi string JSON ke dalam bentuk array menggunakan json_decode
+        $file = json_decode($resume->file, true);
+        $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
+        $counter=0;
+      ?>
+      @if(isset($file['data']))
       <!-- File section start here -->
-      <section id="file" class="portfolio portfolio_two padding_140">
-        <div class="body_container">
-          <div class="section_header">
-            <h2>file</h2>
-          </div><!-- section header -->
+        <section id="file" class="portfolio portfolio_two padding_140">
+          <div class="body_container">
+              <div class="section_header">
+                <h2>file</h2>
+              </div><!-- section header -->
 
-          {{-- <ul class="portfolio_menu">
-              <li class="active" data-filter="*">All Items</li>
-              <li data-filter=".design">Design</li>
-              <li data-filter=".photography">Photography</li>
-              <li data-filter=".illustration">Illustration</li>
-              <li data-filter=".vector">Vector</li>
-          </ul> --}}
+              {{-- <ul class="portfolio_menu">
+                  <li class="active" data-filter="*">All Items</li>
+                  <li data-filter=".design">Design</li>
+                  <li data-filter=".photography">Photography</li>
+                  <li data-filter=".illustration">Illustration</li>
+                  <li data-filter=".vector">Vector</li>
+              </ul> --}}
 
-          <?php
-            // Konversi string JSON ke dalam bentuk array menggunakan json_decode
-            $file = json_decode($resume->file, true);
-            $list_array = ['design illustration', 'photography vector', 'photography illustration', 'photography design', 'illustration design', 'illustration vector'];
-            $counter=0;
-          ?>
-          <div class="portfolio_items">
-            {{-- make if isset --}}
-            @if(isset($file['data']))
-              
-              @foreach ($file['data'] as $item)
-                <?php $counter++; ?>
-                  <div class="portfolio_item {{ $list_array[$counter-1] }}">
-                    <div class="pos_rel">
-                      <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
-                      <div class="overlay"></div>
-                      <div class="port_caption">
-                        <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
-                        <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
-                        <h4>{{ $item['name'] }}</h4>
-                        <p>{{ $item['description'] }}</p>
-                      </div>
-                    </div>
-                  </div><!-- portfolio item -->
-              @endforeach
-            @endif
-
-          </div><!-- portfolio items -->
+              <div class="portfolio_items">
+                {{-- make if isset --}}
           
-        </div><!-- container -->
-      </section>
-      <!-- File section end here -->
+                  @foreach ($file['data'] as $item)
+                    <?php $counter++; ?>
+                    @if($item!=null)
+                      <div class="portfolio_item {{ $list_array[$counter-1] }}">
+                        <div class="pos_rel">
+                          <img src="{{ $item['thumbnail'] }}" alt="portfolio Image" class="img-responsive"/>
+                          <div class="overlay"></div>
+                          <div class="port_caption">
+                            <a href="{{ $item['link'] }}" class="image-icon" data-rel="lightcase:myCollection"  title="Project Title"><i class="fa fa-search" aria-hidden="true"></i></a>
+                            <a href="{{ $item['link'] }}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                            <h4>{{ $item['name'] }}</h4>
+                            <p>{{ $item['description'] }}</p>
+                          </div>
+                        </div>
+                      </div><!-- portfolio item -->
+                    @endif
+                  @endforeach
 
+              </div><!-- portfolio items -->
+          </div><!-- container -->
+        </section>
+      <!-- File section end here -->
+      @endif
 
 
       <!-- Services section start here -->
